@@ -15,12 +15,18 @@
       <section class="hero" id="top">
         <header class="header container" data-site-header>
           <a class="logo" href="#top" aria-label="MOEX Design"><img src="assets/moex-logo.svg" alt="Московская Биржа" /></a>
-          <nav class="nav" aria-label="Основная навигация">
+          <nav class="nav" id="main-navigation" aria-label="Основная навигация">
             <a href="#communication">Коммуникационный дизайн</a>
             <a href="#product">Продуктовый дизайн</a>
+            <div class="nav__mobile-links">
+              <section><p>О центре</p><a href="#top">Миссия и структура</a><a href="#team">Команда</a><a href="#top">Как мы работаем</a></section>
+              <section><p>Коммуникационный дизайн</p><a href="#communication">Бренд и айдентика</a><a href="#communication">Портфолио отдела</a></section>
+              <section><p>Продуктовый дизайн</p><a href="#product">Основа системы</a><a href="#product">Компоненты</a><a href="#product">Паттерны</a><a href="#product">Продукты и сайты</a><a href="#product">Вайркодинг</a><a href="#product">Портфолио отдела</a></section>
+            </div>
             <a class="nav__cta" href="#contacts">Связаться с нами</a>
+            <button class="menu-close" type="button" aria-label="Закрыть меню"><span></span><span></span></button>
           </nav>
-          <button class="menu-button" type="button" aria-label="Открыть меню"><span></span><span></span></button>
+          <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
         </header>
         <div class="container hero__content">
           <div class="eyebrow">Московская Биржа • MOEX</div>
@@ -86,7 +92,7 @@
               <div><p>Продукты</p><a href="#product">Основа системы</a><a href="#product">Компоненты</a><a href="#product">Паттерны</a><a href="#product">Продукты и сайты</a><a href="#product">Вайркодинг</a><a href="#product">Портфолио отдела</a></div>
             </div>
           </div>
-          <div class="footer__brand"><strong>MOEX<br />DESIGN</strong><div><span>’ 26</span><span class="anniversary" aria-label="MOEX 2026"><img class="anniversary__ring" src="assets/anniversary-mark.svg" alt="" /><span class="anniversary__center"><img src="assets/anniversary-mark.svg" alt="" /></span></span></div></div>
+          <div class="footer__brand"><strong class="footer__wordmark"><span class="wordmark__moex">MOEX</span><span class="wordmark__design">DESIGN</span></strong><div><span>’ 26</span><span class="anniversary" aria-label="MOEX 2026"><img class="anniversary__ring" src="assets/anniversary-mark.svg" alt="" /><span class="anniversary__center"><img src="assets/anniversary-mark.svg" alt="" /></span></span></div></div>
         </div>
         <div class="footer__bottom">
           <div class="contacts"><div><span>Пишите нам</span><a href="mailto:design@moex.com">design@moex.com</a></div><div><span>Телефон</span><a href="tel:+74953633232">+7 (495) 363-3232</a></div></div>
@@ -123,6 +129,36 @@
 
       document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
 
+      document.querySelectorAll('.nav a:not(.nav__cta), .footer__columns a').forEach((link) => {
+        const label = link.textContent.trim();
+        link.setAttribute('aria-label', label);
+        link.textContent = '';
+
+        [...label].forEach((letter, index) => {
+          const character = document.createElement('span');
+          character.className = letter === ' ' ? 'letter-swap letter-swap--space' : 'letter-swap';
+          character.style.setProperty('--letter-index', index);
+          character.setAttribute('aria-hidden', 'true');
+          if (letter !== ' ') character.dataset.letter = letter;
+          link.append(character);
+        });
+      });
+
+      const menuButton = document.querySelector('.menu-button');
+      const mainNavigation = document.querySelector('.nav');
+      const setMenuState = (isOpen) => {
+        mainNavigation.classList.toggle('is-open', isOpen);
+        menuButton.classList.toggle('is-open', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+      };
+
+      menuButton.addEventListener('click', () => setMenuState(!mainNavigation.classList.contains('is-open')));
+      mainNavigation.querySelector('.menu-close').addEventListener('click', () => setMenuState(false));
+      mainNavigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuState(false)));
+      window.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuState(false); });
+
       const scrollReveal = document.querySelector('[data-scroll-reveal]');
       const revealWords = scrollReveal.textContent.trim().split(/\s+/);
       scrollReveal.innerHTML = revealWords.map((word) => `<span>${word}</span>`).join(' ');
@@ -137,6 +173,21 @@
       updateScrollReveal();
       window.addEventListener('scroll', updateScrollReveal, { passive: true });
       window.addEventListener('resize', updateScrollReveal);
+
+      const pageMain = document.querySelector('main');
+      const stickyFooter = document.querySelector('.footer');
+      const updateStickyFooter = () => {
+        const footerHeight = stickyFooter.offsetHeight;
+        const canStick = footerHeight < window.innerHeight * .94;
+        document.documentElement.style.setProperty('--footer-space', `${footerHeight}px`);
+        stickyFooter.classList.toggle('footer--sticky', canStick);
+        pageMain.classList.toggle('footer-is-sticky', canStick);
+      };
+
+      updateStickyFooter();
+      window.addEventListener('resize', updateStickyFooter);
+
+
     </script>
   </body>
 </html>
