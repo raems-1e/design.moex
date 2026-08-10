@@ -40,7 +40,7 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .team__kicker span { display:block; width:9px; height:9px; background:var(--red); }
 .team__intro h2 { font-size:40px; letter-spacing:-1.3px; }
 .person { display:flex; min-height:470px; flex-direction:column; justify-content:space-between; background:#f4f4f4; }
-.person__photo { min-height:350px; flex:1; background-image:url('public/assets/team-reference.jpg'); background-repeat:no-repeat; background-size:333.34% auto; }
+.person__photo { min-height:350px; flex:1; background-image:url('assets/team-reference.jpg'); background-repeat:no-repeat; background-size:333.34% auto; }
 .person--anna .person__photo { background-position:50% 0; }
 .person--maxim .person__photo { background-position:94% 0; }
 .person--elena .person__photo { background-position:6% 86%; }
