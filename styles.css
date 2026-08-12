@@ -67,7 +67,7 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .team-lead,.person { width:calc((100cqw - 16px) / 3); min-height:382px; flex:0 0 calc((100cqw - 16px) / 3); border-radius:12px; overflow:hidden; }
 .team-lead { display:flex; padding:24px; flex-direction:column; background:var(--red); color:#fff; }
 .team-lead p { margin:0 0 20px; color:rgba(255,255,255,.7); font-size:12px; }
-.team-lead strong { font-size:19px; line-height:1.12; letter-spacing:-.6px; }
+.team-lead strong { font-size:23px; line-height:1.1; letter-spacing:-.8px; }
 .team-lead span { margin-top:auto; color:rgba(255,255,255,.7); font-size:12px; line-height:1.4; }
 .person { display:flex; flex-direction:column; justify-content:space-between; background:#161616; }
 .person__photo { min-height:220px; flex:1; background-repeat:no-repeat; background-position:center; background-size:cover; }
