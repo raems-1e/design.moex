@@ -20,8 +20,8 @@ a { color:inherit; text-decoration:none; }
 .nav a:hover .letter-swap::before,.nav a:focus-visible .letter-swap::before,.footer__columns a:hover .letter-swap::before,.footer__columns a:focus-visible .letter-swap::before { opacity:0; transform:translateY(-105%); }
 .nav a:hover .letter-swap::after,.nav a:focus-visible .letter-swap::after,.footer__columns a:hover .letter-swap::after,.footer__columns a:focus-visible .letter-swap::after { opacity:1; transform:translateY(-105%); }
 .nav__cta { display:inline-flex; align-items:center; gap:9px; padding:10px 20px; border-radius:9px; background:#fff; color:#151515; font-size:14px; }
-.header.is-light .nav { color:#151515; }
-.header.is-light .nav__cta { background:#151515; color:#fff; }
+.header.is-light .nav { gap:32px; padding:10px 10px 10px 24px; border-radius:12px; background:rgba(148,148,148,.72); color:#fff; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+.header.is-light .nav__cta { background:#fff; color:#151515; }
 .menu-button { display:none; border:0; background:transparent; }
 .nav__mobile-links,.menu-close { display:none; }
 .hero__content { position:relative; z-index:2; display:grid; grid-template-columns:2fr 1fr 1fr; gap:8px; min-height:347px; padding-bottom:57px; }
@@ -120,6 +120,7 @@ main.footer-is-sticky { margin-bottom:var(--footer-space); }
   .hero__direction strong { font-size:20px; }
   .hero__direction--product img { top:4px; right:4px; width:218px; }
   .nav { position:fixed; z-index:9; top:0; right:auto; left:50%; display:flex; width:100vw; align-items:stretch; flex-direction:column; gap:8px; max-height:100dvh; margin-left:-50vw; padding:92px var(--side) 28px; border-radius:0; overflow-y:auto; background:rgba(255,255,255,.96); box-shadow:0 14px 32px rgba(0,0,0,.12); transform:translateY(-105%); transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+  .header.is-light .nav { gap:8px; padding:92px var(--side) 28px; border-radius:0; background:rgba(255,255,255,.96); color:#151515; backdrop-filter:none; -webkit-backdrop-filter:none; }
   .nav.is-open { transform:none; }
   .nav > a:not(.nav__cta) { display:none; }
   .nav a { min-height:48px; justify-content:flex-start; font-size:18px; }
