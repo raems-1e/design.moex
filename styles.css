@@ -115,7 +115,7 @@ main.footer-is-sticky { margin-bottom:var(--footer-space); }
   .hero__content { display:grid; width:calc(100% - 32px); grid-template-columns:1fr; gap:8px; min-height:0; padding-top:0; padding-bottom:24px; }
   .hero__main,.hero__direction { min-height:0; border-radius:20px; }
   .hero__main { padding:38px 28px 42px; }
-  .hero__main h1 { font-size:34px; letter-spacing:-1.7px; }
+  .hero__main h1 { font-size:30px; letter-spacing:-1.5px; }
   .hero__main > p { font-size:15px; line-height:1.45; }
   .hero__direction { min-height:220px; padding:28px; }
   .hero__direction strong { font-size:20px; }
