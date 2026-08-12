@@ -50,7 +50,7 @@ h2 { margin:0; font-size:32px; line-height:1.2; letter-spacing:-.64px; }
 .card { display:flex; min-height:385px; padding:54px 44px 56px; flex-direction:column; justify-content:space-between; background:#fff; }
 .card__label { color:var(--red); }
 h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:-.4px; }
-.team { padding:96px 0; background:#d3d1d1; }
+.team { padding:96px 0; background:#fff; }
 .team__shell { container-type:inline-size; padding:48px; background:#fff; overflow:hidden; }
 .team__heading { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:36px; }
 .team__kicker { display:flex; align-items:center; gap:10px; margin:0 0 18px; color:var(--red); font-size:12px; font-weight:700; letter-spacing:.52px; text-transform:uppercase; }
