@@ -57,7 +57,9 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .team__kicker span { display:block; width:9px; height:9px; background:var(--red); }
 .team__heading h2 { margin:0; font-size:34px; line-height:1.05; letter-spacing:-1.4px; }
 .team__controls { display:flex; gap:8px; }
-.team__controls button { display:grid; width:34px; height:34px; padding:0 0 2px; border:0; border-radius:50%; place-items:center; background:var(--red); color:#fff; font-size:27px; font-weight:300; line-height:1; cursor:pointer; transition:transform .2s ease,background .2s ease; }
+.team__controls button { display:grid; width:34px; height:34px; padding:0; border:0; border-radius:50%; place-items:center; background:var(--red); color:#fff; font-size:0; line-height:1; cursor:pointer; transition:transform .2s ease,background .2s ease; }
+.team__controls button::before { width:9px; height:9px; border-bottom:2px solid currentColor; border-left:2px solid currentColor; content:""; transform:rotate(45deg) translate(1px,1px); }
+.team__controls button[data-team-next]::before { transform:rotate(225deg) translate(1px,1px); }
 .team__controls button:hover { background:#d80003; transform:scale(1.06); }
 .team__viewport { overflow-x:auto; scrollbar-width:none; }
 .team__viewport::-webkit-scrollbar { display:none; }
