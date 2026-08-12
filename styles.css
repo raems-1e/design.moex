@@ -51,28 +51,28 @@ h2 { margin:0; font-size:32px; line-height:1.2; letter-spacing:-.64px; }
 .card__label { color:var(--red); }
 h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:-.4px; }
 .team { padding:96px 0; background:#d3d1d1; }
-.team__shell { padding:48px; background:#fff; overflow:hidden; }
+.team__shell { container-type:inline-size; padding:48px; background:#fff; overflow:hidden; }
 .team__heading { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:36px; }
 .team__kicker { display:flex; align-items:center; gap:10px; margin:0 0 18px; color:var(--red); font-size:12px; font-weight:700; letter-spacing:.52px; text-transform:uppercase; }
 .team__kicker span { display:block; width:9px; height:9px; background:var(--red); }
 .team__heading h2 { margin:0; font-size:34px; line-height:1.05; letter-spacing:-1.4px; }
 .team__controls { display:flex; gap:8px; }
-.team__controls button { display:grid; width:34px; height:34px; padding:0; border:0; border-radius:50%; place-items:center; background:#0969f9; color:#fff; font-size:17px; cursor:pointer; transition:transform .2s ease,background .2s ease; }
-.team__controls button:hover { background:#0055d4; transform:scale(1.06); }
+.team__controls button { display:grid; width:34px; height:34px; padding:0 0 2px; border:0; border-radius:50%; place-items:center; background:var(--red); color:#fff; font-size:27px; font-weight:300; line-height:1; cursor:pointer; transition:transform .2s ease,background .2s ease; }
+.team__controls button:hover { background:#d80003; transform:scale(1.06); }
 .team__viewport { overflow-x:auto; scrollbar-width:none; }
 .team__viewport::-webkit-scrollbar { display:none; }
 .team__track { display:flex; gap:8px; width:max-content; }
-.team-lead,.person { width:230px; min-height:290px; flex:0 0 230px; border-radius:12px; overflow:hidden; }
-.team-lead { display:flex; padding:24px; flex-direction:column; background:#0969f9; color:#fff; }
+.team-lead,.person { width:calc((100cqw - 16px) / 3); min-height:290px; flex:0 0 calc((100cqw - 16px) / 3); border-radius:12px; overflow:hidden; }
+.team-lead { display:flex; padding:24px; flex-direction:column; background:var(--red); color:#fff; }
 .team-lead p { margin:0 0 20px; color:rgba(255,255,255,.7); font-size:12px; }
 .team-lead strong { font-size:19px; line-height:1.12; letter-spacing:-.6px; }
 .team-lead span { margin-top:auto; color:rgba(255,255,255,.7); font-size:12px; line-height:1.4; }
 .person { display:flex; flex-direction:column; justify-content:space-between; background:#161616; }
-.person__photo { min-height:220px; flex:1; background-image:url('assets/team-reference.jpg'); background-repeat:no-repeat; background-size:333.34% auto; }
-.person--anna .person__photo { background-position:50% 0; }
-.person--maxim .person__photo { background-position:94% 0; }
-.person--elena .person__photo { background-position:6% 86%; }
-.person--ilya .person__photo { background-position:center 86%; }
+.person__photo { min-height:220px; flex:1; background-repeat:no-repeat; background-position:center; background-size:cover; }
+.person--anna .person__photo { background-image:url('assets/person-anna.jpg'); }
+.person--maxim .person__photo { background-image:url('assets/person-maxim.jpg'); }
+.person--elena .person__photo { background-image:url('assets/person-elena.jpg'); }
+.person--ilya .person__photo { background-image:url('assets/person-ilya.jpg'); }
 .person__meta { min-height:70px; padding:12px 16px 16px; background:#161616; color:#fff; }
 .person__meta h3 { margin:0 0 4px; font-size:16px; font-weight:600; line-height:1.05; letter-spacing:-.6px; }
 .person__meta p { margin:0; color:rgba(255,255,255,.65); font-size:11px; }
