@@ -20,7 +20,6 @@ a { color:inherit; text-decoration:none; }
 .nav a:hover .letter-swap::before,.nav a:focus-visible .letter-swap::before,.footer__columns a:hover .letter-swap::before,.footer__columns a:focus-visible .letter-swap::before { opacity:0; transform:translateY(-105%); }
 .nav a:hover .letter-swap::after,.nav a:focus-visible .letter-swap::after,.footer__columns a:hover .letter-swap::after,.footer__columns a:focus-visible .letter-swap::after { opacity:1; transform:translateY(-105%); }
 .nav__cta { display:inline-flex; align-items:center; gap:9px; padding:10px 20px; border-radius:9px; background:#fff; color:#151515; font-size:14px; }
-.nav__chevron { color:#b4b4b4; font-size:17px; font-weight:500; line-height:.7; transform:translateY(-1px); }
 .header.is-light .nav { color:#151515; }
 .header.is-light .nav__cta { background:#151515; color:#fff; }
 .menu-button { display:none; border:0; background:transparent; }
