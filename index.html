@@ -58,27 +58,20 @@
       </section>
 
       <section class="team" id="team">
-        <div class="container team__grid">
-          <div class="team__intro" data-reveal>
-            <p class="team__kicker"><span></span>Наша команда</p>
-            <h2>Знакомьтесь<br />с командой</h2>
+        <div class="container team__shell" data-reveal>
+          <div class="team__heading">
+            <div><p class="team__kicker"><span></span>Наша команда</p><h2>Познакомьтесь<br />с командой</h2></div>
+            <div class="team__controls" aria-label="Навигация по команде"><button type="button" data-team-prev aria-label="Предыдущие участники">←</button><button type="button" data-team-next aria-label="Следующие участники">→</button></div>
           </div>
-          <article class="person person--anna" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Анны Беловой"></div>
-            <div class="person__meta"><h3>Анна Белова</h3><p>Руководитель дизайн-центра</p></div>
-          </article>
-          <article class="person person--maxim" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Максима Орлова"></div>
-            <div class="person__meta"><h3>Максим Орлов</h3><p>Руководитель продуктового дизайна</p></div>
-          </article>
-          <article class="person person--elena" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Елены Соколовой"></div>
-            <div class="person__meta"><h3>Елена Соколова</h3><p>Руководитель коммуникационного дизайна</p></div>
-          </article>
-          <article class="person person--ilya" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Ильи Воронова"></div>
-            <div class="person__meta"><h3>Илья Воронов</h3><p>Арт-директор</p></div>
-          </article>
+          <div class="team__viewport" data-team-viewport>
+            <div class="team__track">
+              <article class="team-lead"><p>Дизайн-центр MOEX</p><strong>Мы создаём целостный опыт для продуктов и коммуникаций биржи.</strong><span>Команда объединяет исследования, дизайн и технологии.</span></article>
+              <article class="person person--anna"><div class="person__photo" role="img" aria-label="Портрет Анны Беловой"></div><div class="person__meta"><h3>Анна Белова</h3><p>Руководитель дизайн-центра</p></div></article>
+              <article class="person person--maxim"><div class="person__photo" role="img" aria-label="Портрет Максима Орлова"></div><div class="person__meta"><h3>Максим Орлов</h3><p>Руководитель продуктового дизайна</p></div></article>
+              <article class="person person--elena"><div class="person__photo" role="img" aria-label="Портрет Елены Соколовой"></div><div class="person__meta"><h3>Елена Соколова</h3><p>Руководитель коммуникационного дизайна</p></div></article>
+              <article class="person person--ilya"><div class="person__photo" role="img" aria-label="Портрет Ильи Воронова"></div><div class="person__meta"><h3>Илья Воронов</h3><p>Арт-директор</p></div></article>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -179,6 +172,10 @@
       updateScrollReveal();
       window.addEventListener('scroll', updateScrollReveal, { passive: true });
       window.addEventListener('resize', updateScrollReveal);
+
+      const teamViewport = document.querySelector('[data-team-viewport]');
+      document.querySelector('[data-team-prev]').addEventListener('click', () => teamViewport.scrollBy({ left: -260, behavior: 'smooth' }));
+      document.querySelector('[data-team-next]').addEventListener('click', () => teamViewport.scrollBy({ left: 260, behavior: 'smooth' }));
 
       const pageMain = document.querySelector('main');
       const stickyFooter = document.querySelector('.footer');
