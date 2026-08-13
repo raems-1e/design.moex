@@ -52,7 +52,7 @@
           <div class="structure__tag" data-reveal><img src="assets/mission-icon.svg" alt="" />Миссия и структура</div>
           <div class="structure__copy" data-reveal>
             <p class="kicker">Как устроен дизайн в MOEX</p>
-            <h2 class="scroll-reveal" data-scroll-reveal>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с брендом на всех точках контакта — от рекламного баннера до сложного торгового терминала.</h2>
+            <h2 class="scroll-reveal" data-scroll-reveal>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с&nbsp;брендом на&nbsp;всех точках контакта — от&nbsp;рекламного баннера до&nbsp;сложного торгового терминала.</h2>
           </div>
         </div>
       </section>
@@ -178,7 +178,7 @@
       window.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuState(false); });
 
       const scrollReveal = document.querySelector('[data-scroll-reveal]');
-      const revealWords = scrollReveal.textContent.trim().split(/\s+/);
+      const revealWords = scrollReveal.textContent.trim().split(/ +/);
       scrollReveal.innerHTML = revealWords.map((word) => `<span>${word}</span>`).join(' ');
 
       const updateScrollReveal = () => {
