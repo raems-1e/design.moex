@@ -23,60 +23,55 @@
               <section><p>Коммуникационный дизайн</p><a href="#communication">Бренд и айдентика</a><a href="#communication">Портфолио отдела</a></section>
               <section><p>Продуктовый дизайн</p><a href="#product">Основа системы</a><a href="#product">Компоненты</a><a href="#product">Паттерны</a><a href="#product">Продукты и сайты</a><a href="#product">Вайркодинг</a><a href="#product">Портфолио отдела</a></section>
             </div>
-            <a class="nav__cta" href="#contacts">Связаться с нами</a>
+            <a class="nav__cta" href="#structure">Библиотека</a>
             <button class="menu-close" type="button" aria-label="Закрыть меню"><span></span><span></span></button>
           </nav>
           <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
         </header>
         <div class="container hero__content">
-          <div class="eyebrow">Московская Биржа • MOEX</div>
-          <h1>Единый стандарт дизайна и опыта главной биржи страны</h1>
-          <p>Дизайн-центр Московской Биржи проектирует экосистемы, создаёт современные цифровые продукты и формирует доверие через визуальный язык коммуникации.</p>
+          <article class="hero__main">
+            <div class="eyebrow">Московская Биржа • MOEX</div>
+            <h1>Единый стандарт дизайна и опыта главной биржи страны</h1>
+            <p>Дизайн-центр Московской Биржи проектирует экосистемы, создаёт современные цифровые продукты и формирует доверие через визуальный язык коммуникации.</p>
+          </article>
+          <a class="hero__direction hero__direction--communication" id="communication" href="#structure">
+            <span>Иллюстрации, шрифты, цвета</span>
+            <strong>Коммуникационный<br />дизайн</strong>
+          </a>
+          <a class="hero__direction hero__direction--product" id="product" href="#structure">
+            <span>Гайдлайны, интерфейсы</span>
+            <strong>Продуктовый<br />дизайн</strong>
+          </a>
         </div>
       </section>
 
-      <section class="structure section-grid">
+      <section class="structure section-grid" id="structure">
         <div class="container structure__inner">
           <div class="structure__tag" data-reveal><img src="assets/mission-icon.svg" alt="" />Миссия и структура</div>
           <div class="structure__copy" data-reveal>
             <p class="kicker">Как устроен дизайн в MOEX</p>
-            <h2 class="scroll-reveal" data-scroll-reveal>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с брендом на всех точках контакта — от рекламного баннера до сложного торгового терминала.</h2>
-          </div>
-          <div class="cards">
-            <article class="card" id="product" data-reveal>
-              <p class="card__label">Продуктовый дизайн</p>
-              <h3>Дизайн-система и цифровые сервисы. Обеспечение удобного, быстрого и интуитивного доступа к торгам и аналитике.</h3>
-            </article>
-            <article class="card" id="communication" data-reveal>
-              <p class="card__label">Коммуникационный дизайн</p>
-              <h3>Бренд, айдентика и визуальные коммуникации биржи. Создание сильного образа надежной финансовой структуры.</h3>
-            </article>
+            <h2 class="scroll-reveal" data-scroll-reveal>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с&nbsp;брендом на&nbsp;всех точках контакта — от&nbsp;рекламного баннера до&nbsp;сложного торгового терминала.</h2>
           </div>
         </div>
       </section>
 
       <section class="team" id="team">
-        <div class="container team__grid">
-          <div class="team__intro" data-reveal>
-            <p class="team__kicker"><span></span>Наша команда</p>
-            <h2>Знакомьтесь<br />с командой</h2>
+        <div class="container team__shell" data-reveal>
+          <div class="team__heading">
+            <div><p class="team__kicker"><span></span>Наша команда</p><h2>Познакомьтесь<br />с командой</h2></div>
+            <div class="team__controls" aria-label="Навигация по команде"><button type="button" data-team-prev aria-label="Предыдущие участники">‹</button><button type="button" data-team-next aria-label="Следующие участники">›</button></div>
           </div>
-          <article class="person person--anna" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Анны Беловой"></div>
-            <div class="person__meta"><h3>Анна Белова</h3><p>Руководитель дизайн-центра</p></div>
-          </article>
-          <article class="person person--maxim" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Максима Орлова"></div>
-            <div class="person__meta"><h3>Максим Орлов</h3><p>Руководитель продуктового дизайна</p></div>
-          </article>
-          <article class="person person--elena" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Елены Соколовой"></div>
-            <div class="person__meta"><h3>Елена Соколова</h3><p>Руководитель коммуникационного дизайна</p></div>
-          </article>
-          <article class="person person--ilya" data-reveal>
-            <div class="person__photo" role="img" aria-label="Портрет Ильи Воронова"></div>
-            <div class="person__meta"><h3>Илья Воронов</h3><p>Арт-директор</p></div>
-          </article>
+          <div class="team__viewport" data-team-viewport>
+            <div class="team__track">
+              <article class="team-lead"><p>Дизайн-центр MOEX</p><strong>Мы создаём целостный опыт для&nbsp;продуктов и&nbsp;коммуникаций биржи.</strong><span>Команда объединяет исследования, дизайн и&nbsp;технологии.</span></article>
+              <article class="person person--new-6"><div class="person__photo" role="img" aria-label="Портрет Василия Акулова"></div><div class="person__meta"><h3>Василий Акулов</h3><p>Креативный директор</p></div></article>
+              <article class="person person--new-4"><div class="person__photo" role="img" aria-label="Портрет Игоря Семенова"></div><div class="person__meta"><h3>Игорь Семенов</h3><p>Руководитель группы</p></div></article>
+              <article class="person person--new-5"><div class="person__photo" role="img" aria-label="Портрет Константина Афанасьева"></div><div class="person__meta"><h3>Константин Афанасьев</h3><p>Старший дизайнер</p></div></article>
+              <article class="person person--new-2"><div class="person__photo" role="img" aria-label="Портрет Владислава Асламова"></div><div class="person__meta"><h3>Владислав Асламов</h3><p>Руководитель направления</p></div></article>
+              <article class="person person--new-3"><div class="person__photo" role="img" aria-label="Портрет Андрея Миренкова"></div><div class="person__meta"><h3>Андрей Миренков</h3><p>Программист</p></div></article>
+              <article class="person person--new-1"><div class="person__photo" role="img" aria-label="Портрет Олега Васильева"></div><div class="person__meta"><h3>Олег Васильев</h3><p>Старший дизайнер</p></div></article>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -102,16 +97,20 @@
     </footer>
     <script>
       const header = document.querySelector('[data-site-header]');
+      const hero = document.querySelector('.hero');
       const lightSections = document.querySelectorAll('.structure, .team');
       const logo = header.querySelector('.logo');
 
       const updateHeaderTheme = () => {
         const logoBounds = logo.getBoundingClientRect();
+        const heroBounds = hero.getBoundingClientRect();
+        const heroLightStart = heroBounds.top + (window.innerWidth <= 800 ? 96 : 87);
+        const isOverHeroLightShape = logoBounds.bottom > heroLightStart && logoBounds.top < heroBounds.bottom;
         const isOverLightSection = [...lightSections].some((section) => {
           const sectionBounds = section.getBoundingClientRect();
           return sectionBounds.top < logoBounds.bottom && sectionBounds.bottom > logoBounds.top;
         });
-        header.classList.toggle('is-light', isOverLightSection);
+        header.classList.toggle('is-light', isOverHeroLightShape || isOverLightSection);
       };
 
       updateHeaderTheme();
@@ -129,7 +128,19 @@
 
       document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
 
-      document.querySelectorAll('.nav a:not(.nav__cta), .footer__columns a').forEach((link) => {
+      document.querySelectorAll('.nav a:not(.nav__cta)').forEach((link) => {
+        const label = link.textContent.trim();
+        link.setAttribute('aria-label', label);
+        link.textContent = '';
+
+        const word = document.createElement('span');
+        word.className = 'letter-swap nav__word-swap';
+        word.dataset.letter = label;
+        word.setAttribute('aria-hidden', 'true');
+        link.append(word);
+      });
+
+      document.querySelectorAll('.footer__columns a').forEach((link) => {
         const label = link.textContent.trim();
         link.setAttribute('aria-label', label);
         link.textContent = '';
@@ -160,7 +171,7 @@
       window.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuState(false); });
 
       const scrollReveal = document.querySelector('[data-scroll-reveal]');
-      const revealWords = scrollReveal.textContent.trim().split(/\s+/);
+      const revealWords = scrollReveal.textContent.trim().split(/ +/);
       scrollReveal.innerHTML = revealWords.map((word) => `<span>${word}</span>`).join(' ');
 
       const updateScrollReveal = () => {
@@ -173,6 +184,10 @@
       updateScrollReveal();
       window.addEventListener('scroll', updateScrollReveal, { passive: true });
       window.addEventListener('resize', updateScrollReveal);
+
+      const teamViewport = document.querySelector('[data-team-viewport]');
+      document.querySelector('[data-team-prev]').addEventListener('click', () => teamViewport.scrollBy({ left: -260, behavior: 'smooth' }));
+      document.querySelector('[data-team-next]').addEventListener('click', () => teamViewport.scrollBy({ left: 260, behavior: 'smooth' }));
 
       const pageMain = document.querySelector('main');
       const stickyFooter = document.querySelector('.footer');
