@@ -50,7 +50,7 @@ h2 { margin:0; font-size:32px; line-height:1.2; letter-spacing:-.64px; }
 .card__label { color:var(--red); }
 h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:-.4px; }
 .team { padding:96px 0; background:#fff; }
-.team__shell { container-type:inline-size; padding:48px; background:#fff; overflow:hidden; }
+.team__shell { container-type:inline-size; padding:48px; background:#fff; overflow:visible; }
 .team__heading { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:36px; }
 .team__kicker { display:flex; align-items:center; gap:10px; margin:0 0 18px; color:var(--red); font-size:12px; font-weight:700; letter-spacing:.52px; text-transform:uppercase; }
 .team__kicker span { display:block; width:9px; height:9px; background:var(--red); }
@@ -60,7 +60,7 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .team__controls button::before { position:absolute; top:50%; left:50%; width:7px; height:7px; border-bottom:1.5px solid currentColor; border-left:1.5px solid currentColor; content:""; transform:translate(-40%,-50%) rotate(45deg); }
 .team__controls button[data-team-next]::before { transform:translate(-60%,-50%) rotate(225deg); }
 .team__controls button:hover { background:#d80003; transform:scale(1.06); }
-.team__viewport { overflow-x:auto; scrollbar-width:none; }
+.team__viewport { width:100vw; margin-left:calc(50% - 50vw); padding:0 max(var(--side), calc((100vw - 1310px) / 2)); overflow-x:auto; scrollbar-width:none; }
 .team__viewport::-webkit-scrollbar { display:none; }
 .team__track { display:flex; gap:8px; width:max-content; }
 .team-lead,.person { width:calc((100cqw - 16px) / 3); min-height:382px; flex:0 0 calc((100cqw - 16px) / 3); border-radius:12px; overflow:hidden; }
@@ -123,6 +123,7 @@ main.footer-is-sticky { margin-bottom:var(--footer-space); }
   .header .logo { transform:translateY(1px); }
   .team { padding:40px 0; }
   .team__shell { width:100%; padding:28px 16px; }
+  .team__viewport { padding:0 16px; }
   .team__heading { align-items:flex-end; margin-bottom:24px; }
   .team__heading h2 { font-size:27px; }
   .team__kicker { margin-bottom:12px; }
