@@ -57,6 +57,13 @@ h2 { margin:0; font-size:32px; line-height:1.2; letter-spacing:-.64px; }
 .principle-card:hover > svg circle { transform:scale(1); }
 .principle-card h3 { margin:0 0 10px; font-size:18px; letter-spacing:-.5px; }
 .principle-card p { margin:0; color:rgba(255,255,255,.62); font-size:13px; line-height:1.45; }
+@media (hover:hover) and (pointer:fine) {
+  .principle-card--artista > svg path { stroke-dasharray:720; stroke-dashoffset:720; transition:stroke-dashoffset .85s cubic-bezier(.6,.04,.98,.335); }
+  .principle-card--artista > svg path:nth-child(1) { transition-delay:0s; }
+  .principle-card--artista > svg path:nth-child(2) { transition-delay:.14s; }
+  .principle-card--artista:hover > svg path { stroke-dashoffset:0; }
+  .principle-card--artista:hover > svg circle { transform:scale(1); }
+}
 .scroll-reveal { color:#b6b6b6; }
 .scroll-reveal span { color:#b6b6b6; transition:color .28s ease; }
 .scroll-reveal span.is-active { color:var(--ink); }
