@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="270" viewBox="0 0 360 270" fill="none">
+  <rect width="360" height="270" rx="16" fill="#222629"></rect>
+  <g transform="translate(0,12)">
+    <path d="M44 168C104 168 128 44 316 44" stroke="rgba(255,255,255,0.30)" stroke-width="1.5"></path>
+    <path d="M44 168h272" stroke="rgba(255,255,255,0.14)"></path>
+    <path d="M44 168V40" stroke="rgba(255,255,255,0.14)"></path>
+    <circle cx="118" cy="120" r="4" fill="#ffffff"></circle>
+    <circle cx="196" cy="60" r="4" fill="#ffffff"></circle>
+    <path d="M70 92h44" stroke="rgba(255,255,255,0.28)" stroke-width="9" stroke-linecap="round"></path>
+    <path d="M146 78h60" stroke="rgba(255,255,255,0.55)" stroke-width="11" stroke-linecap="round"></path>
+    <path d="M226 60h74" stroke="#ffffff" stroke-width="14" stroke-linecap="round"></path>
+  </g>
+  <text x="24" y="240" font-family="Inter, sans-serif" font-size="17" font-weight="600" letter-spacing="-0.17" fill="#ffffff">Контраст по стандарту APCA</text>
+</svg>
