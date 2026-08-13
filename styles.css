@@ -64,15 +64,16 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .team__viewport { width:100vw; margin-left:calc(50% - 50vw); padding:0 max(48px, calc((100vw - 1214px) / 2)); overflow-x:auto; scrollbar-width:none; }
 .team__viewport::-webkit-scrollbar { display:none; }
 .team__track { display:flex; gap:8px; width:max-content; }
-.team-lead,.person { width:calc((100cqw - 16px) / 3); min-height:382px; flex:0 0 calc((100cqw - 16px) / 3); border-radius:12px; overflow:hidden; }
+.team-lead,.person { width:calc((100cqw - 16px) / 3); min-height:474px; flex:0 0 calc((100cqw - 16px) / 3); border-radius:12px; overflow:hidden; }
 .team-lead { display:flex; padding:24px; flex-direction:column; background:var(--red); color:#fff; }
 .team-lead p { margin:0 0 20px; color:rgba(255,255,255,.7); font-size:12px; }
 .team-lead strong { font-size:23px; line-height:1.1; letter-spacing:-.8px; }
 .team-lead span { margin-top:auto; color:rgba(255,255,255,.7); font-size:12px; line-height:1.4; }
-.person { display:flex; flex-direction:column; justify-content:space-between; background:#161616; }
-.person__photo { position:relative; min-height:220px; flex:1; overflow:hidden; background-repeat:no-repeat; background-position:center; background-size:cover; transition:filter .28s ease; }
+.person { position:relative; display:flex; flex-direction:column; justify-content:space-between; background:#161616; }
+.person::after { position:absolute; z-index:1; right:0; bottom:0; left:0; height:42%; background:linear-gradient(transparent,rgba(0,0,0,.78)); content:""; pointer-events:none; }
+.person__photo { position:relative; min-height:220px; flex:1; overflow:hidden; background-repeat:no-repeat; background-position:center 32%; background-size:cover; transition:filter .28s ease,background-size .42s cubic-bezier(.2,.75,.25,1); }
 .person__photo::after { position:absolute; inset:0; background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.5) 1px,transparent 1.15px); background-position:0 0; background-size:2px 2px; content:""; mix-blend-mode:multiply; opacity:0; pointer-events:none; transition:opacity .2s ease; }
-.person:hover .person__photo { filter:contrast(1.08) saturate(.96); }
+.person:hover .person__photo { background-size:110%; filter:contrast(1.08) saturate(.96); }
 .person:hover .person__photo::after { opacity:.5; animation:team-dither .18s steps(2,end) infinite; }
 .person--anna .person__photo { background-image:url('assets/person-anna.jpg'); }
 .person--maxim .person__photo { background-image:url('assets/person-maxim.jpg'); }
@@ -85,7 +86,8 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .person--new-4 .person__photo { background-image:url('assets/person-new-4.png'); }
 .person--new-5 .person__photo { background-image:url('assets/person-new-5.png'); }
 .person--new-6 .person__photo { background-image:url('assets/person-new-6.png'); }
-.person__meta { min-height:70px; padding:12px 16px 16px; background:#161616; color:#fff; }
+.person__meta { position:absolute; z-index:2; right:0; bottom:0; left:0; min-height:70px; padding:12px 16px 16px; color:#fff; opacity:0; transform:translateY(10px); transition:opacity .25s ease,transform .25s ease; }
+.person:hover .person__meta { opacity:1; transform:none; }
 .person__meta h3 { margin:0 0 4px; font-size:16px; font-weight:600; line-height:1.05; letter-spacing:-.6px; }
 .person__meta p { margin:0; color:rgba(255,255,255,.65); font-size:11px; }
 main { position:relative; z-index:1; background:#fff; }
@@ -136,9 +138,10 @@ main.footer-is-sticky { margin-bottom:var(--footer-space); }
   .team__heading h2 { font-size:27px; }
   .team__kicker { margin-bottom:12px; }
   .team__track { gap:8px; }
-  .team-lead,.person { width:254px; min-height:402px; flex-basis:254px; }
-  .person,.person--elena,.person--ilya { min-height:402px; }
-  .person__photo { min-height:238px; }
+  .team-lead,.person { width:254px; min-height:494px; flex-basis:254px; }
+  .person,.person--elena,.person--ilya { min-height:494px; }
+  .person__photo { min-height:238px; background-position:center 26%; }
+  .person__meta { opacity:1; transform:none; }
   .hero { min-height:auto; padding-top:112px; background-image:none; }
   .hero::before { top:96px; height:auto; border-radius:24px 24px 0 0; }
   .hero::after { top:90px; height:72px; filter:blur(72px); }
