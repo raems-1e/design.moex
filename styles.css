@@ -32,7 +32,7 @@ a { color:inherit; text-decoration:none; }
 .hero__direction strong { position:relative; z-index:1; font-size:20px; line-height:1.12; letter-spacing:-.6px; }
 .hero__direction--communication img { position:absolute; z-index:0; top:-36px; right:-8px; width:170px; }
 .hero__direction--product img { position:absolute; z-index:0; top:20px; right:24px; width:calc(100% - 48px); max-height:94px; object-fit:contain; }
-.eyebrow { align-self:flex-start; display:inline-block; padding:6px 12px; border-radius:6px; background:#fdf5f1; color:var(--red); font-size:13px; font-weight:600; }
+.eyebrow { align-self:flex-start; display:inline-block; padding:6px 12px; border-radius:6px; background:#f3ebdd; color:var(--red); font-size:13px; font-weight:600; }
 h1 { max-width:515px; margin:16px 0 24px; font-size:32px; font-weight:700; line-height:1.09; letter-spacing:-1.6px; }
 .hero__main > p { max-width:532px; margin:0; color:#727272; font-size:16px; font-weight:500; line-height:1.5; }
 .section-grid { background-color:var(--paper); background-image:none; }
