@@ -72,8 +72,10 @@ h2 { margin:0; font-size:32px; line-height:1.2; letter-spacing:-.64px; }
   .nav > a:not(.nav__cta) { max-width:0; margin:0; opacity:0; overflow:hidden; transition:max-width .72s cubic-bezier(.2,.8,.2,1),margin .72s cubic-bezier(.2,.8,.2,1),opacity .35s ease; }
   .nav__burger { position:relative; z-index:2; display:grid; width:40px; min-width:40px; height:40px; flex:0 0 40px; place-content:center; gap:6px; border:0; background:transparent; cursor:pointer; }
   .nav__burger span { display:block; width:18px; height:2px; background:#fff; }
-  .nav:hover,.nav:focus-within { gap:32px; padding:10px 10px 10px 16px; }
+  .nav:hover,.nav:focus-within { gap:36px; padding:10px 10px 10px 16px; }
   .nav:hover > a:not(.nav__cta),.nav:focus-within > a:not(.nav__cta) { max-width:230px; margin-right:0; opacity:1; }
+  .nav:hover .nav__burger,.nav:focus-within .nav__burger { width:0; min-width:0; flex-basis:0; opacity:0; transform:scale(.7); }
+  .nav__burger { transition:width .35s ease,min-width .35s ease,flex-basis .35s ease,opacity .22s ease,transform .35s ease; }
 }
 @keyframes tokens-draw { 0% { stroke-dashoffset:680; opacity:1; } 85% { stroke-dashoffset:0; opacity:1; } 100% { stroke-dashoffset:0; opacity:0; } }
 .scroll-reveal { color:#b6b6b6; }
