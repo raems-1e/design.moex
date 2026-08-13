@@ -9,7 +9,7 @@ a { color:inherit; text-decoration:none; }
 .header { position:fixed; z-index:10; top:0; left:50%; display:flex; height:87px; align-items:center; justify-content:space-between; padding:0; transform:translateX(-50%); }
 .logo img { display:block; width:109px; height:34px; }
 .logo img,.header.is-light .logo img { filter:brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(4908%) hue-rotate(353deg) brightness(108%) contrast(106%); }
-.nav { display:flex; align-items:center; gap:32px; padding:10px 10px 10px 24px; border-radius:12px; background:rgba(148,148,148,.72); color:#fff; font-size:14px; font-weight:600; letter-spacing:-.28px; transition:background .25s ease; }
+.nav { display:flex; align-items:center; gap:32px; padding:10px 10px 10px 24px; border-radius:12px; background:#151515; color:#fff; font-size:14px; font-weight:600; letter-spacing:-.28px; transition:background .25s ease; }
 .nav a { display:inline-flex; align-items:baseline; white-space:nowrap; }
 .nav > a:not(.nav__cta) { transform:translateY(-1px); }
 .letter-swap { position:relative; display:inline-block; height:1.25em; overflow:hidden; vertical-align:bottom; }
@@ -19,7 +19,7 @@ a { color:inherit; text-decoration:none; }
 .nav a:hover .letter-swap::before,.nav a:focus-visible .letter-swap::before,.footer__columns a:hover .letter-swap::before,.footer__columns a:focus-visible .letter-swap::before { opacity:0; transform:translateY(-105%); }
 .nav a:hover .letter-swap::after,.nav a:focus-visible .letter-swap::after,.footer__columns a:hover .letter-swap::after,.footer__columns a:focus-visible .letter-swap::after { opacity:1; transform:translateY(-105%); }
 .nav__cta,.header.is-light .nav__cta { display:inline-flex; align-items:center; gap:9px; padding:10px 20px; border-radius:9px; background:#fff; color:var(--ink); font-size:14px; }
-.header.is-light .nav { gap:32px; padding:10px 10px 10px 24px; border-radius:12px; background:rgba(148,148,148,.72); color:#fff; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+.header.is-light .nav { gap:32px; padding:10px 10px 10px 24px; border-radius:12px; background:#151515; color:#fff; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
 .menu-button { display:none; border:0; background:transparent; }
 .nav__mobile-links,.menu-close { display:none; }
 .hero__content { position:relative; z-index:2; display:grid; grid-template-columns:2fr 1fr; grid-template-rows:1fr 1fr; gap:8px; min-height:444px; padding-bottom:57px; }
@@ -69,20 +69,21 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .team-lead span { margin-top:auto; color:rgba(255,255,255,.7); font-size:12px; line-height:1.4; }
 .person { position:relative; display:flex; flex-direction:column; justify-content:space-between; background:#161616; }
 .person::after { position:absolute; z-index:1; right:0; bottom:0; left:0; height:42%; background:linear-gradient(transparent,rgba(0,0,0,.78)); content:""; pointer-events:none; }
-.person__photo { position:relative; min-height:220px; flex:1; overflow:hidden; background-repeat:no-repeat; background-position:center 32%; background-size:cover; transition:background-size 1.1s cubic-bezier(.2,.75,.25,1); will-change:background-size; }
+.person__photo { position:relative; min-height:220px; flex:1; overflow:hidden; }
+.person__photo::before { position:absolute; inset:0; background:var(--person-image) center 32% / cover no-repeat; content:""; transform:scale(1); transition:transform .8s cubic-bezier(.2,.75,.25,1); will-change:transform; }
 .person__photo::after { position:absolute; inset:0; background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.5) 1px,transparent 1.15px); background-position:0 0; background-size:2px 2px; content:""; mix-blend-mode:multiply; opacity:0; pointer-events:none; transition:opacity .2s ease; }
-.person:hover .person__photo { background-size:103%; }
-.person--anna .person__photo { background-image:url('assets/person-anna.jpg'); }
-.person--maxim .person__photo { background-image:url('assets/person-maxim.jpg'); }
-.person--elena .person__photo { background-image:url('assets/person-elena.jpg'); }
-.person--ilya .person__photo { background-image:url('assets/person-ilya.jpg'); }
-.person--konstantin .person__photo { background-image:url('assets/person-konstantin.png'); }
-.person--new-1 .person__photo { background-image:url('assets/person-new-1.png'); }
-.person--new-2 .person__photo { background-image:url('assets/person-new-2.png'); }
-.person--new-3 .person__photo { background-image:url('assets/person-new-3.png'); }
-.person--new-4 .person__photo { background-image:url('assets/person-new-4.png'); }
-.person--new-5 .person__photo { background-image:url('assets/person-new-5.png'); }
-.person--new-6 .person__photo { background-image:url('assets/person-new-6.png'); }
+.person:hover .person__photo::before { transform:scale(1.04); }
+.person--anna { --person-image:url('assets/person-anna.jpg'); }
+.person--maxim { --person-image:url('assets/person-maxim.jpg'); }
+.person--elena { --person-image:url('assets/person-elena.jpg'); }
+.person--ilya { --person-image:url('assets/person-ilya.jpg'); }
+.person--konstantin { --person-image:url('assets/person-konstantin.png'); }
+.person--new-1 { --person-image:url('assets/person-new-1.png'); }
+.person--new-2 { --person-image:url('assets/person-new-2.png'); }
+.person--new-3 { --person-image:url('assets/person-new-3.png'); }
+.person--new-4 { --person-image:url('assets/person-new-4.png'); }
+.person--new-5 { --person-image:url('assets/person-new-5.png'); }
+.person--new-6 { --person-image:url('assets/person-new-6.png'); }
 .person__meta { position:absolute; z-index:2; right:0; bottom:0; left:0; min-height:70px; padding:12px 16px 16px; color:#fff; opacity:0; transform:translateY(10px); transition:opacity .25s ease,transform .25s ease; }
 .person:hover .person__meta { opacity:1; transform:none; }
 .person__meta h3 { margin:0 0 4px; font-size:16px; font-weight:600; line-height:1.05; letter-spacing:-.6px; }
