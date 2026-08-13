@@ -77,6 +77,7 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .person--maxim .person__photo { background-image:url('assets/person-maxim.jpg'); }
 .person--elena .person__photo { background-image:url('assets/person-elena.jpg'); }
 .person--ilya .person__photo { background-image:url('assets/person-ilya.jpg'); }
+.person--konstantin .person__photo { background-image:url('assets/person-konstantin.png'); }
 .person__meta { min-height:70px; padding:12px 16px 16px; background:#161616; color:#fff; }
 .person__meta h3 { margin:0 0 4px; font-size:16px; font-weight:600; line-height:1.05; letter-spacing:-.6px; }
 .person__meta p { margin:0; color:rgba(255,255,255,.65); font-size:11px; }
