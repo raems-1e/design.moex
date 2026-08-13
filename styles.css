@@ -70,10 +70,9 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .team-lead span { margin-top:auto; color:rgba(255,255,255,.7); font-size:12px; line-height:1.4; }
 .person { position:relative; display:flex; flex-direction:column; justify-content:space-between; background:#161616; }
 .person::after { position:absolute; z-index:1; right:0; bottom:0; left:0; height:42%; background:linear-gradient(transparent,rgba(0,0,0,.78)); content:""; pointer-events:none; }
-.person__photo { position:relative; min-height:220px; flex:1; overflow:hidden; background-repeat:no-repeat; background-position:center 32%; background-size:cover; transition:filter .28s ease,background-size .42s cubic-bezier(.2,.75,.25,1); }
+.person__photo { position:relative; min-height:220px; flex:1; overflow:hidden; background-repeat:no-repeat; background-position:center 32%; background-size:cover; transition:background-size .7s cubic-bezier(.2,.75,.25,1); }
 .person__photo::after { position:absolute; inset:0; background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.5) 1px,transparent 1.15px); background-position:0 0; background-size:2px 2px; content:""; mix-blend-mode:multiply; opacity:0; pointer-events:none; transition:opacity .2s ease; }
-.person:hover .person__photo { background-size:110%; filter:contrast(1.08) saturate(.96); }
-.person:hover .person__photo::after { opacity:.5; animation:team-dither .18s steps(2,end) infinite; }
+.person:hover .person__photo { background-size:104%; }
 .person--anna .person__photo { background-image:url('assets/person-anna.jpg'); }
 .person--maxim .person__photo { background-image:url('assets/person-maxim.jpg'); }
 .person--elena .person__photo { background-image:url('assets/person-elena.jpg'); }
