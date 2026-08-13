@@ -128,7 +128,19 @@
 
       document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
 
-      document.querySelectorAll('.nav a:not(.nav__cta), .footer__columns a').forEach((link) => {
+      document.querySelectorAll('.nav a:not(.nav__cta)').forEach((link) => {
+        const label = link.textContent.trim();
+        link.setAttribute('aria-label', label);
+        link.textContent = '';
+
+        const word = document.createElement('span');
+        word.className = 'letter-swap nav__word-swap';
+        word.dataset.letter = label;
+        word.setAttribute('aria-hidden', 'true');
+        link.append(word);
+      });
+
+      document.querySelectorAll('.footer__columns a').forEach((link) => {
         const label = link.textContent.trim();
         link.setAttribute('aria-label', label);
         link.textContent = '';
