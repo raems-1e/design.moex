@@ -136,7 +136,7 @@ main.footer-is-sticky { margin-bottom:var(--footer-space); }
 .footer__columns div { display:flex; flex-direction:column; gap:12px; font-size:14px; line-height:1.4; }
 .footer__columns p { margin:0 0 4px; color:#525252; font-size:13px; font-weight:700; letter-spacing:.52px; text-transform:uppercase; }
 .footer__brand { display:flex; align-items:flex-end; flex-direction:column; justify-content:space-between; min-height:260px; }
-.footer__wordmark { display:flex; flex-direction:column; align-items:flex-end; background:linear-gradient(270deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,.05) 48%,rgba(255,255,255,.05) 100%); -webkit-background-clip:text; background-clip:text; color:transparent; font-family:Manrope,Arial,sans-serif; font-size:clamp(70px,8vw,109px); font-weight:800; line-height:.79; letter-spacing:-7px; text-align:right; }
+.footer__wordmark { display:flex; flex-direction:column; align-items:flex-end; background:linear-gradient(270deg,rgba(255,255,255,.025) 0%,rgba(255,255,255,.025) 48%,rgba(255,255,255,.025) 100%); -webkit-background-clip:text; background-clip:text; color:transparent; font-family:Manrope,Arial,sans-serif; font-size:clamp(70px,8vw,109px); font-weight:800; line-height:.79; letter-spacing:-7px; text-align:right; }
 .footer__wordmark span { display:block; }
 .footer__brand > div { display:flex; align-items:center; gap:8px; font-family:Manrope,Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:0; }
 .anniversary { position:relative; display:grid; width:76px; height:76px; place-items:center; }

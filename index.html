@@ -102,8 +102,8 @@
           <div class="footer__brand"><strong class="footer__wordmark"><span class="wordmark__moex">MOEX</span><span class="wordmark__design">DESIGN</span></strong><div><span>’ 26</span><span class="anniversary" aria-label="MOEX 2026"><img class="anniversary__ring" src="assets/anniversary-mark.svg" alt="" /><span class="anniversary__center"><img src="assets/anniversary-mark.svg" alt="" /></span></span></div></div>
         </div>
         <div class="footer__bottom">
-          <div class="contacts"><div><span>Пишите нам</span><a href="mailto:design@moex.com">design@moex.com</a></div><div><span>Телефон</span><a href="tel:+74953633232">+7 (495) 363-3232</a></div></div>
-          <div class="legal"><span>2026</span><a href="#top">Политика конфиденциальности</a><div class="socials"><a href="#top" aria-label="Социальная сеть"><img src="assets/social-icon.svg" alt="" /></a><a href="#top" aria-label="Социальная сеть"><img src="assets/social-icon.svg" alt="" /></a></div></div>
+          <div class="contacts"><div><span>Пишите нам</span><a href="mailto:design@moex.com">design@moex.com</a></div></div>
+          <div class="legal"><span>2026</span><a href="#top">Политика конфиденциальности</a></div>
         </div>
       </div>
     </footer>
@@ -156,15 +156,11 @@
         const label = link.textContent.trim();
         link.setAttribute('aria-label', label);
         link.textContent = '';
-
-        [...label].forEach((letter, index) => {
-          const character = document.createElement('span');
-          character.className = letter === ' ' ? 'letter-swap letter-swap--space' : 'letter-swap';
-          character.style.setProperty('--letter-index', index);
-          character.setAttribute('aria-hidden', 'true');
-          if (letter !== ' ') character.dataset.letter = letter;
-          link.append(character);
-        });
+        const word = document.createElement('span');
+        word.className = 'letter-swap';
+        word.dataset.letter = label;
+        word.setAttribute('aria-hidden', 'true');
+        link.append(word);
       });
 
       const menuButton = document.querySelector('.menu-button');
