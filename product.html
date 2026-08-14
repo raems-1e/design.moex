@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Продуктовый дизайн Московской Биржи" />
+    <title>Продуктовый дизайн — MOEX Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="product-page is-intro-running">
+    <div class="page-intro" aria-hidden="true">
+      <span class="page-intro__slice" style="--intro-step:0"></span>
+      <span class="page-intro__slice" style="--intro-step:1"></span>
+      <span class="page-intro__slice" style="--intro-step:2"></span>
+      <span class="page-intro__slice" style="--intro-step:3"></span>
+      <span class="page-intro__slice" style="--intro-step:4"></span>
+    </div>
+
+    <main>
+      <header class="header container is-light" data-site-header>
+        <a class="logo" href="index.html" aria-label="MOEX Design — главная"><img src="assets/moex-logo.svg" alt="Московская Биржа" /></a>
+        <nav class="nav" id="main-navigation" aria-label="Основная навигация">
+          <button class="nav__burger" type="button" aria-label="Открыть навигацию"><span></span><span></span></button>
+          <a href="index.html#communication">Коммуникационный дизайн</a>
+          <a href="product.html" aria-current="page">Продуктовый дизайн</a>
+          <div class="nav__mobile-links">
+            <section><p>О центре</p><a href="index.html#structure">Миссия и структура</a><a href="index.html#team">Команда</a><a href="index.html#principles">Как мы работаем</a></section>
+            <section><p>Коммуникационный дизайн</p><a href="index.html#communication">Бренд и айдентика</a><a href="index.html#communication">Портфолио отдела</a></section>
+            <section><p>Продуктовый дизайн</p><a href="#foundation">Основа системы</a><a href="#components">Компоненты</a><a href="#patterns">Паттерны</a><a href="#products">Продукты и сайты</a><a href="#vibecoding">Вайбкодинг</a><a href="#portfolio">Портфолио отдела</a></section>
+          </div>
+          <a class="nav__cta" href="#product-map">Библиотека</a>
+          <button class="menu-close" type="button" aria-label="Закрыть меню"><span></span><span></span></button>
+        </nav>
+        <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
+      </header>
+
+      <section class="product-map" id="product-map">
+        <div class="container product-map__inner">
+          <a class="product-map__home" href="index.html">Главная</a>
+          <div class="product-map__branches">
+            <article class="sitemap-card sitemap-card--about">
+              <div class="sitemap-card__head">
+                <h2>О центре</h2>
+                <p>Кто мы, как устроен центр и как соотносятся два отдела.</p>
+                <span>/о-центре</span>
+              </div>
+              <div class="sitemap-card__items">
+                <a href="index.html#structure"><strong>Миссия и структура</strong></a>
+                <a href="index.html#team"><strong>Команда</strong></a>
+                <a href="index.html#principles"><strong>Как мы работаем</strong></a>
+              </div>
+            </article>
+
+            <article class="sitemap-card sitemap-card--communication">
+              <div class="sitemap-card__head">
+                <h2>Коммуникационный дизайн</h2>
+                <p>Бренд, айдентика и визуальные коммуникации биржи.</p>
+                <span>/дизайн/коммуникации</span>
+              </div>
+              <div class="sitemap-card__items">
+                <a href="index.html#communication"><strong>Бренд и айдентика</strong><small>лого, цвет, шрифты</small></a>
+                <a href="index.html#communication"><strong>Портфолио отдела</strong><small>брендинг, события, печать</small></a>
+              </div>
+            </article>
+
+            <article class="sitemap-card sitemap-card--product">
+              <div class="sitemap-card__head">
+                <h1>Продуктовый дизайн</h1>
+                <p>Дизайн-система и цифровые продукты биржи.</p>
+                <span>/дизайн/продукт</span>
+              </div>
+              <div class="sitemap-card__items">
+                <a id="foundation" href="#foundation"><strong>Основа</strong><small>цвет, шрифты, сетка</small></a>
+                <a id="components" href="#components"><strong>Компоненты</strong><small>элементы интерфейса</small></a>
+                <a id="patterns" href="#patterns"><strong>Паттерны</strong><small>формы, навигация</small></a>
+                <a id="products" href="#products"><strong>Продукты и сайты</strong><small>витрина, применение</small></a>
+                <a id="vibecoding" href="#vibecoding"><strong>Вайбкодинг</strong><small>библиотека промптов</small></a>
+                <a id="portfolio" href="#portfolio"><strong>Портфолио отдела</strong><small>продуктовые кейсы</small></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <div class="footer__top">
+          <div class="footer__links">
+            <img class="footer__logo" src="assets/moex-logo-footer.svg" alt="Московская Биржа" />
+            <div class="footer__columns">
+              <div><p>О центре</p><a href="index.html#structure">Миссия и структура</a><a href="index.html#team">Команда</a><a href="index.html#principles">Как мы работаем</a></div>
+              <div><p>Коммуникации</p><a href="index.html#communication">Бренд и айдентика</a><a href="index.html#communication">Портфолио отдела</a></div>
+              <div><p>Продукты</p><a href="#foundation">Основа системы</a><a href="#components">Компоненты</a><a href="#patterns">Паттерны</a><a href="#products">Продукты и сайты</a><a href="#vibecoding">Вайбкодинг</a><a href="#portfolio">Портфолио отдела</a></div>
+            </div>
+          </div>
+          <div class="footer__brand"><strong class="footer__wordmark"><span class="wordmark__moex">MOEX</span><span class="wordmark__design">DESIGN</span></strong><div><span>’ 26</span><span class="anniversary" aria-label="MOEX 2026"><img class="anniversary__ring" src="assets/anniversary-mark.svg" alt="" /><span class="anniversary__center"><img src="assets/anniversary-mark.svg" alt="" /></span></span></div></div>
+        </div>
+        <div class="footer__bottom">
+          <div class="contacts"><div><span>Пишите нам</span><a href="mailto:design@moex.com">design@moex.com</a></div></div>
+          <div class="legal"><span>2026</span><a href="index.html">Политика конфиденциальности</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const pageIntro = document.querySelector('.page-intro');
+      const finishPageIntro = () => {
+        if (!pageIntro || pageIntro.classList.contains('is-finished')) return;
+        pageIntro.classList.add('is-finished');
+        document.body.classList.remove('is-intro-running');
+        window.setTimeout(() => pageIntro.remove(), 160);
+      };
+
+      pageIntro?.lastElementChild?.addEventListener('animationend', finishPageIntro, { once: true });
+      window.setTimeout(finishPageIntro, 2600);
+
+      document.querySelectorAll('.nav a:not(.nav__cta)').forEach((link) => {
+        const label = link.textContent.trim();
+        link.setAttribute('aria-label', label);
+        link.textContent = '';
+        const word = document.createElement('span');
+        word.className = 'letter-swap nav__word-swap';
+        word.dataset.letter = label;
+        word.setAttribute('aria-hidden', 'true');
+        link.append(word);
+      });
+
+      document.querySelectorAll('.footer__columns a').forEach((link) => {
+        const label = link.textContent.trim();
+        link.setAttribute('aria-label', label);
+        link.textContent = '';
+        const word = document.createElement('span');
+        word.className = 'letter-swap';
+        word.dataset.letter = label;
+        word.setAttribute('aria-hidden', 'true');
+        link.append(word);
+      });
+
+      const menuButton = document.querySelector('.menu-button');
+      const mainNavigation = document.querySelector('.nav');
+      const setMenuState = (isOpen) => {
+        mainNavigation.classList.toggle('is-open', isOpen);
+        menuButton.classList.toggle('is-open', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+      };
+
+      menuButton.addEventListener('click', () => setMenuState(!mainNavigation.classList.contains('is-open')));
+      mainNavigation.querySelector('.menu-close').addEventListener('click', () => setMenuState(false));
+      mainNavigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuState(false)));
+      window.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuState(false); });
+
+      const pageMain = document.querySelector('main');
+      const stickyFooter = document.querySelector('.footer');
+      const updateStickyFooter = () => {
+        const footerHeight = stickyFooter.offsetHeight;
+        const canStick = footerHeight < window.innerHeight * .94;
+        document.documentElement.style.setProperty('--footer-space', `${footerHeight}px`);
+        stickyFooter.classList.toggle('footer--sticky', canStick);
+        pageMain.classList.toggle('footer-is-sticky', canStick);
+      };
+
+      updateStickyFooter();
+      window.addEventListener('resize', updateStickyFooter);
+    </script>
+  </body>
+</html>
