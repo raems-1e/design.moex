@@ -7,31 +7,30 @@
     <title>MOEX Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/preloader.css" />
+    <script src="assets/animated-gradient.js" defer></script>
+    <script src="assets/preloader.js" defer></script>
+    <noscript><style>body{overflow:auto!important}body>main,body>footer{opacity:1!important}</style></noscript>
   </head>
-  <body class="is-intro-running">
-    <div class="page-intro" aria-hidden="true">
-      <span class="page-intro__slice" style="--intro-step:0"></span>
-      <span class="page-intro__slice" style="--intro-step:1"></span>
-      <span class="page-intro__slice" style="--intro-step:2"></span>
-      <span class="page-intro__slice" style="--intro-step:3"></span>
-      <span class="page-intro__slice" style="--intro-step:4"></span>
-    </div>
+  <body class="is-preloader-active">
     <main>
       <section class="hero" id="top">
         <header class="header container" data-site-header>
-          <a class="logo" href="#top" aria-label="MOEX Design"><img src="assets/moex-design.svg" alt="MOEX Design" /></a>
+          <a class="logo" href="#top" aria-label="MOEX Design"><img src="assets/moex-logotype.svg" alt="MOEX Design" /></a>
           <nav class="nav" id="main-navigation" aria-label="Основная навигация">
             <button class="nav__burger" type="button" aria-label="Открыть навигацию"><span></span><span></span></button>
-            <a href="#communication">Коммуникационный дизайн</a>
-            <a href="product.html">Продуктовый дизайн</a>
+            <div class="nav__desktop-links">
+              <a href="#communication">Коммуникационный дизайн</a>
+              <a href="product.html">Продуктовый дизайн</a>
+            </div>
             <div class="nav__mobile-links">
               <section><p>О центре</p><a href="#top">Миссия и структура</a><a href="#team">Команда</a><a href="product.html#principles">Как мы работаем</a></section>
               <section><p>Коммуникационный дизайн</p><a href="#communication">Бренд и айдентика</a><a href="#communication">Портфолио отдела</a></section>
               <section><p>Продуктовый дизайн</p><a href="product.html#foundation">Основа системы</a><a href="product.html#components">Компоненты</a><a href="product.html#patterns">Паттерны</a><a href="product.html#products">Продукты и сайты</a><a href="product.html#vibecoding">Вайбкодинг</a><a href="product.html#portfolio">Портфолио отдела</a></section>
             </div>
-            <a class="nav__cta" href="#structure">Библиотека</a>
+            <a class="nav__cta" href="materials.html"><img src="assets/arrow-down-to-line.svg" alt="" aria-hidden="true" /><span>Скачать материалы</span></a>
             <button class="menu-close" type="button" aria-label="Закрыть меню"><span></span><span></span></button>
           </nav>
           <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
@@ -39,7 +38,7 @@
         <div class="container hero__content">
           <article class="hero__main">
             <div class="eyebrow">Московская Биржа • MOEX</div>
-            <h1>Единый стандарт дизайна и опыта главной биржи страны</h1>
+            <h1>Единый стандарт дизайна и&nbsp;опыта главной биржи страны</h1>
             <p>Дизайн-центр Московской Биржи проектирует экосистемы, создаёт современные цифровые продукты и формирует доверие через визуальный язык коммуникации.</p>
             <img class="hero__art" src="assets/hero-growth.webp" alt="" aria-hidden="true" />
           </article>
@@ -54,31 +53,167 @@
         </div>
       </section>
 
-      <section class="structure section-grid" id="structure">
-        <div class="container structure__inner">
-          <div class="structure__tag" data-reveal><img src="assets/mission-icon.svg" alt="" />Миссия и структура</div>
-          <div class="structure__copy" data-reveal>
-            <p class="kicker">Как устроен дизайн в MOEX</p>
-            <h2 class="scroll-reveal" data-scroll-reveal>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с&nbsp;брендом на&nbsp;всех точках контакта — от&nbsp;рекламного баннера до&nbsp;сложного торгового терминала.</h2>
+      <section class="mission-team" id="structure">
+        <div class="mission-team__shapes" aria-hidden="true">
+          <span class="mission-team__shape mission-team__shape--red-main"><img src="assets/mission-shapes/blob-red-main.svg" alt="" /></span>
+          <span class="mission-team__shape mission-team__shape--pink-top"><img src="assets/mission-shapes/blob-pink-top.svg" alt="" /></span>
+          <span class="mission-team__shape mission-team__shape--warm-mid"><img src="assets/mission-shapes/blob-warm-mid.svg" alt="" /></span>
+          <span class="mission-team__shape mission-team__shape--deep-bottom"><img src="assets/mission-shapes/blob-deep-bottom.svg" alt="" /></span>
+          <span class="mission-team__shape mission-team__shape--white-haze"><img src="assets/mission-shapes/blob-white-haze.svg" alt="" /></span>
+          <span class="mission-team__shape mission-team__shape--dark-warm"><img src="assets/mission-shapes/blob-dark-warm.svg" alt="" /></span>
+          <span class="mission-team__shape mission-team__shape--hotpink"><img src="assets/mission-shapes/blob-hotpink.svg" alt="" /></span>
+        </div>
+
+        <div class="mission-team__content">
+          <div class="mission-team__mission">
+            <div class="structure__tag" data-reveal><img src="assets/mission-icon.svg" alt="" />Миссия и структура</div>
+            <div class="structure__copy" data-reveal>
+              <p class="kicker">Как устроен дизайн в&nbsp;MOEX</p>
+              <h2>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с&nbsp;брендом на&nbsp;всех точках контакта — от&nbsp;рекламного баннера до&nbsp;сложного торгового терминала.</h2>
+            </div>
+          </div>
+
+          <div class="team" id="team">
+            <div class="team__shell">
+              <div class="team__heading" data-reveal>
+                <div class="team__intro">
+                  <p class="team__kicker">Наша команда</p>
+                  <h2>Познакомьтесь с командой</h2>
+                  <p class="team__description">Наша команда дизайна — это творческие профессионалы, которые создают продукты, меняющие пользовательский опыт. Каждый участник привносит уникальный взгляд и экспертизу в общее дело.</p>
+                </div>
+                <div class="team__controls" aria-label="Навигация по команде"><button type="button" data-team-prev aria-label="Предыдущие участники">‹</button><button type="button" data-team-next aria-label="Следующие участники">›</button></div>
+              </div>
+              <div class="team__viewport" data-team-viewport tabindex="0" role="region" aria-label="Команда MOEX Design">
+                <div class="team__track">
+                  <article class="person person--team-vasil"><div class="person__photo" role="img" aria-label="Портрет Василия Акулова"></div><div class="person__meta"><h3>Василий Акулов</h3><p>Креативный директор</p></div></article>
+                  <article class="person person--team-semenov"><div class="person__photo" role="img" aria-label="Портрет Игоря Семенова"></div><div class="person__meta"><h3>Игорь Семенов</h3><p>Руководитель группы</p></div></article>
+                  <article class="person person--team-anna"><div class="person__photo" role="img" aria-label="Портрет Анны"></div><div class="person__meta"><h3>Анна</h3><p>Дизайнер</p></div></article>
+                  <article class="person person--team-afanasiev"><div class="person__photo" role="img" aria-label="Портрет Константина Афанасьева"></div><div class="person__meta"><h3>Константин Афанасьев</h3><p>Старший дизайнер</p></div></article>
+                  <article class="person person--team-ervin"><div class="person__photo" role="img" aria-label="Портрет Эрвина"></div><div class="person__meta"><h3>Эрвин</h3><p>Дизайнер</p></div></article>
+                  <article class="person person--team-arina"><div class="person__photo" role="img" aria-label="Портрет Арины"></div><div class="person__meta"><h3>Арина</h3><p>Дизайнер</p></div></article>
+                  <article class="person person--team-oleg"><div class="person__photo" role="img" aria-label="Портрет Олега Васильева"></div><div class="person__meta"><h3>Олег Васильев</h3><p>Старший дизайнер</p></div></article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="team" id="team">
-        <div class="container team__shell" data-reveal>
-          <div class="team__heading">
-            <div><p class="team__kicker"><span></span>Наша команда</p><h2>Познакомьтесь<br />с командой</h2></div>
-            <div class="team__controls" aria-label="Навигация по команде"><button type="button" data-team-prev aria-label="Предыдущие участники">‹</button><button type="button" data-team-next aria-label="Следующие участники">›</button></div>
+      <section class="results" id="results">
+        <div class="results__inner">
+          <header class="results__heading" data-reveal>
+            <p class="results__eyebrow">Ключевые достижения</p>
+            <h2>Результаты команды дизайна</h2>
+            <p>Ключевые достижения команды дизайна Московской биржи за последний год.</p>
+          </header>
+
+          <div class="results__grid">
+            <article class="results-card results-card--revisions" data-reveal>
+              <p class="results-card__value">на 60%</p>
+              <div class="results-card__copy">
+                <h3>Меньше правок</h3>
+                <p>Автоматизация дизайн-процессов и единая система компонентов сократили количество итераций на 60%.</p>
+              </div>
+            </article>
+
+            <article class="results-card results-card--speed" data-reveal>
+              <span class="results-card__watermark" aria-hidden="true">5X</span>
+              <div class="results-card__ticker"><span>SPEED</span><strong>5× быстрее</strong><b>+100%</b></div>
+              <div class="results-card__copy">
+                <h3>Быстрее запуск продуктов</h3>
+                <p>Единый дизайн-стандарт ускорил вывод цифровых продуктов на рынок в 5 раз.</p>
+              </div>
+            </article>
+
+            <article class="results-card results-card--products" data-reveal>
+              <span class="results-card__watermark" aria-hidden="true">30+</span>
+              <div class="results-card__copy">
+                <h3>Продуктов обновлено</h3>
+                <p>Более 30 цифровых продуктов биржи переведены на новый единый стандарт дизайна.</p>
+              </div>
+            </article>
+
+            <article class="results-card results-card--satisfaction" data-reveal>
+              <p class="results-card__value">72%</p>
+              <div class="results-card__copy">
+                <h3>Удовлетворённость клиентов</h3>
+                <p>Уровень удовлетворённости клиентов от работы команды дизайна достиг 72%.</p>
+              </div>
+            </article>
           </div>
-          <div class="team__viewport" data-team-viewport>
-            <div class="team__track">
-              <article class="team-lead"><p>Дизайн-центр MOEX</p><strong>Мы создаём целостный опыт для&nbsp;продуктов и&nbsp;коммуникаций биржи.</strong><span>Команда объединяет исследования, дизайн и&nbsp;технологии.</span></article>
-              <article class="person person--new-6"><div class="person__photo" role="img" aria-label="Портрет Василия Акулова"></div><div class="person__meta"><h3>Василий Акулов</h3><p>Креативный директор</p></div></article>
-              <article class="person person--new-4"><div class="person__photo" role="img" aria-label="Портрет Игоря Семенова"></div><div class="person__meta"><h3>Игорь Семенов</h3><p>Руководитель группы</p></div></article>
-              <article class="person person--new-5"><div class="person__photo" role="img" aria-label="Портрет Константина Афанасьева"></div><div class="person__meta"><h3>Константин Афанасьев</h3><p>Старший дизайнер</p></div></article>
-              <article class="person person--new-1"><div class="person__photo" role="img" aria-label="Портрет Олега Васильева"></div><div class="person__meta"><h3>Олег Васильев</h3><p>Старший дизайнер</p></div></article>
+        </div>
+      </section>
+
+      <section class="design-process" id="process">
+        <div class="design-process__shapes" aria-hidden="true">
+          <span class="design-process__shape design-process__shape--red"><img src="assets/mission-shapes/blob-red-main.svg" alt="" /></span>
+          <span class="design-process__shape design-process__shape--pink"><img src="assets/mission-shapes/blob-pink-top.svg" alt="" /></span>
+          <span class="design-process__shape design-process__shape--warm"><img src="assets/mission-shapes/blob-warm-mid.svg" alt="" /></span>
+          <span class="design-process__shape design-process__shape--deep"><img src="assets/mission-shapes/blob-deep-bottom.svg" alt="" /></span>
+          <span class="design-process__shape design-process__shape--dark"><img src="assets/mission-shapes/blob-dark-warm.svg" alt="" /></span>
+          <span class="design-process__shape design-process__shape--hotpink"><img src="assets/mission-shapes/blob-hotpink.svg" alt="" /></span>
+        </div>
+
+        <div class="design-process__inner">
+          <header class="design-process__heading" data-reveal>
+            <p>Ключевые достижения</p>
+            <h2>Как устроен дизайн в&nbsp;MOEX</h2>
+            <span>От задачи до продукта — один операционный контур. На десктопе процесс собирается по мере скролла.</span>
+          </header>
+
+          <div class="process-flow__scroller" data-reveal>
+            <ol class="process-flow" data-process-flow aria-label="Процесс работы команды дизайна">
+              <li class="process-stage" style="--stage-delay:0" data-flow-label="Task" data-flow-note="Brief">Task</li>
+              <li class="process-stage" style="--stage-delay:1" data-flow-label="Research" data-flow-note="Insight">Research</li>
+              <li class="process-stage" style="--stage-delay:2" data-flow-label="Design System" data-flow-note="Foundation">Design System</li>
+              <li class="process-stage process-stage--active is-current" style="--stage-delay:3" data-flow-label="Design" data-flow-note="Flow unit" aria-current="step">
+                <span class="process-stage__label">Design</span>
+                <span class="process-stage__card"><b data-process-title>Design</b><small data-process-note>Flow unit</small><small data-process-position>Stage 4 / 7</small></span>
+              </li>
+              <li class="process-stage" style="--stage-delay:4" data-flow-label="Prototype" data-flow-note="Interaction">Prototype</li>
+              <li class="process-stage" style="--stage-delay:5" data-flow-label="Test" data-flow-note="Validation">Test</li>
+              <li class="process-stage" style="--stage-delay:6" data-flow-label="Product" data-flow-note="Release">Product</li>
+            </ol>
+          </div>
+
+          <section class="project-showcase" aria-labelledby="projects-heading">
+            <header class="project-showcase__heading" data-reveal>
+              <p>Портфолио</p>
+              <h2 id="projects-heading">Проекты, меняющие индустрию</h2>
+              <span>Взгляните на решения, созданные на стыке строгого регламента финансовых систем и передового пользовательского опыта.</span>
+            </header>
+
+            <div class="project-showcase__scroller" data-reveal>
+              <div class="project-showcase__grid">
+                <article class="project-card project-card--bonds">
+                  <div class="project-card__visual" aria-hidden="true">
+                    <span class="project-card__glow"></span>
+                    <img class="project-card__screener" src="assets/projects/project-this.png" alt="" />
+                    <img class="project-card__hand" src="assets/projects/project-hand.png" alt="" />
+                  </div>
+                  <div class="project-card__meta"><span>Продуктовый дизайн</span><h3>Скринеры облигаций</h3><p>Поиск и сравнение инструментов для инвестиционных решений.</p></div>
+                </article>
+
+                <article class="project-card project-card--illustrations">
+                  <div class="project-card__visual project-card__visual--illustrations" aria-hidden="true">
+                    <span class="project-card__glow"></span>
+                    <span class="project-sheet project-sheet--back"></span>
+                    <span class="project-sheet project-sheet--middle"></span>
+                    <span class="project-sheet project-sheet--front"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="project-card__meta"><span>Коммуникационный дизайн</span><h3>Новые 3D-иллюстрации</h3><p>Выразительная визуальная система для цифровых сервисов.</p></div>
+                </article>
+
+                <article class="project-card project-card--mobile">
+                  <div class="project-card__visual project-card__visual--mobile" aria-hidden="true">
+                    <span class="project-card__glow"></span>
+                    <img class="project-card__phone" src="assets/projects/project-pro.png" alt="" />
+                  </div>
+                  <div class="project-card__meta"><span>Продуктовый дизайн</span><h3>Мобильные продукты</h3><p>Сложные финансовые данные — понятным языком на небольшом экране.</p></div>
+                </article>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
     </main>
@@ -87,7 +222,7 @@
       <div class="container footer__inner">
         <div class="footer__top">
           <div class="footer__links">
-            <img class="footer__logo" src="assets/moex-design.svg" alt="MOEX Design" />
+            <img class="footer__logo" src="assets/moex-logotype.svg" alt="MOEX Design" />
             <div class="footer__columns">
               <div><p>О центре</p><a href="#top">Миссия и структура</a><a href="#top">Команда</a><a href="product.html#principles">Как мы работаем</a></div>
               <div><p>Коммуникации</p><a href="#communication">Бренд и айдентика</a><a href="#communication">Портфолио отдела</a></div>
@@ -103,20 +238,9 @@
       </div>
     </footer>
     <script>
-      const pageIntro = document.querySelector('.page-intro');
-      const finishPageIntro = () => {
-        if (!pageIntro || pageIntro.classList.contains('is-finished')) return;
-        pageIntro.classList.add('is-finished');
-        document.body.classList.remove('is-intro-running');
-        window.setTimeout(() => pageIntro.remove(), 160);
-      };
-
-      pageIntro?.lastElementChild?.addEventListener('animationend', finishPageIntro, { once: true });
-      window.setTimeout(finishPageIntro, 2600);
-
       const header = document.querySelector('[data-site-header]');
       const hero = document.querySelector('.hero');
-      const lightSections = document.querySelectorAll('.structure, .team');
+      const lightSections = document.querySelectorAll('.principles, .product-map');
       const logo = header.querySelector('.logo');
 
       const updateHeaderTheme = () => {
@@ -145,6 +269,67 @@
       }, { threshold: 0.15 });
 
       document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
+
+      const processFlow = document.querySelector('[data-process-flow]');
+      if (processFlow) {
+        const processStages = [...processFlow.querySelectorAll('.process-stage')];
+        const processTitle = processFlow.querySelector('[data-process-title]');
+        const processNote = processFlow.querySelector('[data-process-note]');
+        const processPosition = processFlow.querySelector('[data-process-position]');
+        const processScroller = processFlow.closest('.process-flow__scroller');
+        const initialProcessStage = 3;
+        let currentProcessStage = initialProcessStage;
+        let processTimer;
+
+        const showProcessStage = (index) => {
+          currentProcessStage = (index + processStages.length) % processStages.length;
+          const computedFlow = window.getComputedStyle(processFlow);
+          const horizontalPadding = Number.parseFloat(computedFlow.paddingLeft) || 0;
+          const stageWidth = (processFlow.clientWidth - (horizontalPadding * 2)) / processStages.length;
+          const offset = (currentProcessStage - initialProcessStage) * stageWidth;
+          const stage = processStages[currentProcessStage];
+
+          processFlow.style.setProperty('--active-offset', `${offset}px`);
+          processTitle.textContent = stage.dataset.flowLabel;
+          processNote.textContent = stage.dataset.flowNote;
+          processPosition.textContent = `Stage ${currentProcessStage + 1} / ${processStages.length}`;
+
+          processStages.forEach((item, itemIndex) => {
+            const isCurrent = itemIndex === currentProcessStage;
+            item.classList.toggle('is-current', isCurrent);
+            if (isCurrent) item.setAttribute('aria-current', 'step');
+            else item.removeAttribute('aria-current');
+          });
+        };
+
+        const stopProcessPlayback = () => {
+          window.clearInterval(processTimer);
+          processTimer = undefined;
+        };
+
+        const startProcessPlayback = () => {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || processTimer) return;
+          processFlow.classList.add('is-interactive');
+          showProcessStage(currentProcessStage + 1);
+          processTimer = window.setInterval(() => showProcessStage(currentProcessStage + 1), 1200);
+        };
+
+        processScroller.addEventListener('pointerenter', (event) => {
+          if (event.pointerType === 'mouse') startProcessPlayback();
+        });
+        processScroller.addEventListener('pointerleave', stopProcessPlayback);
+        window.addEventListener('resize', () => showProcessStage(currentProcessStage), { passive: true });
+
+        const processObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              processFlow.classList.add('is-assembled');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.35 });
+        processObserver.observe(processFlow);
+      }
 
       document.querySelectorAll('.nav a:not(.nav__cta)').forEach((link) => {
         const label = link.textContent.trim();
@@ -184,24 +369,35 @@
       mainNavigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuState(false)));
       window.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuState(false); });
 
-      const scrollReveal = document.querySelector('[data-scroll-reveal]');
-      const revealWords = scrollReveal.textContent.trim().split(/ +/);
-      scrollReveal.innerHTML = revealWords.map((word) => `<span>${word}</span>`).join(' ');
-
-      const updateScrollReveal = () => {
-        const bounds = scrollReveal.getBoundingClientRect();
-        const progress = Math.min(1, Math.max(0, (window.innerHeight * .78 - bounds.top) / (bounds.height + window.innerHeight * .18)));
-        const activeWords = Math.ceil(progress * revealWords.length);
-        scrollReveal.querySelectorAll('span').forEach((word, index) => word.classList.toggle('is-active', index < activeWords));
-      };
-
-      updateScrollReveal();
-      window.addEventListener('scroll', updateScrollReveal, { passive: true });
-      window.addEventListener('resize', updateScrollReveal);
-
       const teamViewport = document.querySelector('[data-team-viewport]');
-      document.querySelector('[data-team-prev]').addEventListener('click', () => teamViewport.scrollBy({ left: -260, behavior: 'smooth' }));
-      document.querySelector('[data-team-next]').addEventListener('click', () => teamViewport.scrollBy({ left: 260, behavior: 'smooth' }));
+      const teamStep = 253;
+      document.querySelector('[data-team-prev]').addEventListener('click', () => teamViewport.scrollBy({ left: -teamStep, behavior: 'smooth' }));
+      document.querySelector('[data-team-next]').addEventListener('click', () => teamViewport.scrollBy({ left: teamStep, behavior: 'smooth' }));
+
+      let teamDragStart = 0;
+      let teamScrollStart = 0;
+      teamViewport.addEventListener('pointerdown', (event) => {
+        if (event.pointerType !== 'mouse') return;
+        teamDragStart = event.clientX;
+        teamScrollStart = teamViewport.scrollLeft;
+        teamViewport.classList.add('is-dragging');
+        teamViewport.setPointerCapture(event.pointerId);
+      });
+      teamViewport.addEventListener('pointermove', (event) => {
+        if (!teamViewport.classList.contains('is-dragging')) return;
+        teamViewport.scrollLeft = teamScrollStart - (event.clientX - teamDragStart);
+      });
+      const stopTeamDrag = (event) => {
+        if (!teamViewport.classList.contains('is-dragging')) return;
+        teamViewport.classList.remove('is-dragging');
+        if (teamViewport.hasPointerCapture(event.pointerId)) teamViewport.releasePointerCapture(event.pointerId);
+      };
+      teamViewport.addEventListener('pointerup', stopTeamDrag);
+      teamViewport.addEventListener('pointercancel', stopTeamDrag);
+      teamViewport.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') teamViewport.scrollBy({ left: -teamStep, behavior: 'smooth' });
+        if (event.key === 'ArrowRight') teamViewport.scrollBy({ left: teamStep, behavior: 'smooth' });
+      });
 
       const pageMain = document.querySelector('main');
       const stickyFooter = document.querySelector('.footer');

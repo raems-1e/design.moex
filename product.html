@@ -7,31 +7,30 @@
     <title>Продуктовый дизайн — MOEX Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/preloader.css" />
+    <script src="assets/animated-gradient.js" defer></script>
+    <script src="assets/preloader.js" defer></script>
+    <noscript><style>body{overflow:auto!important}body>main,body>footer{opacity:1!important}</style></noscript>
   </head>
-  <body class="product-page is-intro-running">
-    <div class="page-intro" aria-hidden="true">
-      <span class="page-intro__slice" style="--intro-step:0"></span>
-      <span class="page-intro__slice" style="--intro-step:1"></span>
-      <span class="page-intro__slice" style="--intro-step:2"></span>
-      <span class="page-intro__slice" style="--intro-step:3"></span>
-      <span class="page-intro__slice" style="--intro-step:4"></span>
-    </div>
+  <body class="product-page is-preloader-active">
 
     <main>
       <header class="header container is-light" data-site-header>
-        <a class="logo" href="index.html" aria-label="MOEX Design — главная"><img src="assets/moex-design.svg" alt="MOEX Design" /></a>
+        <a class="logo" href="index.html" aria-label="MOEX Design — главная"><img src="assets/moex-logotype.svg" alt="MOEX Design" /></a>
         <nav class="nav" id="main-navigation" aria-label="Основная навигация">
           <button class="nav__burger" type="button" aria-label="Открыть навигацию"><span></span><span></span></button>
-          <a href="index.html#communication">Коммуникационный дизайн</a>
-          <a href="product.html" aria-current="page">Продуктовый дизайн</a>
+          <div class="nav__desktop-links">
+            <a href="index.html#communication">Коммуникационный дизайн</a>
+            <a href="product.html" aria-current="page">Продуктовый дизайн</a>
+          </div>
           <div class="nav__mobile-links">
             <section><p>О центре</p><a href="index.html#structure">Миссия и структура</a><a href="index.html#team">Команда</a><a href="#principles">Как мы работаем</a></section>
             <section><p>Коммуникационный дизайн</p><a href="index.html#communication">Бренд и айдентика</a><a href="index.html#communication">Портфолио отдела</a></section>
             <section><p>Продуктовый дизайн</p><a href="#foundation">Основа системы</a><a href="#components">Компоненты</a><a href="#patterns">Паттерны</a><a href="#products">Продукты и сайты</a><a href="#vibecoding">Вайбкодинг</a><a href="#portfolio">Портфолио отдела</a></section>
           </div>
-          <a class="nav__cta" href="#product-map">Библиотека</a>
+          <a class="nav__cta" href="materials.html"><img src="assets/arrow-down-to-line.svg" alt="" aria-hidden="true" /><span>Скачать материалы</span></a>
           <button class="menu-close" type="button" aria-label="Закрыть меню"><span></span><span></span></button>
         </nav>
         <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
@@ -101,7 +100,7 @@
       <div class="container footer__inner">
         <div class="footer__top">
           <div class="footer__links">
-            <img class="footer__logo" src="assets/moex-design.svg" alt="MOEX Design" />
+            <img class="footer__logo" src="assets/moex-logotype.svg" alt="MOEX Design" />
             <div class="footer__columns">
               <div><p>О центре</p><a href="index.html#structure">Миссия и структура</a><a href="index.html#team">Команда</a><a href="#principles">Как мы работаем</a></div>
               <div><p>Коммуникации</p><a href="index.html#communication">Бренд и айдентика</a><a href="index.html#communication">Портфолио отдела</a></div>
@@ -118,17 +117,6 @@
     </footer>
 
     <script>
-      const pageIntro = document.querySelector('.page-intro');
-      const finishPageIntro = () => {
-        if (!pageIntro || pageIntro.classList.contains('is-finished')) return;
-        pageIntro.classList.add('is-finished');
-        document.body.classList.remove('is-intro-running');
-        window.setTimeout(() => pageIntro.remove(), 160);
-      };
-
-      pageIntro?.lastElementChild?.addEventListener('animationend', finishPageIntro, { once: true });
-      window.setTimeout(finishPageIntro, 2600);
-
       const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
