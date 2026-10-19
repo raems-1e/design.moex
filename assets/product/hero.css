@@ -1,0 +1,105 @@
+/* Figma 2436:16741: original asset dimensions, proportionally scaled stage. */
+.product-hero { position:relative; z-index:2; height:723px; padding-top:102px; overflow:visible; background:#f9f9f9; }
+.product-hero__stage { position:relative; width:1440px; height:621px; margin:0 auto; clip-path:inset(-100px 0 -110px); transform:scale(var(--product-hero-scale,1)); transform-origin:top left; }
+.product-hero__stage > * { position:absolute; }
+.product-hero__stage { pointer-events:none; }
+.product-hero__stage img { display:block; max-width:none; }
+.ph-title { left:416.913px; top:162.1px; width:612.313px; max-width:none; height:176.081px; margin:0; padding:0; }
+.ph-eyebrow { left:420px; top:117px; width:600px; margin:0; text-align:center; color:#5e6266; font:600 19px/1.3 Manrope,Inter,sans-serif; letter-spacing:-.57px; }
+.ph-line { pointer-events:none; }
+.ph-line--long { left:1080px; top:-50px; }
+.ph-line--short { left:60px; top:69px; }
+.ph-line--long img,.ph-line--short img { transform:rotate(90deg); transform-origin:top left; }
+.ph-line--right { left:880px; top:149px; }
+.ph-line--left { left:-140px; top:268px; }
+.ph-code { display:flex; flex-direction:column; gap:4px; color:#9ca3af; font:400 12px/16px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; white-space:nowrap; }
+.ph-code--left.is-live { height:96px; overflow:hidden; }
+.product-hero .ph-code--left.is-live span { flex:none; height:16px; animation:none; }
+.ph-code--left.is-live .is-typing::after { content:""; display:inline-block; width:1px; height:1em; margin-left:3px; vertical-align:-2px; background:currentColor; opacity:.55; }
+.ph-code--left { left:80px; top:287px; }
+.ph-code--right { left:1160px; top:422px; }
+.ph-glow { pointer-events:none; }
+.ph-glow--blue { left:50px; top:350px; }
+.ph-glow--pink { left:155px; top:405px; }
+.ph-card { left:140px; top:440px; width:240px; height:240px; padding:28px; display:flex; flex-direction:column; gap:24px; border:1.5px solid #e5e8eb; border-radius:32px; background:rgba(255,255,255,.7); box-shadow:0 16px 32px #0000000a; -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
+.ph-circle { width:40px; height:40px; flex:none; overflow:visible; }
+.ph-circle circle { fill:none; stroke:#000; stroke-width:2; transform:rotate(-90deg); transform-origin:center; }
+.ph-skeleton { display:flex; flex-direction:column; gap:12px; width:100%; }
+.ph-skeleton i { display:block; height:10px; background:#e5e8eb; border-radius:5px; }
+.ph-skeleton i:nth-child(2) { width:110px; }
+.ph-skeleton i:nth-child(3) { width:140px; }
+.ph-glass { left:910px; top:212px; width:240px; height:240px; border:1px solid #e5e8eb99; border-radius:44px; background:#ffffff0d; -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); }
+.ph-pill { left:1080px; top:342px; width:190px; height:100px; border-radius:50px; background:linear-gradient(90deg,#f3ebdd,#fff); box-shadow:0 12px 24px #f3ebdd; }
+.ph-pill-small { left:1210px; top:200px; width:56px; height:32px; border-radius:16px; background:#f3ebdd; opacity:.79; box-shadow:0 4px 10px #f3ebdd; }
+.ph-grid { pointer-events:none; fill:none; stroke:#e5e8eb; stroke-width:1; }
+.ph-grid--left { left:100px; top:400px; }
+.ph-grid--right { left:870px; top:172px; }
+.ph-grid .ph-measure { stroke:#b8c1ca; stroke-opacity:.55; stroke-width:.8; }
+.ph-grid text { fill:#98a3ae; fill-opacity:.6; stroke:none; font:10px ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing:.3px; }
+.product-hero.is-assembling .ph-grid text { animation:ph-annotation 1.2s 3s cubic-bezier(.4,0,.2,1) both paused; }
+.product-hero.is-assembling .ph-grid text:nth-of-type(2) { animation-delay:3.08s; }
+.product-hero.is-assembling .ph-grid text:nth-of-type(3) { animation-delay:3.16s; }
+.product-hero.is-assembling.is-playing .ph-grid text { animation-play-state:running; }
+@keyframes ph-annotation { from { opacity:0; translate:0 2px; } to { opacity:1; translate:0 0; } }
+/* One entrance timeline: construction → surfaces → component details. */
+.product-hero.is-assembling .ph-eyebrow { animation:ph-heading-rise .75s cubic-bezier(.22,1,.36,1) both paused; }
+.product-hero.is-assembling .ph-title { animation:ph-heading-rise .9s .16s cubic-bezier(.22,1,.36,1) both paused; }
+.product-hero.is-assembling.is-playing :is(.ph-eyebrow,.ph-title) { animation-play-state:running; }
+@keyframes ph-heading-rise { from { opacity:0; translate:0 12px; } to { opacity:1; translate:0 0; } }
+.product-hero.is-assembling :is(.ph-grid path,.ph-line,.ph-card,.ph-glass,.ph-pill,.ph-pill-small,.ph-glow,.ph-circle circle,.ph-skeleton i,.ph-code span) {
+  animation-duration:1s; animation-delay:var(--ph-delay,0s); animation-timing-function:cubic-bezier(.22,1,.36,1); animation-fill-mode:both; animation-play-state:paused;
+}
+.product-hero.is-assembling.is-playing :is(.ph-grid path,.ph-line,.ph-card,.ph-glass,.ph-pill,.ph-pill-small,.ph-glow,.ph-circle circle,.ph-skeleton i,.ph-code span) { animation-play-state:running; }
+.product-hero.is-assembling .ph-grid path { stroke-dasharray:1; animation-name:ph-draw; animation-duration:1.6s; animation-timing-function:cubic-bezier(.4,0,.2,1); }
+.product-hero.is-assembling .ph-grid .ph-measure { animation-name:ph-draw; animation-delay:1.1s; animation-duration:1.9s; }
+.is-assembling .ph-grid--right { --ph-delay:.12s; }
+.product-hero.is-assembling .ph-line { animation-name:ph-rule; animation-duration:1.6s; animation-timing-function:cubic-bezier(.4,0,.2,1); }
+.product-hero.is-assembling :is(.ph-line--short,.ph-line--long) { width:1px; height:370px; animation-name:ph-rule-vertical; }
+.product-hero.is-assembling .ph-line--long { height:545px; --ph-delay:.12s; }
+.is-assembling .ph-card { animation-name:ph-surface; --ph-delay:.7s; }
+.is-assembling .ph-glass { animation-name:ph-surface; --ph-delay:1.15s; }
+.is-assembling .ph-pill { animation-name:ph-surface; --ph-delay:1.65s; }
+.is-assembling .ph-pill-small { animation-name:ph-surface; --ph-delay:1.9s; }
+.is-assembling .ph-glow { animation-name:ph-reveal; --ph-delay:.6s; animation-duration:1.5s; }
+.is-assembling .ph-circle circle { stroke-dasharray:1; animation-name:ph-draw; --ph-delay:1.65s; animation-duration:.85s; }
+.is-assembling .ph-skeleton i { transform-origin:left center; animation-name:ph-skeleton; --ph-delay:2s; animation-duration:.85s; }
+.is-assembling .ph-skeleton i:nth-child(2) { --ph-delay:2.18s; }
+.is-assembling .ph-skeleton i:nth-child(3) { --ph-delay:2.36s; }
+.is-assembling .ph-code span { animation-name:ph-code; animation-duration:.65s; }
+@keyframes ph-draw { from { stroke-dashoffset:1; opacity:0; } to { stroke-dashoffset:0; opacity:1; } }
+@keyframes ph-rule { from { clip-path:inset(0 50%); } to { clip-path:inset(0); } }
+@keyframes ph-rule-vertical { from { clip-path:inset(50% -2px); } to { clip-path:inset(0 -2px); } }
+@keyframes ph-surface { from { opacity:0; transform:scale(.2); } to { transform:scale(1); } }
+@keyframes ph-reveal { from { opacity:0; } to { opacity:1; } }
+@keyframes ph-skeleton { from { opacity:0; transform:scaleX(0); } to { opacity:1; transform:scaleX(1); } }
+@keyframes ph-code { from { opacity:0; clip-path:inset(0 100% 0 0); } to { opacity:1; clip-path:inset(0); } }
+@media (prefers-reduced-motion:reduce) {
+ .product-hero.is-assembling .ph-grid text { animation:none; }
+ .product-hero.is-assembling :is(.ph-eyebrow,.ph-title) { animation:none; }
+ .product-hero.is-assembling :is(.ph-grid path,.ph-line,.ph-card,.ph-glass,.ph-pill,.ph-pill-small,.ph-glow,.ph-circle circle,.ph-skeleton i,.ph-code span) { animation:none; }
+}
+@media (max-width:1440px) { .product-hero__stage { margin:0; } }
+@media (max-width:800px) {
+  .product-hero { height:660px; }
+  .product-hero__stage { width:750px; height:900px; }
+  .ph-eyebrow { left:75px; top:100px; font-size:28px; }
+  .ph-title { left:68.8435px; top:164px; }
+  .ph-card { left:68px; top:720px; }
+  .ph-grid--left { left:28px; top:680px; }
+  .ph-grid--right { left:398px; top:390px; }
+  .ph-glow--blue { left:-22px; top:630px; }
+  .ph-glow--pink { left:83px; top:685px; }
+  .ph-glass { left:438px; top:430px; }
+  .ph-pill { left:490px; top:610px; }
+  .ph-pill-small { left:634px; top:370px; }
+  .ph-code { font-size:16px; line-height:20px; }
+  .ph-code--left.is-live { height:92px; }
+  .product-hero .ph-code--left.is-live span { height:20px; }
+  .ph-code--left { left:68px; top:625px; }
+  .ph-code--left:not(.is-live) span:last-child { display:none; }
+  .ph-code--right { left:420px; top:770px; }
+  .ph-line--short { left:36px; top:335px; }
+  .ph-line--long { left:560px; top:360px; }
+  .ph-line--left { left:-80px; top:452px; }
+  .ph-line--right { left:390px; top:402px; }
+}

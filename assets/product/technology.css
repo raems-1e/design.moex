@@ -1,0 +1,94 @@
+/* Three Figma technology slides, 1440 × 827. Background assets remain at native size. */
+.product-tech { position:relative; z-index:1; isolation:isolate; width:100%; height:827px; margin:0 auto; border-radius:42px; overflow:hidden; background:transparent; color:#1e1e1e; touch-action:pan-y; }
+.product-tech__gradient { position:absolute; inset:0 0 calc(100px * var(--tech-scale,1)); border-radius:42px; overflow:hidden; pointer-events:none; background:#f3ebdd url('../communication/style-background.svg') center / cover no-repeat; }
+.product-tech__gradient canvas { display:block; width:100%; height:100%; opacity:.65; filter:blur(18px); transform:scale(1.08); }
+.product-tech__viewport { position:absolute; inset:0; }
+.product-tech__slide { position:absolute; inset:0; opacity:0; visibility:hidden; transform:translateX(32px); transition:opacity .55s ease,transform .65s cubic-bezier(.22,1,.36,1),visibility .65s; pointer-events:none; }
+.product-tech__slide.is-active { opacity:1; visibility:visible; transform:none; pointer-events:auto; }
+.product-tech__stage { position:relative; width:1440px; height:827px; margin:0 auto; transform:scale(var(--tech-scale,1)); transform-origin:top left; }
+.product-tech__background { display:none; position:absolute; inset:0; pointer-events:none; }
+.product-tech__background img { display:block; max-width:none; }
+.product-tech__heading { position:absolute; left:147px; top:111px; width:629px; }
+.product-tech__kicker { margin:0 0 17px; font:700 11px/14px Manrope,Inter,sans-serif; letter-spacing:.44px; text-transform:uppercase; }
+.product-tech__heading h2 { margin:0; font:600 32px/1.05 Inter,sans-serif; letter-spacing:-1.28px; color:inherit; }
+.product-tech__description { width:502px; margin:16px 0 0; font:500 14px/1.5 Inter,sans-serif; }
+.product-tech__metrics { position:absolute; left:147px; right:147px; top:306px; display:flex; justify-content:space-between; margin:0; }
+.product-tech__metrics dt { font:400 95px/1.1 Inter,sans-serif; letter-spacing:-6.65px; }
+.product-tech__metrics dd { margin:19px 0 0; font:600 13px/1.4 Inter,sans-serif; }
+.product-tech__metrics > div:last-child { text-align:right; }
+.product-tech__slide--apca .product-tech__metrics > div:nth-child(2) { position:absolute; left:382px; }
+.product-tech__slide--spacing .product-tech__metrics > div:nth-child(2) { margin-left:auto; }
+.product-tech__slide--spacing .product-tech__metrics > div:not(:first-child) { width:173px; text-align:right; }
+.product-tech__slide--spacing .product-tech__metrics > div:nth-child(n+3) { margin-left:72px; }
+.product-tech__slide--states .product-tech__heading { top:72px; }
+.product-tech__slide--states .product-tech__metrics { top:289px; }
+.product-tech__slide--states .product-tech__metrics dt { font-size:72px; letter-spacing:-5.04px; }
+.product-tech__rule { position:absolute; left:794px; top:361px; max-width:none; }
+.product-tech__slide--spacing .product-tech__rule { left:364px; }
+.product-tech__slide--states .product-tech__rule { left:393px; top:328px; width:60px; }
+.product-tech__controls { position:absolute; z-index:3; top:calc(226px * var(--tech-scale,1)); right:10.2%; display:flex; gap:4px; }
+.product-tech__controls button { display:grid; place-items:center; width:42px; height:44px; padding:0; border:0; background:none; cursor:pointer; }
+.product-tech__viewport { cursor:grab; user-select:none; }
+.product-tech__viewport:active { cursor:grabbing; }
+.product-tech__controls span { position:relative; display:block; height:4px; width:100%; overflow:hidden; border-radius:4px; background:#1c1c1c30; }
+.product-tech__controls span::after { content:""; position:absolute; inset:0; border-radius:inherit; background:#1c1c1c; transform:scaleX(0); transform-origin:left center; }
+.product-tech__controls [aria-current="true"] span::after { transform:scaleX(var(--tech-progress,0)); }
+.product-tech__controls button:focus-visible { outline:2px solid #1c1c1c; outline-offset:3px; border-radius:6px; }
+.product-tech__status { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.pt-device { position:absolute; top:320px; left:0; width:1440px; height:827px; pointer-events:none; scale:calc(.62 * var(--tech-creative-scale,1.06)); transform-origin:50% 0; }
+.pt-device > img,.pt-device__rotated { position:absolute; max-width:none; }
+.pt-device__rotated { display:flex; align-items:center; justify-content:center; }
+.pt-device__image { display:block; flex:none; max-width:none; transform:rotate(21.86deg); }
+.pt-device--apca .pt-device__shadow { left:2.22%; top:11.61%; width:102.93%; height:155.9%; mix-blend-mode:multiply; }
+.pt-device--apca .pt-device__shadow img { width:1238.953px; height:892.335px; }
+.pt-device--apca .pt-device__ipad { left:20.86%; top:28.24%; width:68.4%; height:110.78%; }
+.pt-device--apca .pt-device__ipad img { width:793.028px; height:669.04px; }
+.pt-device--apca .pt-device__screen { left:22.61%; top:30.99%; width:65%; height:104.84%; }
+.pt-device--apca .pt-device__screen img { width:755.309px; height:631.205px; }
+.pt-device--spacing .pt-device__shadow { left:10.82%; top:85.46%; width:64.45%; height:77.06%; mix-blend-mode:multiply; }
+.pt-device--spacing .pt-device__mac { left:9.51%; top:45.59%; width:65.05%; height:114.43%; }
+.pt-device--spacing .pt-device__screen { left:10.57%; top:47.07%; width:41.29%; height:77.5%; }
+.pt-device--states .pt-device__shadow { left:30.76%; top:106.59%; width:35.85%; height:5.14%; mix-blend-mode:multiply; }
+.pt-device--states .pt-device__display { left:39.04%; top:48.97%; width:38.76%; height:59.87%; }
+.pt-device--states .pt-device__mask { left:39.83%; top:50.64%; width:36.51%; height:42.69%; }
+.pt-device--states .pt-device__screen { left:39.81%; top:50.59%; width:36.56%; height:42.77%; }
+.pt-device__veil { display:none; }
+.pt-device--spacing .pt-device__veil { left:208px; top:309px; }
+.pt-device--states .pt-device__veil { left:406px; top:252px; }
+.pt-device.pt-device--brandbook { top:462px; height:340px; scale:var(--tech-creative-scale,1.06); transform-origin:50% 50%; }
+.pt-device--brandbook > .pt-device__brandbook { position:static; display:block; width:100%; height:100%; object-fit:contain; }
+@media(max-width:800px) {
+  .product-tech { height:760px; border-radius:28px; }
+  .product-tech__gradient { bottom:100px; border-radius:28px; }
+  .product-tech__stage { width:100%; height:760px; transform:none; }
+  .product-tech__background { width:1440px; height:827px; left:50%; margin-left:-720px; }
+  .product-tech__heading,.product-tech__slide--states .product-tech__heading { left:24px; right:24px; top:72px; width:auto; }
+  .product-tech__heading h2 { max-width:440px; font-size:28px; letter-spacing:-1px; }
+  .product-tech__description { width:auto; max-width:500px; font-size:14px; }
+  .product-tech__metrics,.product-tech__slide--states .product-tech__metrics { left:24px; right:24px; top:300px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+  .product-tech__metrics dt { font-size:clamp(30px,8.5vw,56px); letter-spacing:-2px; white-space:nowrap; }
+  .product-tech__metrics dd { font-size:10px; line-height:1.4; margin-top:10px; }
+  .product-tech__slide--apca .product-tech__metrics > div:nth-child(2) { position:static; }
+  .product-tech__slide--spacing .product-tech__metrics { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .product-tech__slide--spacing .product-tech__metrics > div:not(:first-child),.product-tech__slide--spacing .product-tech__metrics > div:nth-child(n+3) { width:auto; margin:0; text-align:left; }
+  .product-tech__slide--states .product-tech__metrics { grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:20px; top:300px; }
+  .product-tech__slide--states .product-tech__metrics dt { font-size:32px; letter-spacing:-1.5px; }
+  .product-tech__metrics > div:last-child { text-align:left; }
+  .product-tech__rule { display:none; }
+  .product-tech__controls { top:16px; right:24px; }
+  .product-tech__controls button { width:36px; }
+  .pt-device { top:400px; left:50%; margin-left:-720px; scale:var(--tech-creative-scale,1.06); transform:scale(calc(var(--tech-art-scale,.6) * .72)); transform-origin:50% 0; }
+  .pt-device--spacing { margin-left:-650px; top:370px; }
+  .pt-device--states { margin-left:-790px; top:370px; }
+  .pt-device.pt-device--brandbook { top:470px; left:20px; width:calc(100% - 40px); height:260px; margin-left:0; transform:none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .pt-device { scale:.62; }
+  .product-tech__slide,.product-tech__controls span { transition:none; }
+}
+@media(max-width:800px) and (prefers-reduced-motion:reduce) {
+  .pt-device { scale:1; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .pt-device.pt-device--brandbook { scale:1; }
+}

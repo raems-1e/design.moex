@@ -1,0 +1,41 @@
+@font-face {
+  font-family:'MOEX Inter';
+  src:url('./InterVariable.woff2') format('woff2');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:block;
+}
+
+/* Use the same local, proportional lining digits in every UI font.
+   Numeric-only faces preserve the existing letterforms and font weights. */
+@font-face {
+  font-family:'Inter';
+  src:url('./InterVariable.woff2') format('woff2');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:block;
+  font-feature-settings:'tnum' 0, 'pnum' 1, 'lnum' 1;
+  unicode-range:U+0030-0039;
+}
+@font-face {
+  font-family:'Manrope';
+  src:url('./InterVariable.woff2') format('woff2');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:block;
+  font-feature-settings:'tnum' 0, 'pnum' 1, 'lnum' 1;
+  unicode-range:U+0030-0039;
+}
+@font-face {
+  font-family:'MOEX Inter';
+  src:url('./InterVariable.woff2') format('woff2');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:block;
+  font-feature-settings:'tnum' 0, 'pnum' 1, 'lnum' 1;
+  unicode-range:U+0030-0039;
+}
+
+:where(html, body, body *) {
+  font-variant-numeric:lining-nums proportional-nums;
+}

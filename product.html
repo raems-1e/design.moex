@@ -7,92 +7,337 @@
     <title>Продуктовый дизайн — MOEX Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="assets/preloader.css" />
     <script src="assets/animated-gradient.js" defer></script>
     <script src="assets/preloader.js" defer></script>
+    <link rel="stylesheet" href="assets/mobile-menu.css" />
+    <script src="assets/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="assets/page-transitions.css" />
+    <script src="assets/page-transitions.js" defer></script>
     <noscript><style>body{overflow:auto!important}body>main,body>footer{opacity:1!important}</style></noscript>
+  <link rel="stylesheet" href="assets/site-chrome.css" />
+  <link rel="stylesheet" href="assets/pill-nav.css" />
+  <script src="assets/pill-nav.js" defer></script>
+  <script src="assets/adaptive-logo.js" defer></script>
+  <link rel="stylesheet" href="assets/heading-reveal.css" />
+  <script src="assets/heading-reveal.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/product/hero.css" />
+    <script src="assets/product/hero.js" defer></script>
+    <link rel="stylesheet" href="assets/product/technology.css" />
+    <script src="assets/product/technology.js" defer></script>
+    <link rel="stylesheet" href="assets/product/principles.css" />
+    <link rel="stylesheet" href="assets/product/principles-swatch.css" />
+    <script src="assets/product/principles.js" defer></script>
+    <link rel="stylesheet" href="assets/product/style.css" />
+    <script src="assets/product/style.js" defer></script>
+    <link rel="stylesheet" href="assets/communication/results.css" />
+    <script src="assets/communication/results.js" defer></script>
+    <link rel="stylesheet" href="assets/product/customization.css" />
+    <script src="assets/product/customization.js" defer></script>
+    <link rel="stylesheet" href="assets/projects/carousel.css" />
+  <link rel="preload" href="assets/fonts/inter/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/fonts/inter/inter.css" />
+  <script src="assets/projects/carousel.js" defer></script>
+  <link rel="stylesheet" href="assets/footer-shader.css" />
+  <script src="assets/footer-shader.js" defer></script>
   </head>
   <body class="product-page is-preloader-active">
 
     <main>
-      <header class="header container is-light" data-site-header>
-        <a class="logo" href="index.html" aria-label="MOEX Design — главная"><img src="assets/moex-logotype.svg" alt="MOEX Design" /></a>
+      <header class="header container" data-site-header>
+        <div class="header-atmosphere" aria-hidden="true"></div>
+        <a class="logo" href="index.html" aria-label="MOEX Design — главная"><picture><source media="(max-width:800px)" srcset="assets/materials/mobile/header-logo.svg" /><img src="assets/moex-logotype.svg" alt="MOEX Design" /></picture></a>
         <nav class="nav" id="main-navigation" aria-label="Основная навигация">
-          <button class="nav__burger" type="button" aria-label="Открыть навигацию"><span></span><span></span></button>
           <div class="nav__desktop-links">
-            <a href="index.html#communication">Коммуникационный дизайн</a>
+            <a href="communication.html">Коммуникационный дизайн</a>
             <a href="product.html" aria-current="page">Продуктовый дизайн</a>
           </div>
-          <div class="nav__mobile-links">
-            <section><p>О центре</p><a href="index.html#structure">Миссия и структура</a><a href="index.html#team">Команда</a><a href="#principles">Как мы работаем</a></section>
-            <section><p>Коммуникационный дизайн</p><a href="index.html#communication">Бренд и айдентика</a><a href="index.html#communication">Портфолио отдела</a></section>
-            <section><p>Продуктовый дизайн</p><a href="#foundation">Основа системы</a><a href="#components">Компоненты</a><a href="#patterns">Паттерны</a><a href="#products">Продукты и сайты</a><a href="#vibecoding">Вайбкодинг</a><a href="#portfolio">Портфолио отдела</a></section>
-          </div>
-          <a class="nav__cta" href="materials.html"><img src="assets/arrow-down-to-line.svg" alt="" aria-hidden="true" /><span>Скачать материалы</span></a>
-          <button class="menu-close" type="button" aria-label="Закрыть меню"><span></span><span></span></button>
+          <a class="nav__cta" href="materials.html"><span>Скачать материалы</span><img src="assets/arrow-down-to-line.svg" alt="" /></a>
         </nav>
         <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span></button>
       </header>
 
-      <section class="product-map" id="product-map">
-        <div class="container product-map__inner">
-          <a class="product-map__home" href="index.html">Главная</a>
-          <div class="product-map__branches">
-            <article class="sitemap-card sitemap-card--about">
-              <div class="sitemap-card__head">
-                <h2>О центре</h2>
-                <p>Кто мы, как устроен центр и как соотносятся два отдела.</p>
-                <span>/о-центре</span>
-              </div>
-              <div class="sitemap-card__items">
-                <a href="index.html#structure"><strong>Миссия и структура</strong></a>
-                <a href="index.html#team"><strong>Команда</strong></a>
-                <a href="#principles"><strong>Как мы работаем</strong></a>
+      <section class="product-hero" id="product-map" aria-labelledby="product-title">
+        <div class="product-hero__stage">
+          <svg class="ph-grid ph-grid--left" width="320" height="320" viewBox="0 0 320 320" aria-hidden="true">
+            <path d="M40 0V320 M280 0V320 M0 40H320 M0 280H320" pathLength="1" />
+            <path class="ph-measure" d="M160 18H40 M160 18H280 M40 14V22 M280 14V22 M18 160V40 M18 160V280 M14 40H22 M14 280H22 M34 40H46 M40 34V46 M274 280H286 M280 274V286" pathLength="1" />
+            <text x="160" y="11" text-anchor="middle">240</text><text x="10" y="160" text-anchor="middle" transform="rotate(-90 10 160)">240</text><text x="232" y="302">R 32</text>
+          </svg>
+          <svg class="ph-grid ph-grid--right" width="320" height="320" viewBox="0 0 320 320" aria-hidden="true">
+            <path d="M40 0V320 M280 0V320 M0 40H320 M0 280H320" pathLength="1" />
+            <path class="ph-measure" d="M160 18H40 M160 18H280 M40 14V22 M280 14V22 M302 160V40 M302 160V280 M298 40H306 M298 280H306 M34 40H46 M40 34V46 M274 280H286 M280 274V286" pathLength="1" />
+            <text x="160" y="11" text-anchor="middle">240</text><text x="314" y="160" text-anchor="middle" transform="rotate(-90 314 160)">240</text><text x="232" y="302">R 44</text>
+          </svg>
+          <div class="ph-line ph-line--long" aria-hidden="true"><img src="assets/product/line-long.svg" width="545" height="1" alt="" /></div>
+          <div class="ph-line ph-line--short" aria-hidden="true"><img src="assets/product/line-short.svg" width="370" height="1" alt="" /></div>
+          <img class="ph-line ph-line--right" src="assets/product/line-horizontal.svg" width="400" height="1" alt="" />
+          <img class="ph-line ph-line--left" src="assets/product/line-horizontal.svg" width="400" height="1" alt="" />
+          <div class="ph-code ph-code--left" aria-hidden="true"><span style="--ph-delay:.75s">/* Switch [Light] / Toggle */</span><span style="--ph-delay:1.1s">background: #FFFFFF;</span><span style="--ph-delay:1.5s">box-shadow: 0px 16px 32px rgba(0,0,0,0.04);</span><span style="--ph-delay:1.85s">border-radius: 32px;</span><span style="--ph-delay:2.25s">/* Content / Skeleton */</span></div>
+          <div class="ph-code ph-code--right" aria-hidden="true"><span style="--ph-delay:1.3s">/* Floating Object */</span><span style="--ph-delay:1.65s">backdrop-filter: blur(18px);</span><span style="--ph-delay:2s">border-radius: 44px;</span><span style="--ph-delay:2.4s">/* Glass / Highlight */</span></div>
+          <p class="ph-eyebrow">Дизайн-система MOEX</p>
+          <h1 class="ph-title" id="product-title"><img src="assets/product/headline.svg" width="612.313" height="176.081" alt="Продуктовый дизайн" /></h1>
+          <img class="ph-glow ph-glow--blue" src="assets/product/glow-blue.svg" width="400" height="400" alt="" />
+          <img class="ph-glow ph-glow--pink" src="assets/product/glow-pink.svg" width="330" height="330" alt="" />
+          <div class="ph-card" aria-hidden="true"><svg class="ph-circle" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" pathLength="1" /></svg><div class="ph-skeleton"><i></i><i></i><i></i></div></div>
+          <div class="ph-glass" aria-hidden="true"></div>
+          <div class="ph-pill" aria-hidden="true"></div>
+          <div class="ph-pill-small" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="product-tech" id="technology" aria-label="Технологии дизайн-системы" aria-roledescription="карусель">
+        <div class="product-tech__gradient" aria-hidden="true"><canvas></canvas></div>
+        <div class="product-tech__viewport">
+          <article class="product-tech__slide product-tech__slide--apca is-active" id="technology-slide-1" role="group" aria-roledescription="слайд" aria-label="1 из 3: Повышенный контраст APCA">
+            <div class="product-tech__stage">
+              <div class="product-tech__background" aria-hidden="true"><img src="assets/product/slide1-imgBgi.svg" width="1440" height="827" alt="" /></div>
+              <div class="pt-device pt-device--brandbook" aria-hidden="true"><img class="pt-device__brandbook" src="assets/projects/moex-brandbook-ipad.png" alt="" decoding="async" draggable="false" /></div>
+              <div class="product-tech__heading"><p class="product-tech__kicker">Технологии</p><h2>Повышенный контраст APCA</h2><p class="product-tech__description">Передовые стандарты восприятия информации. Мы полностью перешли на методологию APCA для обеспечения идеальной читаемости интерфейсов Московской Биржи</p></div>
+              <dl class="product-tech__metrics"><div><dt>Lc 75</dt><dd>Lc 75 — Основной текст</dd></div><div><dt>Lc 60</dt><dd>Lc 60 — Заголовки</dd></div><div><dt>Lc 90</dt><dd>Lc 90 — Мелкие подписи</dd></div></dl>
+              <img class="product-tech__rule" src="assets/product/slide1-imgLine395.svg" width="235" height="1" alt="" />
+            </div>
+          </article>
+          <article class="product-tech__slide product-tech__slide--spacing" id="technology-slide-2" role="group" aria-roledescription="слайд" aria-label="2 из 3: Единая размерность" inert aria-hidden="true">
+            <div class="product-tech__stage">
+              <div class="product-tech__background" aria-hidden="true"><img src="assets/product/slide2-imgBgi.svg" width="1440" height="827" alt="" /></div>
+              <div class="pt-device pt-device--brandbook" aria-hidden="true"><img class="pt-device__brandbook" src="assets/projects/moex-brandbook-ipad.png" alt="" decoding="async" draggable="false" /></div>
+              <div class="product-tech__heading"><p class="product-tech__kicker">Технологии</p><h2>Единая размерность</h2><p class="product-tech__description">Отступы, размеры и интервалы строятся по единой шкале. Это создаёт визуальный ритм, упрощает проектирование и помогает интерфейсам оставаться цельными независимо от продукта</p></div>
+              <dl class="product-tech__metrics"><div><dt>4</dt><dd>4 — Базовый шаг</dd></div><div><dt>8</dt><dd>8 — Малый отступ</dd></div><div><dt>16</dt><dd>16 — Основной ритм</dd></div><div><dt>32</dt><dd>32 — Крупный</dd></div></dl>
+              <img class="product-tech__rule" src="assets/product/slide2-imgLine395.svg" width="235" height="1" alt="" />
+            </div>
+          </article>
+          <article class="product-tech__slide product-tech__slide--states" id="technology-slide-3" role="group" aria-roledescription="слайд" aria-label="3 из 3: Единая логика состояний" inert aria-hidden="true">
+            <div class="product-tech__stage">
+              <div class="product-tech__background" aria-hidden="true"><img src="assets/product/slide3-imgBgi.svg" width="1440" height="827" alt="" /></div>
+              <div class="pt-device pt-device--brandbook" aria-hidden="true"><img class="pt-device__brandbook" src="assets/projects/moex-brandbook-ipad.png" alt="" decoding="async" draggable="false" /></div>
+              <div class="product-tech__heading"><p class="product-tech__kicker">Технологии</p><h2>Единая логика состояний</h2><p class="product-tech__description">Все компоненты используют общую систему состояний. Это делает поведение интерфейсов предсказуемым, ускоряет разработку и помогает пользователям одинаково считывать взаимодействие во всех продуктах MOEX</p></div>
+              <dl class="product-tech__metrics"><div><dt>Default</dt><dd>Default — Базовое состояние</dd></div><div><dt>Hover</dt><dd>Hover — Наведение</dd></div><div><dt>Active</dt><dd>Active — Активное действие</dd></div><div><dt>Disabled</dt><dd>Disabled — Недоступно</dd></div></dl>
+              <img class="product-tech__rule" src="assets/product/slide3-imgLine395.svg" width="92" height="1" alt="" />
+            </div>
+          </article>
+        </div>
+        <div class="product-tech__controls" aria-label="Выбор слайда">
+          <button type="button" data-tech-slide="0" aria-label="Повышенный контраст APCA" aria-controls="technology-slide-1" aria-current="true"><span></span></button>
+          <button type="button" data-tech-slide="1" aria-label="Единая размерность" aria-controls="technology-slide-2" aria-current="false"><span></span></button>
+          <button type="button" data-tech-slide="2" aria-label="Единая логика состояний" aria-controls="technology-slide-3" aria-current="false"><span></span></button>
+        </div>
+        <p class="product-tech__status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+      <section class="product-principles" id="principles" aria-labelledby="principles-title">
+        <div class="product-principles__inner">
+          <div class="product-principles__heading">
+            <p class="product-principles__kicker">Принципы дизайна</p>
+            <h2 id="principles-title">Как мы проектируем</h2>
+            <p class="product-principles__intro">Четыре принципа, которые превращают сложные финансовые сценарии в понятный пользовательский опыт</p>
+          </div>
+          <div class="product-principles__cards">
+            <article class="pp-card pp-card--clarity is-active">
+              <button class="pp-card__trigger" type="button" aria-labelledby="principle-title-0" aria-expanded="true" aria-controls="principle-detail-0"></button>
+              <span class="pp-card__number" aria-hidden="true">01</span>
+              <div class="pp-card__art" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="pp-card__copy">
+                <span class="pp-card__icon" aria-hidden="true"><img src="assets/product/principle-zap.svg" alt="" /></span>
+                <h3 id="principle-title-0">Ясность</h3>
+                <div class="pp-card__detail" id="principle-detail-0"><div class="pp-card__tags"><span>Иерархия</span><span>Доступность</span><span>Простой язык</span></div><h4>Сложное становится понятным</h4><p>Выстраиваем иерархию, выделяем главное и объясняем следующий шаг. Помогаем разобраться в финансовом продукте без лишних усилий</p></div>
               </div>
             </article>
-
-            <article class="sitemap-card sitemap-card--communication">
-              <div class="sitemap-card__head">
-                <h2>Коммуникационный дизайн</h2>
-                <p>Бренд, айдентика и визуальные коммуникации биржи.</p>
-                <span>/дизайн/коммуникации</span>
-              </div>
-              <div class="sitemap-card__items">
-                <a href="index.html#communication"><strong>Бренд и айдентика</strong><small>лого, цвет, шрифты</small></a>
-                <a href="index.html#communication"><strong>Портфолио отдела</strong><small>брендинг, события, печать</small></a>
+            <article class="pp-card pp-card--system">
+              <button class="pp-card__trigger" type="button" aria-labelledby="principle-title-1" aria-expanded="false" aria-controls="principle-detail-1"></button>
+              <span class="pp-card__number" aria-hidden="true">02</span>
+              <div class="pp-card__art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="pp-card__copy">
+                <span class="pp-card__icon" aria-hidden="true"><img src="assets/product/principle-system.svg" alt="" /></span>
+                <h3 id="principle-title-1">Системность</h3>
+                <div class="pp-card__detail" id="principle-detail-1" hidden><div class="pp-card__tags"><span>Компоненты</span><span>Паттерны</span><span>Единый опыт</span></div><h4>Разные продукты. Единый язык</h4><p>Объединяем продукты общими компонентами и правилами. Знакомые элементы работают одинаково — пользователю не нужно учиться заново</p></div>
               </div>
             </article>
-
-            <article class="sitemap-card sitemap-card--product">
-              <div class="sitemap-card__head">
-                <h1>Продуктовый дизайн</h1>
-                <p>Дизайн-система и цифровые продукты биржи.</p>
-                <span>/дизайн/продукт</span>
+            <article class="pp-card pp-card--trust">
+              <button class="pp-card__trigger" type="button" aria-labelledby="principle-title-2" aria-expanded="false" aria-controls="principle-detail-2"></button>
+              <span class="pp-card__number" aria-hidden="true">03</span>
+              <div class="pp-card__art" aria-hidden="true"><i><b>✓</b><span>Подтверждено</span></i><i></i><i></i></div>
+              <div class="pp-card__copy">
+                <span class="pp-card__icon" aria-hidden="true"><img src="assets/product/principle-system.svg" alt="" /></span>
+                <h3 id="principle-title-2">Доверие</h3>
+                <div class="pp-card__detail" id="principle-detail-2" hidden><div class="pp-card__tags"><span>Прозрачность</span><span>Обратная связь</span><span>Контроль</span></div><h4>Понятно, что происходит</h4><p>Показываем условия, статусы и результат действий. Помогаем замечать важное и сохранять контроль на каждом шаге</p></div>
               </div>
-              <div class="sitemap-card__items">
-                <a id="foundation" href="#foundation"><strong>Основа</strong><small>цвет, шрифты, сетка</small></a>
-                <a id="components" href="#components"><strong>Компоненты</strong><small>элементы интерфейса</small></a>
-                <a id="patterns" href="#patterns"><strong>Паттерны</strong><small>формы, навигация</small></a>
-                <a id="products" href="#products"><strong>Продукты и сайты</strong><small>витрина, применение</small></a>
-                <a id="vibecoding" href="#vibecoding"><strong>Вайбкодинг</strong><small>библиотека промптов</small></a>
-                <a id="portfolio" href="#portfolio"><strong>Портфолио отдела</strong><small>продуктовые кейсы</small></a>
+            </article>
+            <article class="pp-card pp-card--speed">
+              <button class="pp-card__trigger" type="button" aria-labelledby="principle-title-3" aria-expanded="false" aria-controls="principle-detail-3"></button>
+              <span class="pp-card__number" aria-hidden="true">04</span>
+              <div class="pp-card__art" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="pp-card__copy">
+                <span class="pp-card__icon" aria-hidden="true"><img src="assets/product/principle-zap.svg" alt="" /></span>
+                <h3 id="principle-title-3">Скорость</h3>
+                <div class="pp-card__detail" id="principle-detail-3" hidden><div class="pp-card__tags"><span>Короткий путь</span><span>Быстрый доступ</span><span>Отклик</span></div><h4>Меньше шагов до результата</h4><p>Убираем лишние действия, делаем частые задачи доступными и даём своевременный отклик. Интерфейс помогает двигаться в своём темпе</p></div>
               </div>
             </article>
           </div>
         </div>
       </section>
-
-      <section class="principles" id="principles">
-        <div class="container principles__inner" data-reveal>
-          <div class="principles__heading"><p class="team__kicker"><span></span>Принципы дизайна</p><h2>Создаём понятные<br />и доступные продукты</h2></div>
-          <div class="principles__grid">
-            <article class="principle-card principle-card--apca"><img src="assets/apca-card.svg" alt="График контраста по стандарту APCA" /><h3>Контраст и доступность</h3><p>Проверяем интерфейсы на читаемость и удобство для всех пользователей.</p></article>
-            <article class="principle-card principle-card--tokens"><img class="tokens-card" src="assets/tokens-card.svg" alt="Схема дизайн-токенов" /><svg class="tokens-draw" viewBox="0 0 274 114" aria-hidden="true"><path d="M52.75 10.75C90.75 10.75 86.75 28.75 124.75 28.75C86.75 28.75 90.75 34.75 52.75 34.75M52.75 58.75C90.75 58.75 86.75 80.75 124.75 80.75M124.75 80.75C86.75 80.75 90.75 82.75 52.75 82.75M124.75 80.75C86.75 80.75 90.75 106.75 52.75 106.75"/><path d="M236.75 6.75C198.75 6.75 202.75 28.75 164.75 28.75C202.75 28.75 198.75 34.75 236.75 34.75M236.75 58.75C198.75 58.75 202.75 80.75 164.75 80.75C202.75 80.75 198.75 102.75 236.75 102.75"/><path d="M46.75 4.75H6.75C3.436 4.75.75 7.436.75 10.75s2.686 6 6 6h40c3.314 0 6-2.686 6-6s-2.686-6-6-6ZM46.75 28.75H6.75c-3.314 0-6 2.686-6 6s2.686 6 6 6h40c3.314 0 6-2.686 6-6s-2.686-6-6-6ZM46.75 52.75H6.75c-3.314 0-6 2.686-6 6s2.686 6 6 6h40c3.314 0 6-2.686 6-6s-2.686-6-6-6Z"/><path d="M158.75 22.75h-28c-3.314 0-6 2.686-6 6s2.686 6 6 6h28c3.314 0 6-2.686 6-6s-2.686-6-6-6ZM158.75 74.75h-28c-3.314 0-6 2.686-6 6s2.686 6 6 6h28c3.314 0 6-2.686 6-6s-2.686-6-6-6Z"/><path d="M266.75.75h-24c-3.314 0-6 2.686-6 6s2.686 6 6 6h24c3.314 0 6-2.686 6-6s-2.686-6-6-6ZM266.75 28.75h-24c-3.314 0-6 2.686-6 6s2.686 6 6 6h24c3.314 0 6-2.686 6-6s-2.686-6-6-6ZM266.75 52.75h-24c-3.314 0-6 2.686-6 6s2.686 6 6 6h24c3.314 0 6-2.686 6-6s-2.686-6-6-6Z"/></svg><h3>Ясная структура</h3><p>Выстраиваем сценарии так, чтобы важное всегда было на виду.</p></article>
-            <article class="principle-card"><svg viewBox="0 0 360 210" aria-hidden="true"><path d="M48 60H194M48 105H276M48 150H154"/><path d="M256 50v116M198 108h116"/><circle cx="256" cy="108" r="30"/></svg><h3>Единая система</h3><p>Объединяем визуальный язык, компоненты и паттерны в одну систему.</p></article>
+      <section class="product-style" id="style" aria-labelledby="product-style-title">
+        <div class="product-style__underlight" aria-hidden="true"><img class="ps-glow ps-glow--under" src="assets/product/style-under-glow.svg" width="2074" height="897" alt="" loading="lazy" /></div>
+        <div class="product-style__background" aria-hidden="true">
+          <div class="product-style__glows">
+            <img class="ps-glow ps-glow--red" src="assets/product/style-glow-red.svg" width="1580" height="1580" alt="" loading="lazy" />
+            <img class="ps-glow ps-glow--warm" src="assets/product/style-glow-warm.svg" width="1144" height="1044" alt="" loading="lazy" />
+            <img class="ps-glow ps-glow--deep" src="assets/product/style-glow-deep.svg" width="1548" height="1348" alt="" loading="lazy" />
+            <img class="ps-glow ps-glow--dark" src="assets/product/style-glow-dark.svg" width="1212" height="1312" alt="" loading="lazy" />
+            <img class="ps-glow ps-glow--pink" src="assets/product/style-glow-pink.svg" width="976" height="976" alt="" loading="lazy" />
           </div>
         </div>
+        <div class="product-style__inner">
+          <header class="product-style__heading">
+            <h2 id="product-style-title">Стиль</h2>
+            <p>В дизайн-системе используется широкий набор визуальных инструментов и приемов, чтобы продукты были не просто удобными, но и привлекательными</p>
+          </header>
+          <div class="product-style__showcase">
+            <p class="product-style__wordmark" aria-hidden="true">SIGMA DESIGN SYSTEM</p>
+            <div class="style-grid">
+              <article class="style-card style-card--palette" tabindex="0">
+                <div class="style-card__top">
+                  <div class="product-style__swatches" aria-hidden="true">
+                    <img src="assets/product/style-color-1.svg" width="43.6875" height="43.6875" alt="" />
+                    <img src="assets/product/style-color-3.svg" width="43.6875" height="43.6875" alt="" />
+                    <img src="assets/product/style-color-2.svg" width="43.6875" height="43.6875" alt="" />
+                  </div>
+                  <span class="product-style__hex">HEX #FF0508</span>
+                </div>
+                <div class="style-card__copy"><h3>Палитра</h3><p>Автоматизация дизайн-процессов и единая система компонентов сократили количество итераций на 60%</p></div>
+              </article>
+              <article class="style-card style-card--icons" tabindex="0">
+                <div class="style-card__metric"><span>ICONS —</span><strong>462</strong><span class="style-card__badge">+372%</span></div>
+                <div class="product-style__icons" aria-hidden="true">
+                  <div class="product-style__icon-row"><img src="assets/product/style-icons-row-1.png" alt="" loading="lazy" draggable="false" /></div>
+                  <div class="product-style__icon-row"><img src="assets/product/style-icons-row-2.png" alt="" loading="lazy" draggable="false" /></div>
+                  <div class="product-style__icon-row"><img src="assets/product/style-icons-row-3.png" alt="" loading="lazy" draggable="false" /></div>
+                  <div class="product-style__icon-row"><img src="assets/product/style-icons-row-4.png" alt="" loading="lazy" draggable="false" /></div>
+                </div>
+                <div class="style-card__copy"><h3>Иконографика</h3><p>Единый дизайн-стандарт ускорил вывод цифровых продуктов на рынок в 5 раз</p></div>
+              </article>
+              <a class="style-card style-card--type" href="materials.html#typography">
+                <span class="style-card__meta">Inter Bold</span>
+                <span class="style-card__letters" aria-hidden="true">Aa Bb</span>
+                <div class="style-card__copy"><h3>Типографика</h3><p>Автоматизация дизайн-процессов и единая система компонентов сократили количество итераций на 60%</p></div>
+              </a>
+              <article class="style-card style-card--variants" tabindex="0">
+                <div class="product-style__variants" role="img" aria-label="Варианты кнопок Primary и Soft в разных размерах">
+                  <span class="product-style__variant product-style__variant--first" aria-hidden="true">Primary</span>
+                  <span class="product-style__variant product-style__variant--second" aria-hidden="true">Soft</span>
+                  <svg class="product-style__blueprint" viewBox="-29 -24 260 104" width="260" height="104" aria-hidden="true">
+                    <g class="variant-blueprint__extensions variant-blueprint__draw-y" fill="none">
+                      <path d="M0 -18V48 M96 -18V48 M106 -18V48 M202 -18V48" />
+                    </g>
+                    <g class="variant-blueprint__extensions variant-blueprint__draw-x" fill="none">
+                      <path d="M-26 6H228 M-26 38H228" />
+                    </g>
+                    <g class="variant-blueprint__dimensions variant-blueprint__draw-x" fill="none">
+                      <path d="M0 -9H96 M0 -12V-6 M96 -12V-6 M106 -9H202 M106 -12V-6 M202 -12V-6" />
+                    </g>
+                    <g class="variant-blueprint__dimensions variant-blueprint__draw-y" fill="none">
+                      <path d="M-15 6V38 M-18 6H-12 M-18 38H-12 M217 6V38 M214 6H220 M214 38H220" />
+                    </g>
+                    <g class="variant-blueprint__contours" fill="none">
+                      <path class="variant-blueprint__radius" d="M0 27.6A10.4 10.4 0 0 0 10.4 38 M10.4 27.6L3.05 34.95L-4 53H30" pathLength="1" />
+                    </g>
+                    <g class="variant-blueprint__labels">
+                      <text x="48" y="-14" text-anchor="middle">96</text>
+                      <text x="154" y="-14" text-anchor="middle">96</text>
+                      <text x="-21" y="22" text-anchor="middle" transform="rotate(-90 -21 22)">32</text>
+                      <text x="228" y="22" text-anchor="middle" transform="rotate(-90 228 22)">32</text>
+                      <text x="0" y="64">R 10.4</text>
+                      <text x="123" y="64">SOFT / S</text>
+                    </g>
+                  </svg>
+                </div>
+                <div class="style-card__copy"><h3>Варианты и размеры</h3><p>Автоматизация дизайн-процессов и единая система компонентов сократили количество итераций на 60%</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="product-custom" id="customization" aria-labelledby="custom-title">
+        <div class="product-custom__panel">
+          <div class="product-custom__settings">
+            <p class="product-custom__eyebrow">Гибкость системы</p>
+            <h2 id="custom-title">Кастомизация</h2>
+            <p class="product-custom__description">Продукты MOEX могут адаптировать визуальный характер под&nbsp;свои задачи, сохраняя общий язык, компоненты и&nbsp;принципы взаимодействия</p>
+            <div class="product-custom__options">
+              <fieldset class="product-custom__count"><legend>Количество баннеров</legend><div class="product-custom__segments">
+                <label><input type="radio" name="custom-count" value="1" checked /><span>1</span></label>
+                <label><input type="radio" name="custom-count" value="2" /><span>2</span></label>
+                <label><input type="radio" name="custom-count" value="3" /><span>3</span></label>
+                <label><input type="radio" name="custom-count" value="4" /><span>4</span></label>
+              </div></fieldset>
+              <fieldset><legend>Цвет</legend><div class="product-custom__colors">
+                <label style="--swatch:#ff0508"><input type="radio" name="custom-color" value="red" aria-label="Красный" checked /><span></span></label>
+                <label style="--swatch:#f3ebdd"><input type="radio" name="custom-color" value="sand" aria-label="Бежевый" /><span></span></label>
+                <label style="--swatch:#abd0ff"><input type="radio" name="custom-color" value="blue" aria-label="Голубой" /><span></span></label>
+              </div></fieldset>
+            </div>
+            <div class="product-custom__toggles">
+              <label>Изображение<input type="checkbox" name="custom-image" role="switch" checked /><span aria-hidden="true"></span></label>
+              <label>Кнопка<input type="checkbox" name="custom-button" role="switch" checked /><span aria-hidden="true"></span></label>
+            </div>
+          </div>
+          <div class="product-custom__preview" data-color="red" data-count="1" aria-label="Предпросмотр баннеров">
+            <div class="product-custom__banners">
+              <article class="custom-banner"><h3>Вечные фьючерсы<br />на&nbsp;иностранные акции</h3><p>Новые контракты уже в&nbsp;торгах</p><img src="assets/communication/candles.png" alt="Биржевые котировки" /><span class="custom-banner__button">Торговать</span></article>
+              <article class="custom-banner" hidden><h3>Возможности<br />для&nbsp;инвестиций</h3><p>Откройте новые инструменты</p><img src="assets/communication/gold.png" alt="Золотые слитки" /><span class="custom-banner__button">Подробнее</span></article>
+              <article class="custom-banner" hidden><h3>Рынок<br />в&nbsp;движении</h3><p>Следите за&nbsp;котировками</p><img src="assets/communication/rate.png" alt="Процентная ставка" /><span class="custom-banner__button">Смотреть</span></article>
+              <article class="custom-banner" hidden><h3>Новые<br />перспективы</h3><p>Ваш следующий шаг</p><img src="assets/communication/currency.png" alt="Валютные инструменты" /><span class="custom-banner__button">Подробнее</span></article>
+            </div>
+            <aside class="product-custom__teasers" aria-hidden="true"><div><strong>Крипто без&nbsp;криптобиржи</strong><p>На&nbsp;регулируемой площадке с&nbsp;привычным брокерским счётом</p></div><div><strong>Инвестиционный сервис</strong><p>Основание для&nbsp;принятия квалифицированных решений</p></div></aside>
+          </div>
+          <p class="product-custom__status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+      <section class="communication-results product-results" id="results" aria-labelledby="results-title">
+        <div class="communication-results__inner">
+          <header class="communication-results__heading">
+            <p class="communication-results__eyebrow">Результаты</p>
+            <h2 id="results-title">Результаты внедрения дизайн-системы</h2>
+          </header>
+          <dl class="communication-results__metrics">
+            <div class="communication-results__metric">
+              <dt>переиспользование компонентов</dt>
+              <dd class="communication-results__value">72%</dd>
+              <dd class="communication-results__description">Больше не&nbsp;пишем код с&nbsp;нуля — переиспользуем готовые блоки библиотеки</dd>
+            </div>
+            <div class="communication-results__metric">
+              <dt>ускорение прототипирования</dt>
+              <dd class="communication-results__value">2.6×</dd>
+              <dd class="communication-results__description">Интерактивные компоненты позволяют собрать рабочий флоу за&nbsp;один клик</dd>
+            </div>
+            <div class="communication-results__metric">
+              <dt>продуктов на&nbsp;Sigma</dt>
+              <dd class="communication-results__value">30+</dd>
+              <dd class="communication-results__description">Все новые и&nbsp;редизайнутые сервисы сразу подключаются к&nbsp;общему контуру</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+<section class="projects-carousel" id="portfolio" aria-labelledby="projects-heading" aria-roledescription="карусель">
+        <header class="projects-carousel__heading"><p>Портфолио</p><h2 id="projects-heading">Проекты, меняющие индустрию</h2><span>Дизайн, который делает сложное понятным</span></header>
+        <div class="projects-carousel__stage" aria-label="Проекты MOEX">
+          <article class="project-stack-card is-active" role="group" aria-roledescription="слайд" aria-label="1 из 3: Цифровые продукты">
+            <div class="project-stack-card__visual"><img src="assets/projects/moex-brandbook-ipad.png" alt="iPad с брендбуком MOEX" loading="lazy" decoding="async" draggable="false" /></div>
+            <div class="project-stack-card__body"><span class="project-stack-card__eyebrow">Цифровые продукты</span><h3>Финансовые сервисы, в&nbsp;которых легко ориентироваться</h3><p>Единый интерфейс объединяет рыночные данные, инструменты и&nbsp;торговые возможности</p><div class="project-stack-card__bottom"><div class="project-stack-card__tags"><span>Интерфейсы</span><span>MOEX</span></div><a href="product.html">Подробнее</a></div></div>
+          </article>
+          <article class="project-stack-card" role="group" aria-roledescription="слайд" aria-label="2 из 3: Скринеры облигаций" inert aria-hidden="true">
+            <div class="project-stack-card__visual"><img src="assets/projects/moex-brandbook-ipad.png" alt="iPad с брендбуком MOEX" loading="lazy" decoding="async" draggable="false" /></div>
+            <div class="project-stack-card__body"><span class="project-stack-card__eyebrow">Скринеры облигаций</span><h3>Всё важное для&nbsp;выбора инструмента — на&nbsp;одном экране</h3><p>Фильтры и&nbsp;сравнение помогают находить облигации и&nbsp;работать с&nbsp;данными без&nbsp;лишних шагов</p><div class="project-stack-card__bottom"><div class="project-stack-card__tags"><span>Данные</span><span>UX / UI</span></div><a href="product.html">Подробнее</a></div></div>
+          </article>
+          <article class="project-stack-card" role="group" aria-roledescription="слайд" aria-label="3 из 3: Визуальная система" inert aria-hidden="true">
+            <div class="project-stack-card__visual"><img src="assets/projects/moex-brandbook-ipad.png" alt="iPad с брендбуком MOEX" loading="lazy" decoding="async" draggable="false" /></div>
+            <div class="project-stack-card__body"><span class="project-stack-card__eyebrow">Визуальная система</span><h3>Один узнаваемый язык для&nbsp;разных задач бренда</h3><p>Типографика, графика и&nbsp;объёмные иллюстрации работают вместе — в&nbsp;продуктах и&nbsp;коммуникациях</p><div class="project-stack-card__bottom"><div class="project-stack-card__tags"><span>Айдентика</span><span>3D</span></div><a href="communication.html">Подробнее</a></div></div>
+          </article>
+        </div>
+        <div class="projects-carousel__dots" aria-label="Выбор проекта"><button type="button" data-project-dot="0" aria-label="Цифровые продукты" aria-current="true"><span></span></button><button type="button" data-project-dot="1" aria-label="Скринеры облигаций" aria-current="false"><span></span></button><button type="button" data-project-dot="2" aria-label="Визуальная система" aria-current="false"><span></span></button></div>
+        <p class="projects-carousel__status" role="status" aria-live="polite"></p>
       </section>
     </main>
 
@@ -102,9 +347,9 @@
           <div class="footer__links">
             <img class="footer__logo" src="assets/moex-logotype.svg" alt="MOEX Design" />
             <div class="footer__columns">
-              <div><p>О центре</p><a href="index.html#structure">Миссия и структура</a><a href="index.html#team">Команда</a><a href="#principles">Как мы работаем</a></div>
-              <div><p>Коммуникации</p><a href="index.html#communication">Бренд и айдентика</a><a href="index.html#communication">Портфолио отдела</a></div>
-              <div><p>Продукты</p><a href="#foundation">Основа системы</a><a href="#components">Компоненты</a><a href="#patterns">Паттерны</a><a href="#products">Продукты и сайты</a><a href="#vibecoding">Вайбкодинг</a><a href="#portfolio">Портфолио отдела</a></div>
+              <div><p><a href="communication.html">Коммуникационный дизайн</a></p><a href="communication.html#style">Стиль</a><a href="communication.html#banners">Рекламные баннеры</a><a href="communication.html#typography">Типографика</a><a href="communication.html#banner-builder">Конструктор</a><a href="communication.html#results">Результаты</a><a href="communication.html#portfolio">Проекты</a></div>
+              <div><p><a href="product.html">Продуктовый дизайн</a></p><a href="product.html#technology">Технологии</a><a href="product.html#principles">Как мы проектируем</a><a href="product.html#style">Стиль</a><a href="product.html#customization">Кастомизация</a><a href="product.html#results">Результаты</a><a href="product.html#portfolio">Проекты</a></div>
+              <div><p><a href="materials.html">Скачать материалы</a></p><a href="materials.html#logos">Логотипы</a><a href="materials.html#typography">Фирменный шрифт</a><a href="materials.html#brandbook">Брендбук</a><a href="materials.html#illustrations">3D-иллюстрации</a><a href="materials.html#icons">Иконки</a><a href="materials.html#presentations">Презентации и шаблоны</a></div>
             </div>
           </div>
           <div class="footer__brand"><strong class="footer__wordmark"><span class="wordmark__moex">MOEX</span><span class="wordmark__design">DESIGN</span></strong><div><span>’ 26</span><span class="anniversary" aria-label="MOEX 2026"><img class="anniversary__ring" src="assets/anniversary-mark.svg" alt="" /><span class="anniversary__center"><img src="assets/anniversary-mark.svg" alt="" /></span></span></div></div>
@@ -128,16 +373,6 @@
 
       document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
 
-      document.querySelectorAll('.nav a:not(.nav__cta)').forEach((link) => {
-        const label = link.textContent.trim();
-        link.setAttribute('aria-label', label);
-        link.textContent = '';
-        const word = document.createElement('span');
-        word.className = 'letter-swap nav__word-swap';
-        word.dataset.letter = label;
-        word.setAttribute('aria-hidden', 'true');
-        link.append(word);
-      });
 
       document.querySelectorAll('.footer__columns a').forEach((link) => {
         const label = link.textContent.trim();
@@ -150,26 +385,12 @@
         link.append(word);
       });
 
-      const menuButton = document.querySelector('.menu-button');
-      const mainNavigation = document.querySelector('.nav');
-      const setMenuState = (isOpen) => {
-        mainNavigation.classList.toggle('is-open', isOpen);
-        menuButton.classList.toggle('is-open', isOpen);
-        document.body.classList.toggle('menu-open', isOpen);
-        menuButton.setAttribute('aria-expanded', String(isOpen));
-        menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-      };
-
-      menuButton.addEventListener('click', () => setMenuState(!mainNavigation.classList.contains('is-open')));
-      mainNavigation.querySelector('.menu-close').addEventListener('click', () => setMenuState(false));
-      mainNavigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuState(false)));
-      window.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuState(false); });
 
       const pageMain = document.querySelector('main');
       const stickyFooter = document.querySelector('.footer');
       const updateStickyFooter = () => {
         const footerHeight = stickyFooter.offsetHeight;
-        const canStick = footerHeight < window.innerHeight * .94;
+        const canStick = window.innerWidth > 800 && footerHeight < window.innerHeight * .94;
         document.documentElement.style.setProperty('--footer-space', `${footerHeight}px`);
         stickyFooter.classList.toggle('footer--sticky', canStick);
         pageMain.classList.toggle('footer-is-sticky', canStick);

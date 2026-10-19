@@ -2,37 +2,6 @@
   'use strict';
 
   const mobileViewport = window.matchMedia('(max-width:760px)');
-  const menuToggle = document.querySelector('.materials-menu-toggle');
-  const drawer = document.querySelector('.materials-mobile-drawer');
-  const drawerClose = drawer?.querySelector('.materials-mobile-drawer__close');
-  const drawerDismiss = document.querySelector('.materials-mobile-drawer-dismiss');
-  const drawerPageMain = document.querySelector('.materials-main');
-  const drawerPageFooter = document.querySelector('.materials-page > .footer');
-  const setMenuOpen = (open) => {
-    if (!mobileViewport.matches) open = false;
-    document.body.classList.toggle('is-menu-open', open);
-    document.documentElement.classList.toggle('is-materials-drawer-open', open);
-    menuToggle?.setAttribute('aria-expanded', String(open));
-    menuToggle?.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
-    drawer?.setAttribute('aria-hidden', String(!open));
-    if (drawer) drawer.inert = !open;
-    if (drawerPageMain) drawerPageMain.inert = open;
-    if (drawerPageFooter) drawerPageFooter.inert = open;
-    if (open) window.setTimeout(() => {
-      if (document.body.classList.contains('is-menu-open')) drawerClose?.focus({ preventScroll: true });
-    }, 80);
-  };
-  const closeMenu = () => setMenuOpen(false);
-  menuToggle?.addEventListener('click', () => setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true'));
-  drawerClose?.addEventListener('click', () => { closeMenu(); menuToggle?.focus({ preventScroll: true }); });
-  drawerDismiss?.addEventListener('click', () => { closeMenu(); menuToggle?.focus({ preventScroll: true }); });
-  drawer?.addEventListener('click', (event) => {
-    if (event.target.closest('a')) closeMenu();
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && document.body.classList.contains('is-menu-open')) { closeMenu(); menuToggle?.focus({ preventScroll: true }); }
-  });
-  mobileViewport.addEventListener('change', closeMenu);
 
   // The mobile Figma ticker has its own content and a 40-second timeline.
   const tickerGroups = [...document.querySelectorAll('.moex-preloader__ticker-group')];
@@ -112,6 +81,74 @@
   });
 
   const nav = document.querySelector('[data-materials-nav]');
+  const kitHeader = nav?.closest('.materials-header');
+  const kitHero = document.querySelector('.materials-hero');
+  const kitFooter = document.querySelector('footer.footer');
+  if (kitHeader && kitHero) {
+    const slot = document.createElement('div');
+    slot.className = 'materials-nav-slot';
+    kitHeader.before(slot);
+    slot.append(kitHeader);
+    const main = document.querySelector('.materials-main');
+    let docked = false;
+    let switching = false;
+    const dockReducedMotion = matchMedia('(prefers-reduced-motion:reduce)');
+    let dockFrame = 0;
+    const switchDock = async (nextDocked) => {
+      switching = true;
+      const reduced = dockReducedMotion.matches;
+      const fromTransform = docked ? 'translate(-50%,0)' : 'translateY(0)';
+      const toTransform = docked ? 'translate(-50%,14px)' : 'translateY(-8px)';
+      if (!reduced) {
+        const outgoing = kitHeader.animate([
+          {opacity:1, transform:fromTransform},
+          {opacity:0, transform:toTransform}
+        ], {duration:220, easing:'cubic-bezier(.4,0,1,1)', fill:'forwards'});
+        await outgoing.finished;
+        outgoing.cancel();
+      }
+      if (nextDocked) {
+        slot.style.height = `${kitHeader.offsetHeight}px`;
+        document.body.append(kitHeader);
+      } else {
+        slot.append(kitHeader);
+        slot.style.height = '';
+      }
+      docked = nextDocked;
+      kitHeader.classList.toggle('is-bottom-dock', docked);
+      syncNavIndicator();
+      updateDock();
+      if (!reduced && !kitHeader.inert) {
+        const incoming = kitHeader.animate([
+          {opacity:0, transform:docked ? 'translate(-50%,18px)' : 'translateY(-8px)'},
+          {opacity:1, transform:docked ? 'translate(-50%,0)' : 'translateY(0)'}
+        ], {duration:480, easing:'cubic-bezier(.22,1,.36,1)'});
+        await incoming.finished;
+      }
+      switching = false;
+      queueDock();
+    };
+    const updateDock = () => {
+      dockFrame = 0;
+      const headerHeight = mobileViewport.matches ? 70 : 90;
+      const tickerHeight = document.body.classList.contains('has-site-ticker') ? 44 : 0;
+      const shouldDock = slot.getBoundingClientRect().bottom <= headerHeight + tickerHeight;
+      if (shouldDock !== docked && !switching) switchDock(shouldDock);
+      // A fixed footer sits behind main even at the top of the page.
+      const footerEdge = kitFooter?.classList.contains('footer--sticky') && main
+        ? main.getBoundingClientRect().bottom : kitFooter?.getBoundingClientRect().top;
+      const footerVisible = footerEdge != null && footerEdge < window.innerHeight;
+      const visible = !docked || (!document.body.classList.contains('is-preloader-active') && !footerVisible);
+      kitHeader.classList.toggle('is-dock-visible', visible);
+      kitHeader.inert = !visible;
+      kitHeader.setAttribute('aria-hidden', String(!visible));
+    };
+    const queueDock = () => { if (!dockFrame) dockFrame = requestAnimationFrame(updateDock); };
+    addEventListener('scroll', queueDock, {passive:true});
+    addEventListener('resize', queueDock);
+    document.addEventListener('moex:preloader-complete', queueDock);
+    queueDock();
+  }
   const navLinks = [...document.querySelectorAll('[data-materials-nav] .materials-nav__scroller a[href^="#"]')];
   const sections = [...document.querySelectorAll('[data-materials-section]')];
   const navScroller = nav?.querySelector('.materials-nav__scroller');
@@ -197,7 +234,7 @@
   if (pageMain && footer) {
     const syncFooter = () => {
       const height = footer.offsetHeight;
-      const canStick = height < window.innerHeight * .94;
+      const canStick = window.innerWidth > 800 && height < window.innerHeight * .94;
       document.documentElement.style.setProperty('--footer-space', `${height}px`);
       footer.classList.toggle('footer--sticky', canStick);
       pageMain.classList.toggle('footer-is-sticky', canStick);

@@ -4,11 +4,18 @@
 .materials-layout { display:grid; gap:24px; margin-top:52px; }
 
 .materials-hero { --materials-grid-step:64px; position:relative; min-height:286px; overflow:hidden; background-color:#fff; border-bottom:1px solid #ebebeb; }
-.materials-hero::before { position:absolute; z-index:0; inset:-20%; background-image:linear-gradient(#ededed 1px,transparent 1px),linear-gradient(90deg,#ededed 1px,transparent 1px); background-size:var(--materials-grid-step) var(--materials-grid-step); transform-origin:60% 45%; animation:materials-grid-recede 18s ease-in-out infinite alternate; content:""; pointer-events:none; }
-.materials-hero::after { position:absolute; inset:0; background:linear-gradient(90deg,rgba(255,255,255,.16),transparent 20%,transparent 80%,rgba(255,255,255,.16)); content:""; pointer-events:none; }
-@keyframes materials-grid-recede {
-  from { transform:scale(1); opacity:.9; }
-  to { transform:scale(.84); opacity:.6; }
+.materials-hero::before { position:absolute; z-index:0; inset:0; background-image:radial-gradient(circle at 1px 1px,rgba(64,60,55,.23) 1.3px,transparent 1.8px),linear-gradient(rgba(64,60,55,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(64,60,55,.075) 1px,transparent 1px); background-size:var(--materials-grid-step) var(--materials-grid-step); background-position:30px 24px; animation:materials-grid-breathe 9s ease-in-out infinite alternate; content:""; pointer-events:none; }
+.materials-hero::after { position:absolute; z-index:1; inset:0; background:radial-gradient(ellipse at 23% 65%,rgba(255,255,255,.74),transparent 68%),linear-gradient(to bottom,rgba(255,255,255,.12),transparent 65%,rgba(255,255,255,.6)); content:""; pointer-events:none; }
+@keyframes materials-grid-breathe {
+  from { opacity:.55; }
+  to { opacity:.95; }
+}
+.materials-hero::after { transition:opacity .85s ease; }
+@media (hover:hover) and (pointer:fine) {
+  .materials-hero:hover::after { opacity:.38; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .materials-hero::after { transition:none; }
 }
 .materials-site-header { position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:30px; padding-top:36px; }
 .materials-site-logo { display:block; flex:0 0 auto; }
@@ -16,7 +23,7 @@
 .materials-site-nav { display:flex; align-items:center; gap:4px; padding:6px; border:1px solid #dedede; border-radius:16px; background:rgba(255,255,255,.88); box-shadow:0 4px 16px rgba(20,20,20,.025); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
 .materials-site-nav > a { flex:0 0 auto; padding:10px 15px; border-radius:9px; color:#1d1d1d; font-size:14px; font-weight:500; line-height:1; white-space:nowrap; transition:background-color .2s ease,color .2s ease; }
 .materials-site-nav > a:hover,.materials-site-nav > a:focus-visible { background:#f0f0f0; }
-.materials-site-nav__cta { display:inline-flex; align-items:center; gap:9px; background:#1d1d1d; color:#fff !important; font-weight:600 !important; }
+.materials-site-nav__cta { display:inline-flex; align-items:center; gap:9px; background:#1d1d1d; color:#fff !important; font-weight:500 !important; }
 .materials-site-nav__cta:hover,.materials-site-nav__cta:focus-visible { background:#393939 !important; }
 .materials-site-nav__cta img { display:block; width:16px; height:16px; filter:invert(1); }
 .materials-hero__copy { position:relative; z-index:2; padding-top:38px; }

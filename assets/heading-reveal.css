@@ -1,0 +1,12 @@
+.heading-reveal__readable { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.heading-reveal__word { display:inline-block; white-space:nowrap; transform-origin:50% 100%; }
+.heading-reveal:not(.heading-reveal--visible) .heading-reveal__word { opacity:0; transform:translateY(.32em) rotateX(12deg); }
+.heading-reveal--visible .heading-reveal__word { animation:heading-word-arrive 1150ms cubic-bezier(.22,.55,.3,1) var(--word-delay) both; }
+@keyframes heading-word-arrive {
+  from { opacity:0; filter:blur(5px); transform:translateY(.28em) rotateX(8deg); }
+  60% { opacity:.85; filter:blur(1.5px); }
+  to { opacity:1; filter:blur(0); transform:none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .heading-reveal .heading-reveal__word { opacity:1; transform:none; filter:none; animation:none; }
+}

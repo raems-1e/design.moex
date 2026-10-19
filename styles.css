@@ -61,6 +61,7 @@ a { color:inherit; text-decoration:none; }
 .hero__direction:hover { background:#fdf5f1; transform:translateY(-4px); }
 .hero__direction span { position:relative; z-index:1; margin-bottom:12px; color:#727272; font-size:12px; font-weight:500; line-height:1.5; }
 .hero__direction strong { position:relative; z-index:1; font-size:20px; line-height:1.12; letter-spacing:-.6px; }
+.hero__direction { font-family:Manrope,Inter,Arial,sans-serif; }
 .eyebrow { align-self:flex-start; display:inline-block; padding:6px 12px; border-radius:6px; background:rgba(255,255,255,.42); color:#777; font-size:13px; font-weight:600; }
 h1 { max-width:515px; margin:16px 0 24px; font-size:32px; font-weight:600; line-height:1.09; letter-spacing:-1.6px; }
 .hero__main > p { max-width:532px; margin:0; color:#727272; font-size:16px; font-weight:500; line-height:1.5; }
@@ -162,7 +163,7 @@ h3 { max-width:500px; margin:0; font-size:20px; line-height:1.2; letter-spacing:
 .person--team-afanasiev { --person-image:url('assets/team-card-afanasiev.png'); --person-position:left top; --person-size:229px 331px; }
 .person--team-ervin { --person-image:url('assets/team-card-ervin.png'); --person-position:left top; --person-size:229px 331px; }
 .person--team-arina { --person-image:url('assets/team-arina.png'); --person-size:111%; --person-position:center top; }
-.person--team-oleg { --person-image:url('assets/team-oleg.png'); --person-position:center bottom; }
+.person--team-oleg { --person-image:url('assets/team-oleg-white.png'); --person-position:center bottom; }
 .person__meta { min-height:51px; color:#fff; }
 .person__meta h3 { margin:0 0 4px; font-size:14px; font-weight:600; line-height:1.2; letter-spacing:0; text-transform:uppercase; }
 .person__meta p { margin:0; color:rgba(255,255,255,.72); font-size:11px; font-weight:600; line-height:1.3; text-transform:uppercase; }

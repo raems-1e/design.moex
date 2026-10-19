@@ -1,0 +1,33 @@
+/* A decorative layer only: no layout changes to sticky/reveal footers. */
+body .footer.footer--shader{isolation:isolate;overflow:hidden;background:#090607}
+.footer--shader .footer-shader{position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse at 82% 100%,#38171c,transparent 70%),radial-gradient(ellipse at 48% 125%,#241419,transparent 65%),#090607}
+.footer .wordmark__moex,.footer .wordmark__design{display:inline-block;transition:translate .18s ease-out}
+.footer .wordmark__moex{translate:calc(-1 * var(--wordmark-shift,0px)) 0}
+.footer .wordmark__design{translate:var(--wordmark-shift,0px) 0}
+@media(prefers-reduced-motion:reduce){.footer .wordmark__moex,.footer .wordmark__design{translate:none;transition:none}}
+.footer-shader canvas{display:block;width:100%;height:100%;pointer-events:none}
+body .footer.footer--shader::before,body .footer.footer--shader::after{display:none}
+.footer--shader .footer__inner{position:relative;z-index:1}
+body .footer--shader .footer__columns p{color:#c9babc}
+body .footer--shader .footer__bottom{border-top-color:#ffffff24}
+body .footer--shader .legal{color:#c9babc}
+@media(forced-colors:active){.footer--shader .footer-shader{display:none}}
+
+/* Keep headings on one line and retain the original rolling link animation. */
+.footer .footer__top{flex-wrap:wrap}
+.footer .footer__links{width:min(100%,780px)}
+.footer .footer__columns{grid-template-columns:repeat(3,max-content);justify-content:space-between;gap:24px}
+.footer .footer__columns p{white-space:nowrap}
+.footer .footer__brand{margin-left:auto}
+.footer .footer__columns > div{min-width:0}
+.footer .footer__columns a{overflow-wrap:break-word;transition:color .25s ease}
+.footer .footer__columns .letter-swap{height:auto;overflow:hidden}
+.footer .footer__columns .letter-swap::after{width:100%}
+.footer .footer__columns a:hover,.footer .footer__columns a:focus-visible{color:#fff}
+@media(max-width:800px){
+  body .footer .footer__columns{display:flex;flex-direction:column;gap:32px}
+  body .footer .footer__columns > div{gap:12px}
+  body .footer .footer__columns a{display:block;line-height:1.5}
+  body .footer .footer__inner{transform:none}
+  body .footer .footer__brand{margin-left:0}
+}

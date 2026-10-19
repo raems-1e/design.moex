@@ -16,14 +16,13 @@
    Cards stay in document flow; artwork is positioned inside its own card. */
 @media (max-width:760px) {
   .materials-page { --ink:#1c1c1c; --materials-drawer-width:min(78vw,320px); position:relative; left:0; -webkit-font-smoothing:antialiased; transition:left .64s cubic-bezier(.4,0,.2,1); }
-  html.is-materials-drawer-open { overflow:hidden; background:#e90009; }
   .materials-page.is-menu-open { left:calc(-1 * var(--materials-drawer-width)); }
   .materials-desktop-only { display:none; }
   .materials-mobile-only { display:initial; }
   .materials-main,body.has-site-ticker .materials-main { padding:0 0 42px; }
   .materials-container { width:calc(100% - 18px); }
   .materials-hero { --materials-grid-step:49px; min-height:320px; border:0; }
-  .materials-hero::before { inset:0; background-size:47px 47px; background-position:1px 8px; background-image:linear-gradient(#f4f4f4 1px,transparent 1px),linear-gradient(90deg,#f4f4f4 1px,transparent 1px); opacity:1; transform:none; animation:none; }
+  .materials-hero::before { background-position:17px 8px; opacity:.7; animation:none; }
   .materials-site-header { position:fixed; z-index:11; top:44px; left:0; width:100%; height:70px; padding:0 14px 0 17px; gap:16px; border-bottom:1px solid #1c1c1c0a; background:rgba(249,249,249,.93); -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); transition:left .64s cubic-bezier(.4,0,.2,1); }
   .materials-page.is-menu-open .materials-site-header { left:calc(-1 * var(--materials-drawer-width)); }
   .materials-site-logo img { width:127px; height:17px; }
@@ -37,38 +36,6 @@
   .materials-menu-toggle[aria-expanded="true"]::after { top:11px; transform:rotate(-45deg); }
   .materials-menu-toggle:focus-visible { outline:2px solid var(--ink); outline-offset:4px; border-radius:3px; }
   .materials-site-nav { display:none; }
-  .materials-mobile-drawer { position:fixed; z-index:10003; inset:0 0 0 auto; display:flex; width:var(--materials-drawer-width); height:100dvh; flex-direction:column; overflow:visible; padding:66px 22px 28px; background:#e90009; box-shadow:-16px 0 42px #6c000038; color:#fff; opacity:0; visibility:hidden; pointer-events:none; transform:translate3d(22px,0,0); transition:opacity .38s ease,transform .64s cubic-bezier(.4,0,.2,1),visibility .64s; }
-  .materials-page.is-menu-open .materials-mobile-drawer { opacity:1; visibility:visible; pointer-events:auto; transform:none; }
-  .materials-mobile-drawer::before,.materials-mobile-drawer::after { position:absolute; right:100%; width:28px; height:28px; content:""; pointer-events:none; }
-  .materials-mobile-drawer::before { top:0; background:radial-gradient(circle at 0 100%,transparent 28px,#e90009 29px); }
-  .materials-mobile-drawer::after { bottom:0; background:radial-gradient(circle at 0 0,transparent 28px,#e90009 29px); }
-  .materials-mobile-drawer__wave { position:absolute; z-index:0; inset:0; overflow:hidden; pointer-events:none; background:radial-gradient(ellipse 85% 43% at 110% 17%,#ffffff18,transparent 72%); }
-  .materials-mobile-drawer__wave::before,.materials-mobile-drawer__wave::after { position:absolute; display:block; width:165%; height:62%; border-radius:50%; filter:blur(28px); content:""; will-change:transform; }
-  .materials-mobile-drawer__wave::before { top:10%; left:-85%; background:radial-gradient(ellipse at center,#fff 0,#ffc5c9 34%,transparent 72%); opacity:.36; animation:materials-drawer-wave 9s ease-in-out infinite alternate; }
-  .materials-mobile-drawer__wave::after { right:-60%; bottom:0; background:radial-gradient(ellipse at center,#830015 0,#b50021 35%,transparent 70%); opacity:.32; animation:materials-drawer-wave 12s ease-in-out infinite alternate-reverse; }
-  .materials-mobile-drawer__wave::before,.materials-mobile-drawer__wave::after { animation-play-state:paused; }
-  .materials-page.is-menu-open .materials-mobile-drawer__wave::before,.materials-page.is-menu-open .materials-mobile-drawer__wave::after { animation-play-state:running; }
-  @keyframes materials-drawer-wave { from { transform:translate3d(-5%,-5%,0) rotate(-12deg) scale(1); } to { transform:translate3d(39%,8%,0) rotate(12deg) scale(1.12); } }
-  .materials-mobile-drawer__top,.materials-mobile-drawer__links,.materials-mobile-drawer__caption,.materials-mobile-drawer__badge { position:relative; z-index:1; }
-  .materials-mobile-drawer__top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
-  .materials-mobile-drawer__top img { display:block; width:146px; height:auto; filter:brightness(0) invert(1); }
-  .materials-mobile-drawer__close { display:grid; width:32px; height:32px; flex:0 0 32px; place-items:center; border:1px solid #ffffff35; border-radius:10px; background:#ffffff0d; color:#fff; font:300 27px/1 Inter,Arial,sans-serif; cursor:pointer; }
-  .materials-mobile-drawer__close span { transform:translateY(-2px); }
-  .materials-mobile-drawer__links { display:flex; flex-direction:column; gap:0; margin-top:58px; }
-  .materials-mobile-drawer__links a { display:flex; min-height:62px; align-items:center; justify-content:space-between; gap:12px; border-bottom:1px solid #ffffff23; color:#f8f8f8; font-size:16px; font-weight:500; line-height:1.3; text-decoration:none; }
-  .materials-mobile-drawer__links a:last-child { color:#fff; }
-  .materials-mobile-drawer__links a span { font-size:21px; font-weight:400; }
-  .materials-orbit-badge { position:relative; display:block; flex:0 0 auto; aspect-ratio:1; }
-  .materials-mobile-drawer > .materials-mobile-drawer__badge { position:absolute; right:24px; bottom:76px; width:88px; height:88px; }
-  .materials-orbit-badge > img { position:absolute; inset:0; display:block; width:100%; height:100%; }
-  .materials-orbit-badge__ring { -webkit-mask-image:radial-gradient(circle at center,transparent 0 18%,#000 18.5%); mask-image:radial-gradient(circle at center,transparent 0 18%,#000 18.5%); animation:materials-orbit-spin 34s linear infinite; }
-  .materials-orbit-badge__mark { -webkit-mask-image:radial-gradient(circle at center,#000 0 18%,transparent 18.5%); mask-image:radial-gradient(circle at center,#000 0 18%,transparent 18.5%); }
-  .materials-mobile-drawer__badge .materials-orbit-badge__ring { animation-play-state:paused; }
-  .materials-page.is-menu-open .materials-mobile-drawer__badge .materials-orbit-badge__ring { animation-play-state:running; }
-  @keyframes materials-orbit-spin { to { transform:rotate(360deg); } }
-  .materials-mobile-drawer__caption { margin-top:auto; color:#ffffffa8; font-size:11px; font-weight:600; letter-spacing:.08em; }
-  .materials-mobile-drawer-dismiss { position:fixed; z-index:10002; inset:0 var(--materials-drawer-width) 0 0; display:block; width:calc(100% - var(--materials-drawer-width)); padding:0; border:0; border-radius:0 28px 28px 0; background:rgba(0,0,0,.065); box-shadow:inset -12px 0 28px #00000017,12px 0 38px #2400002e; opacity:0; visibility:hidden; pointer-events:none; cursor:pointer; transition:opacity .4s ease,visibility .64s; }
-  .materials-page.is-menu-open .materials-mobile-drawer-dismiss { opacity:1; visibility:visible; pointer-events:auto; }
   .materials-page .moex-preloader.is-site-shell { right:auto; left:0; width:100%; transition:left .64s cubic-bezier(.4,0,.2,1); }
   .materials-page.is-menu-open .moex-preloader.is-site-shell { left:calc(-1 * var(--materials-drawer-width)); }
   .materials-hero__copy { width:calc(100% - 32px); padding-top:173px; }

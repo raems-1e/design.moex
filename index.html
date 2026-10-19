@@ -7,28 +7,48 @@
     <title>MOEX Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="assets/preloader.css" />
     <script src="assets/animated-gradient.js" defer></script>
     <script src="assets/preloader.js" defer></script>
+    <link rel="stylesheet" href="assets/mobile-menu.css" />
+    <script src="assets/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="assets/page-transitions.css" />
+    <script src="assets/page-transitions.js" defer></script>
     <noscript><style>body{overflow:auto!important}body>main,body>footer{opacity:1!important}</style></noscript>
+  <link rel="stylesheet" href="assets/site-chrome.css" />
+  <link rel="stylesheet" href="assets/pill-nav.css" />
+  <script src="assets/pill-nav.js" defer></script>
+  <script src="assets/adaptive-logo.js" defer></script>
+  <link rel="stylesheet" href="assets/heading-reveal.css" />
+  <script src="assets/heading-reveal.js" defer></script>
+  <link rel="stylesheet" href="assets/team-preview.css" />
+  <script src="assets/team-preview.js" defer></script>
+    <link rel="stylesheet" href="assets/projects/carousel.css" />
+  <link rel="preload" href="assets/fonts/inter/InterVariable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/fonts/inter/inter.css" />
+  <script src="assets/projects/carousel.js" defer></script>
+  <link rel="stylesheet" href="assets/results-cards.css" />
+  <script src="assets/results-cards.js" defer></script>
+  <link rel="stylesheet" href="assets/footer-shader.css" />
+  <script src="assets/footer-shader.js" defer></script>
   </head>
   <body class="is-preloader-active">
     <main>
       <section class="hero" id="top">
         <header class="header container" data-site-header>
-          <a class="logo" href="#top" aria-label="MOEX Design"><img src="assets/moex-logotype.svg" alt="MOEX Design" /></a>
+          <a class="logo" href="#top" aria-label="MOEX Design"><picture><source media="(max-width:800px)" srcset="assets/materials/mobile/header-logo.svg" /><img src="assets/moex-logotype.svg" alt="MOEX Design" /></picture></a>
           <nav class="nav" id="main-navigation" aria-label="Основная навигация">
             <button class="nav__burger" type="button" aria-label="Открыть навигацию"><span></span><span></span></button>
             <div class="nav__desktop-links">
-              <a href="#communication">Коммуникационный дизайн</a>
+              <a href="communication.html">Коммуникационный дизайн</a>
               <a href="product.html">Продуктовый дизайн</a>
             </div>
             <div class="nav__mobile-links">
-              <section><p>О центре</p><a href="#top">Миссия и структура</a><a href="#team">Команда</a><a href="product.html#principles">Как мы работаем</a></section>
-              <section><p>Коммуникационный дизайн</p><a href="#communication">Бренд и айдентика</a><a href="#communication">Портфолио отдела</a></section>
-              <section><p>Продуктовый дизайн</p><a href="product.html#foundation">Основа системы</a><a href="product.html#components">Компоненты</a><a href="product.html#patterns">Паттерны</a><a href="product.html#products">Продукты и сайты</a><a href="product.html#vibecoding">Вайбкодинг</a><a href="product.html#portfolio">Портфолио отдела</a></section>
+              <section><p>О&nbsp;центре</p><a href="#top">Миссия и&nbsp;структура</a><a href="#team">Команда</a><a href="product.html#principles">Как мы работаем</a></section>
+              <section><p>Коммуникационный дизайн</p><a href="#communication">Бренд и&nbsp;айдентика</a><a href="#communication">Портфолио отдела</a></section>
+              <section><p>Продуктовый дизайн</p><a href="product.html#foundation">Основа системы</a><a href="product.html#components">Компоненты</a><a href="product.html#patterns">Паттерны</a><a href="product.html#products">Продукты и&nbsp;сайты</a><a href="product.html#vibecoding">Вайбкодинг</a><a href="product.html#portfolio">Портфолио отдела</a></section>
             </div>
             <a class="nav__cta" href="materials.html"><img src="assets/arrow-down-to-line.svg" alt="" aria-hidden="true" /><span>Скачать материалы</span></a>
             <button class="menu-close" type="button" aria-label="Закрыть меню"><span></span><span></span></button>
@@ -39,10 +59,10 @@
           <article class="hero__main">
             <div class="eyebrow">Московская Биржа • MOEX</div>
             <h1>Единый стандарт дизайна и&nbsp;опыта главной биржи страны</h1>
-            <p>Дизайн-центр Московской Биржи проектирует экосистемы, создаёт современные цифровые продукты и формирует доверие через визуальный язык коммуникации.</p>
+            <p>Дизайн-центр Московской Биржи проектирует экосистемы, создаёт современные цифровые продукты и&nbsp;формирует доверие через&nbsp;визуальный язык коммуникации</p>
             <img class="hero__art" src="assets/hero-growth.webp" alt="" aria-hidden="true" />
           </article>
-          <a class="hero__direction hero__direction--communication" id="communication" href="#structure">
+          <a class="hero__direction hero__direction--communication" id="communication" href="communication.html">
             <span>Иллюстрации, шрифты, цвета</span>
             <strong>Коммуникационный<br />дизайн</strong>
           </a>
@@ -66,10 +86,10 @@
 
         <div class="mission-team__content">
           <div class="mission-team__mission">
-            <div class="structure__tag" data-reveal><img src="assets/mission-icon.svg" alt="" />Миссия и структура</div>
+            <div class="structure__tag" data-reveal><img src="assets/mission-icon.svg" alt="" />Миссия и&nbsp;структура</div>
             <div class="structure__copy" data-reveal>
               <p class="kicker">Как устроен дизайн в&nbsp;MOEX</p>
-              <h2>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с&nbsp;брендом на&nbsp;всех точках контакта — от&nbsp;рекламного баннера до&nbsp;сложного торгового терминала.</h2>
+              <h2>Мы объединили два ключевых направления дизайна, чтобы создавать целостный опыт взаимодействия с&nbsp;брендом на&nbsp;всех точках контакта — от&nbsp;рекламного баннера до&nbsp;сложного торгового терминала</h2>
             </div>
           </div>
 
@@ -78,10 +98,9 @@
               <div class="team__heading" data-reveal>
                 <div class="team__intro">
                   <p class="team__kicker">Наша команда</p>
-                  <h2>Познакомьтесь с командой</h2>
-                  <p class="team__description">Наша команда дизайна — это творческие профессионалы, которые создают продукты, меняющие пользовательский опыт. Каждый участник привносит уникальный взгляд и экспертизу в общее дело.</p>
+                  <h2>Познакомьтесь с&nbsp;командой</h2>
+                  <p class="team__description">Наша команда дизайна — это творческие профессионалы, которые создают продукты, меняющие пользовательский опыт. Каждый участник привносит уникальный взгляд и&nbsp;экспертизу в&nbsp;общее дело</p>
                 </div>
-                <div class="team__controls" aria-label="Навигация по команде"><button type="button" data-team-prev aria-label="Предыдущие участники">‹</button><button type="button" data-team-next aria-label="Следующие участники">›</button></div>
               </div>
               <div class="team__viewport" data-team-viewport tabindex="0" role="region" aria-label="Команда MOEX Design">
                 <div class="team__track">
@@ -104,15 +123,15 @@
           <header class="results__heading" data-reveal>
             <p class="results__eyebrow">Ключевые достижения</p>
             <h2>Результаты команды дизайна</h2>
-            <p>Ключевые достижения команды дизайна Московской биржи за последний год.</p>
+            <p>Ключевые достижения команды дизайна Московской биржи за&nbsp;последний год</p>
           </header>
 
           <div class="results__grid">
             <article class="results-card results-card--revisions" data-reveal>
-              <p class="results-card__value">на 60%</p>
+              <p class="results-card__value">на&nbsp;60%</p>
               <div class="results-card__copy">
                 <h3>Меньше правок</h3>
-                <p>Автоматизация дизайн-процессов и единая система компонентов сократили количество итераций на 60%.</p>
+                <p>Автоматизация дизайн-процессов и&nbsp;единая система компонентов сократили количество итераций на&nbsp;60%</p>
               </div>
             </article>
 
@@ -121,7 +140,7 @@
               <div class="results-card__ticker"><span>SPEED</span><strong>5× быстрее</strong><b>+100%</b></div>
               <div class="results-card__copy">
                 <h3>Быстрее запуск продуктов</h3>
-                <p>Единый дизайн-стандарт ускорил вывод цифровых продуктов на рынок в 5 раз.</p>
+                <p>Единый дизайн-стандарт ускорил вывод цифровых продуктов на&nbsp;рынок в&nbsp;5 раз</p>
               </div>
             </article>
 
@@ -129,7 +148,7 @@
               <span class="results-card__watermark" aria-hidden="true">30+</span>
               <div class="results-card__copy">
                 <h3>Продуктов обновлено</h3>
-                <p>Более 30 цифровых продуктов биржи переведены на новый единый стандарт дизайна.</p>
+                <p>Более 30 цифровых продуктов биржи переведены на&nbsp;новый единый стандарт дизайна</p>
               </div>
             </article>
 
@@ -137,84 +156,31 @@
               <p class="results-card__value">72%</p>
               <div class="results-card__copy">
                 <h3>Удовлетворённость клиентов</h3>
-                <p>Уровень удовлетворённости клиентов от работы команды дизайна достиг 72%.</p>
+                <p>Уровень удовлетворённости клиентов от&nbsp;работы команды дизайна достиг 72%</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="design-process" id="process">
-        <div class="design-process__shapes" aria-hidden="true">
-          <span class="design-process__shape design-process__shape--red"><img src="assets/mission-shapes/blob-red-main.svg" alt="" /></span>
-          <span class="design-process__shape design-process__shape--pink"><img src="assets/mission-shapes/blob-pink-top.svg" alt="" /></span>
-          <span class="design-process__shape design-process__shape--warm"><img src="assets/mission-shapes/blob-warm-mid.svg" alt="" /></span>
-          <span class="design-process__shape design-process__shape--deep"><img src="assets/mission-shapes/blob-deep-bottom.svg" alt="" /></span>
-          <span class="design-process__shape design-process__shape--dark"><img src="assets/mission-shapes/blob-dark-warm.svg" alt="" /></span>
-          <span class="design-process__shape design-process__shape--hotpink"><img src="assets/mission-shapes/blob-hotpink.svg" alt="" /></span>
+<section class="projects-carousel" id="portfolio" aria-labelledby="projects-heading" aria-roledescription="карусель">
+        <header class="projects-carousel__heading"><p>Портфолио</p><h2 id="projects-heading">Проекты, меняющие индустрию</h2><span>Дизайн, который делает сложное понятным</span></header>
+        <div class="projects-carousel__stage" aria-label="Проекты MOEX">
+          <article class="project-stack-card is-active" role="group" aria-roledescription="слайд" aria-label="1 из 3: Цифровые продукты">
+            <div class="project-stack-card__visual"><img src="assets/projects/moex-brandbook-ipad.png" alt="iPad с брендбуком MOEX" loading="lazy" decoding="async" draggable="false" /></div>
+            <div class="project-stack-card__body"><span class="project-stack-card__eyebrow">Цифровые продукты</span><h3>Финансовые сервисы, в&nbsp;которых легко ориентироваться</h3><p>Единый интерфейс объединяет рыночные данные, инструменты и&nbsp;торговые возможности</p><div class="project-stack-card__bottom"><div class="project-stack-card__tags"><span>Интерфейсы</span><span>MOEX</span></div><a href="product.html">Подробнее</a></div></div>
+          </article>
+          <article class="project-stack-card" role="group" aria-roledescription="слайд" aria-label="2 из 3: Скринеры облигаций" inert aria-hidden="true">
+            <div class="project-stack-card__visual"><img src="assets/projects/moex-brandbook-ipad.png" alt="iPad с брендбуком MOEX" loading="lazy" decoding="async" draggable="false" /></div>
+            <div class="project-stack-card__body"><span class="project-stack-card__eyebrow">Скринеры облигаций</span><h3>Всё важное для&nbsp;выбора инструмента — на&nbsp;одном экране</h3><p>Фильтры и&nbsp;сравнение помогают находить облигации и&nbsp;работать с&nbsp;данными без&nbsp;лишних шагов</p><div class="project-stack-card__bottom"><div class="project-stack-card__tags"><span>Данные</span><span>UX / UI</span></div><a href="product.html">Подробнее</a></div></div>
+          </article>
+          <article class="project-stack-card" role="group" aria-roledescription="слайд" aria-label="3 из 3: Визуальная система" inert aria-hidden="true">
+            <div class="project-stack-card__visual"><img src="assets/projects/moex-brandbook-ipad.png" alt="iPad с брендбуком MOEX" loading="lazy" decoding="async" draggable="false" /></div>
+            <div class="project-stack-card__body"><span class="project-stack-card__eyebrow">Визуальная система</span><h3>Один узнаваемый язык для&nbsp;разных задач бренда</h3><p>Типографика, графика и&nbsp;объёмные иллюстрации работают вместе — в&nbsp;продуктах и&nbsp;коммуникациях</p><div class="project-stack-card__bottom"><div class="project-stack-card__tags"><span>Айдентика</span><span>3D</span></div><a href="communication.html">Подробнее</a></div></div>
+          </article>
         </div>
-
-        <div class="design-process__inner">
-          <header class="design-process__heading" data-reveal>
-            <p>Ключевые достижения</p>
-            <h2>Как устроен дизайн в&nbsp;MOEX</h2>
-            <span>От задачи до продукта — один операционный контур. На десктопе процесс собирается по мере скролла.</span>
-          </header>
-
-          <div class="process-flow__scroller" data-reveal>
-            <ol class="process-flow" data-process-flow aria-label="Процесс работы команды дизайна">
-              <li class="process-stage" style="--stage-delay:0" data-flow-label="Task" data-flow-note="Brief">Task</li>
-              <li class="process-stage" style="--stage-delay:1" data-flow-label="Research" data-flow-note="Insight">Research</li>
-              <li class="process-stage" style="--stage-delay:2" data-flow-label="Design System" data-flow-note="Foundation">Design System</li>
-              <li class="process-stage process-stage--active is-current" style="--stage-delay:3" data-flow-label="Design" data-flow-note="Flow unit" aria-current="step">
-                <span class="process-stage__label">Design</span>
-                <span class="process-stage__card"><b data-process-title>Design</b><small data-process-note>Flow unit</small><small data-process-position>Stage 4 / 7</small></span>
-              </li>
-              <li class="process-stage" style="--stage-delay:4" data-flow-label="Prototype" data-flow-note="Interaction">Prototype</li>
-              <li class="process-stage" style="--stage-delay:5" data-flow-label="Test" data-flow-note="Validation">Test</li>
-              <li class="process-stage" style="--stage-delay:6" data-flow-label="Product" data-flow-note="Release">Product</li>
-            </ol>
-          </div>
-
-          <section class="project-showcase" aria-labelledby="projects-heading">
-            <header class="project-showcase__heading" data-reveal>
-              <p>Портфолио</p>
-              <h2 id="projects-heading">Проекты, меняющие индустрию</h2>
-              <span>Взгляните на решения, созданные на стыке строгого регламента финансовых систем и передового пользовательского опыта.</span>
-            </header>
-
-            <div class="project-showcase__scroller" data-reveal>
-              <div class="project-showcase__grid">
-                <article class="project-card project-card--bonds">
-                  <div class="project-card__visual" aria-hidden="true">
-                    <span class="project-card__glow"></span>
-                    <img class="project-card__screener" src="assets/projects/project-this.png" alt="" />
-                    <img class="project-card__hand" src="assets/projects/project-hand.png" alt="" />
-                  </div>
-                  <div class="project-card__meta"><span>Продуктовый дизайн</span><h3>Скринеры облигаций</h3><p>Поиск и сравнение инструментов для инвестиционных решений.</p></div>
-                </article>
-
-                <article class="project-card project-card--illustrations">
-                  <div class="project-card__visual project-card__visual--illustrations" aria-hidden="true">
-                    <span class="project-card__glow"></span>
-                    <span class="project-sheet project-sheet--back"></span>
-                    <span class="project-sheet project-sheet--middle"></span>
-                    <span class="project-sheet project-sheet--front"><i></i><i></i><i></i></span>
-                  </div>
-                  <div class="project-card__meta"><span>Коммуникационный дизайн</span><h3>Новые 3D-иллюстрации</h3><p>Выразительная визуальная система для цифровых сервисов.</p></div>
-                </article>
-
-                <article class="project-card project-card--mobile">
-                  <div class="project-card__visual project-card__visual--mobile" aria-hidden="true">
-                    <span class="project-card__glow"></span>
-                    <img class="project-card__phone" src="assets/projects/project-pro.png" alt="" />
-                  </div>
-                  <div class="project-card__meta"><span>Продуктовый дизайн</span><h3>Мобильные продукты</h3><p>Сложные финансовые данные — понятным языком на небольшом экране.</p></div>
-                </article>
-              </div>
-            </div>
-          </section>
-        </div>
+        <div class="projects-carousel__dots" aria-label="Выбор проекта"><button type="button" data-project-dot="0" aria-label="Цифровые продукты" aria-current="true"><span></span></button><button type="button" data-project-dot="1" aria-label="Скринеры облигаций" aria-current="false"><span></span></button><button type="button" data-project-dot="2" aria-label="Визуальная система" aria-current="false"><span></span></button></div>
+        <p class="projects-carousel__status" role="status" aria-live="polite"></p>
       </section>
     </main>
 
@@ -224,9 +190,9 @@
           <div class="footer__links">
             <img class="footer__logo" src="assets/moex-logotype.svg" alt="MOEX Design" />
             <div class="footer__columns">
-              <div><p>О центре</p><a href="#top">Миссия и структура</a><a href="#top">Команда</a><a href="product.html#principles">Как мы работаем</a></div>
-              <div><p>Коммуникации</p><a href="#communication">Бренд и айдентика</a><a href="#communication">Портфолио отдела</a></div>
-              <div><p>Продукты</p><a href="product.html#foundation">Основа системы</a><a href="product.html#components">Компоненты</a><a href="product.html#patterns">Паттерны</a><a href="product.html#products">Продукты и сайты</a><a href="product.html#vibecoding">Вайбкодинг</a><a href="product.html#portfolio">Портфолио отдела</a></div>
+              <div><p><a href="communication.html">Коммуникационный дизайн</a></p><a href="communication.html#style">Стиль</a><a href="communication.html#banners">Рекламные баннеры</a><a href="communication.html#typography">Типографика</a><a href="communication.html#banner-builder">Конструктор</a><a href="communication.html#results">Результаты</a><a href="communication.html#portfolio">Проекты</a></div>
+              <div><p><a href="product.html">Продуктовый дизайн</a></p><a href="product.html#technology">Технологии</a><a href="product.html#principles">Как мы проектируем</a><a href="product.html#style">Стиль</a><a href="product.html#customization">Кастомизация</a><a href="product.html#results">Результаты</a><a href="product.html#portfolio">Проекты</a></div>
+              <div><p><a href="materials.html">Скачать материалы</a></p><a href="materials.html#logos">Логотипы</a><a href="materials.html#typography">Фирменный шрифт</a><a href="materials.html#brandbook">Брендбук</a><a href="materials.html#illustrations">3D-иллюстрации</a><a href="materials.html#icons">Иконки</a><a href="materials.html#presentations">Презентации и шаблоны</a></div>
             </div>
           </div>
           <div class="footer__brand"><strong class="footer__wordmark"><span class="wordmark__moex">MOEX</span><span class="wordmark__design">DESIGN</span></strong><div><span>’ 26</span><span class="anniversary" aria-label="MOEX 2026"><img class="anniversary__ring" src="assets/anniversary-mark.svg" alt="" /><span class="anniversary__center"><img src="assets/anniversary-mark.svg" alt="" /></span></span></div></div>
@@ -270,66 +236,6 @@
 
       document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element));
 
-      const processFlow = document.querySelector('[data-process-flow]');
-      if (processFlow) {
-        const processStages = [...processFlow.querySelectorAll('.process-stage')];
-        const processTitle = processFlow.querySelector('[data-process-title]');
-        const processNote = processFlow.querySelector('[data-process-note]');
-        const processPosition = processFlow.querySelector('[data-process-position]');
-        const processScroller = processFlow.closest('.process-flow__scroller');
-        const initialProcessStage = 3;
-        let currentProcessStage = initialProcessStage;
-        let processTimer;
-
-        const showProcessStage = (index) => {
-          currentProcessStage = (index + processStages.length) % processStages.length;
-          const computedFlow = window.getComputedStyle(processFlow);
-          const horizontalPadding = Number.parseFloat(computedFlow.paddingLeft) || 0;
-          const stageWidth = (processFlow.clientWidth - (horizontalPadding * 2)) / processStages.length;
-          const offset = (currentProcessStage - initialProcessStage) * stageWidth;
-          const stage = processStages[currentProcessStage];
-
-          processFlow.style.setProperty('--active-offset', `${offset}px`);
-          processTitle.textContent = stage.dataset.flowLabel;
-          processNote.textContent = stage.dataset.flowNote;
-          processPosition.textContent = `Stage ${currentProcessStage + 1} / ${processStages.length}`;
-
-          processStages.forEach((item, itemIndex) => {
-            const isCurrent = itemIndex === currentProcessStage;
-            item.classList.toggle('is-current', isCurrent);
-            if (isCurrent) item.setAttribute('aria-current', 'step');
-            else item.removeAttribute('aria-current');
-          });
-        };
-
-        const stopProcessPlayback = () => {
-          window.clearInterval(processTimer);
-          processTimer = undefined;
-        };
-
-        const startProcessPlayback = () => {
-          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || processTimer) return;
-          processFlow.classList.add('is-interactive');
-          showProcessStage(currentProcessStage + 1);
-          processTimer = window.setInterval(() => showProcessStage(currentProcessStage + 1), 1200);
-        };
-
-        processScroller.addEventListener('pointerenter', (event) => {
-          if (event.pointerType === 'mouse') startProcessPlayback();
-        });
-        processScroller.addEventListener('pointerleave', stopProcessPlayback);
-        window.addEventListener('resize', () => showProcessStage(currentProcessStage), { passive: true });
-
-        const processObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              processFlow.classList.add('is-assembled');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.35 });
-        processObserver.observe(processFlow);
-      }
 
       document.querySelectorAll('.nav a:not(.nav__cta)').forEach((link) => {
         const label = link.textContent.trim();
@@ -354,29 +260,14 @@
         link.append(word);
       });
 
-      const menuButton = document.querySelector('.menu-button');
-      const mainNavigation = document.querySelector('.nav');
-      const setMenuState = (isOpen) => {
-        mainNavigation.classList.toggle('is-open', isOpen);
-        menuButton.classList.toggle('is-open', isOpen);
-        document.body.classList.toggle('menu-open', isOpen);
-        menuButton.setAttribute('aria-expanded', String(isOpen));
-        menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-      };
-
-      menuButton.addEventListener('click', () => setMenuState(!mainNavigation.classList.contains('is-open')));
-      mainNavigation.querySelector('.menu-close').addEventListener('click', () => setMenuState(false));
-      mainNavigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuState(false)));
-      window.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuState(false); });
 
       const teamViewport = document.querySelector('[data-team-viewport]');
-      const teamStep = 253;
-      document.querySelector('[data-team-prev]').addEventListener('click', () => teamViewport.scrollBy({ left: -teamStep, behavior: 'smooth' }));
-      document.querySelector('[data-team-next]').addEventListener('click', () => teamViewport.scrollBy({ left: teamStep, behavior: 'smooth' }));
+      const teamStep = 267;
 
       let teamDragStart = 0;
       let teamScrollStart = 0;
       teamViewport.addEventListener('pointerdown', (event) => {
+        if (event.target.closest('button, a, .person-preview__detail')) return;
         if (event.pointerType !== 'mouse') return;
         teamDragStart = event.clientX;
         teamScrollStart = teamViewport.scrollLeft;
@@ -403,7 +294,7 @@
       const stickyFooter = document.querySelector('.footer');
       const updateStickyFooter = () => {
         const footerHeight = stickyFooter.offsetHeight;
-        const canStick = footerHeight < window.innerHeight * .94;
+        const canStick = window.innerWidth > 800 && footerHeight < window.innerHeight * .94;
         document.documentElement.style.setProperty('--footer-space', `${footerHeight}px`);
         stickyFooter.classList.toggle('footer--sticky', canStick);
         pageMain.classList.toggle('footer-is-sticky', canStick);
