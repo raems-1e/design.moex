@@ -1,0 +1,481 @@
+[
+  {
+    "file": "assets/communication/api.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "3fdd146fb5abae26e488889bc3fe9032cc3ef0c9ff9d89aa86adf9f06eeea6a2",
+    "sha256_after": "830b81028f1364f0cd88b9a7bb6d9eb31854b53bd05a34a3ddc5dde8a6e7061a",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/auction.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "3de69676ea3b89235b48b61493b8e0491d1abdab1451298d754b23f15fe75469",
+    "sha256_after": "87ecfee8ae5d98595e532c64e0581d4fe0cbf37e47055ffececd1b4b7091b30e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-1.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "f775c1951dba581a03296081c51908fb7d281e99ec78336288756e293de41928",
+    "sha256_after": "bd01af2f151b3e4a7bb57e926a0363dd6a43ed029d7cce486313bae096ed09ef",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-2.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "49e1c6fdb96b0eb00d783d12f73a30c1f6c35f13abe5f8e00bf0de6d254b3e7f",
+    "sha256_after": "cc262c1cc4076da14a25dc745be861d24dda54cd6c7bfe2df7737ac8d083bd75",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-3.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "4b9cc68df2e31d5006ff972818bf900d00f5de64a4b97125560e138dcbde3202",
+    "sha256_after": "694444b661dd63f49ab451861f802c01ffd7373b0f9af6890c17c2b0089e6ddd",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-bonds.jpeg",
+    "removed": [
+      "JPEG-E1"
+    ],
+    "sha256_before": "7ede72291963893aeaaddcb7507e2e27ca5140310be6b1108c26aab55d7fd763",
+    "sha256_after": "afdfa190c20d81355db4a8eea3d1a720c0314d826b7d752a777e93c4d671b98c",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-brandbook.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "6024c2f4e77ee5a5b83f5ddf26e3b4c788475db9492ad2d7d77ec2dcc6f6f05e",
+    "sha256_after": "8c43cbedf80a6a0abc12c6271ee556d0ce10e2c7d5bf253141ed5993a3457451",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-data.jpg",
+    "removed": [
+      "JPEG-EB"
+    ],
+    "sha256_before": "451e4be2f5af7163ff8caa2f57bde6ad93cbd5af95496e44d1e41657d14ba211",
+    "sha256_after": "9e66b27a7718fac0f62f57268b972fd80b91b083180db89f8ab335324df7b5be",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-leadership.jpeg",
+    "removed": [
+      "JPEG-E1"
+    ],
+    "sha256_before": "6a4a6bbd144b529ad4efccc848458677d77023f13ff6b9ed57b5f93d786d3945",
+    "sha256_after": "0744f07cb31c79bc5fa43a4152565c601b8749cb8fbde721d97126a0b3482723",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-padel.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "57a499770897fb962f31c231808db56e4dbf1008e792f2ca9fc77d379a2b50aa",
+    "sha256_after": "65fcd341d30d55b8cc8d2af6653eac28260dfa6628b4cbb321387bd7ff0f5640",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/banner-webinar.jpeg",
+    "removed": [
+      "JPEG-E1"
+    ],
+    "sha256_before": "8bca90d23f30ad716fe2f408688e92cb1363fe60b9802564d36c133382a5f6a1",
+    "sha256_after": "25c94d16220eed70d0be3c4b1a5542ff6ff439c315fec5bbe33b0cc2d3e95195",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/candles.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "86d724f5499047732e8c6c5da18c5cc0d2bdac881abfa5ca4d81681af74d7cd5",
+    "sha256_after": "cf6e75d70aa7474c451c1b45e7d4e99ed225b7c6ff03ffea21c272681e126442",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/constructor-background.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "4361020c108adc0dd03653fef51d3d0e5f3eb292d670f7480b2576c789ed2e03",
+    "sha256_after": "110cce7a480bb79432e9e8f8b3e52cd0734fb038fe97f2ccc38a6373561d95f8",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/gold.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "17e3283a14e7d9efc36d28d6b76b134e9800f616fe74d58c2feab013461b8f2c",
+    "sha256_after": "9653c7f9318ebf44fdc94f69bbef3ca4e7c517af2d0e6a0fe690cb43b17f7468",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/style-graphic.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "90b0d52c9f07984baa4f489f1361d39f87a428aa1c266d383a24448977dd946b",
+    "sha256_after": "41baac262a48781537f4553f23aabca0d9d00dd7fbe73d0654f6fd097112672d",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication/style-motion.png",
+    "removed": [
+      "caBX"
+    ],
+    "sha256_before": "e67896ba1359746ce854732a8413d29e8fc5120459dea398bf6eae53ee00d84c",
+    "sha256_after": "a809f54cb88815a2fdf41d78de2f6fd9d750092ef9fd05a271db2ed2c3ed4e12",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/communication-card.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "03ad15303f794f0b46f2ec1a1ad45603df58d89dc75cf4386ff3da0a15d50845",
+    "sha256_after": "f5e9de5e2da96bfe5a34f5cb2bd3a1f68915f1f49a37cd47dba3a7b894b51e55",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/brandbook-ipad.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "a2a294f60e9c4cd22c26b4e2241f6f70e387511059ad8127c29b087ff9a988d9",
+    "sha256_after": "b29a661016740a208fe00427d490d67c17cb9744d3466206b37ad30334bf7d5d",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/brandbook-moex.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "e05c38b6892fa22a3e9707773f36a340e796a03b18e97a804656ed0e60020dd4",
+    "sha256_after": "d7e9c1170f2adf9b612448dbb3e4e2dc2db703ae9c9a6d532bb29972c5985d6e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/group-logos.png",
+    "removed": [
+      "caBX"
+    ],
+    "sha256_before": "96c23d7daaca80a6c78e9197344169ed27025e3151823501e8a86ed214285491",
+    "sha256_after": "38d20516e5037aa3fbc80cf900f3e9966fa882fd0a0792d27ffbcf79e29715be",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/illustration-graphic.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "90b0d52c9f07984baa4f489f1361d39f87a428aa1c266d383a24448977dd946b",
+    "sha256_after": "41baac262a48781537f4553f23aabca0d9d00dd7fbe73d0654f6fd097112672d",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/illustration-money-market.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "e04ba7572bc189adf9313e0de6fb1b9bf2b4c64a8dfc7636e8558cf08b64304a",
+    "sha256_after": "01c4141e1a71a7d586790513f88ceb84e266c2bafe53edd9daf1fe051d9b6dcb",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/lucide-icons-soft.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "53a2cb35d79b5c74edb74e1c9322569ab752445f77449a24efa63658bb216e26",
+    "sha256_after": "b7d89fe154c41cce08e85b70ef493a3fe5dc35d7b5cd7b5f5a0bfa649833c232",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/lucide-icons.png",
+    "removed": [
+      "eXIf",
+      "iTXt"
+    ],
+    "sha256_before": "2a78fef90906b431ca03e817aaee8358111f080d255c38f8f9b02d0b04340a13",
+    "sha256_after": "238f98317b35da35d516c9d648c6fef71fd740255f3204167607e62e17f3684e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/mobile/icons.png",
+    "removed": [
+      "eXIf",
+      "iTXt"
+    ],
+    "sha256_before": "2a78fef90906b431ca03e817aaee8358111f080d255c38f8f9b02d0b04340a13",
+    "sha256_after": "238f98317b35da35d516c9d648c6fef71fd740255f3204167607e62e17f3684e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/mobile/ncc.png",
+    "removed": [
+      "iTXt"
+    ],
+    "sha256_before": "a7671db40ea003d4ce75e6ffecb3bfe71ecfaf1120358a59c1318b8036290398",
+    "sha256_after": "7c4e16e547efc65684ce22a543fca3d34afea870b185493b9c00e163350ac3b2",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/materials/presentation-graphic.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "3fdd146fb5abae26e488889bc3fe9032cc3ef0c9ff9d89aa86adf9f06eeea6a2",
+    "sha256_after": "830b81028f1364f0cd88b9a7bb6d9eb31854b53bd05a34a3ddc5dde8a6e7061a",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-anna.jpg",
+    "removed": [
+      "JPEG-E1",
+      "JPEG-ED"
+    ],
+    "sha256_before": "aa1a914f51aa26fd5f9eaef7b059fbc289110cc4ef3163556fe995664480beb4",
+    "sha256_after": "73ef277c4a1d882e3c64c047db24628a430071fb2e84910de069f26de1fdcb43",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-elena.jpg",
+    "removed": [
+      "JPEG-E1",
+      "JPEG-ED"
+    ],
+    "sha256_before": "173ab0900874a05ce77439286b36a611950dc985d9a316db1e17c90a1fa1f3d8",
+    "sha256_after": "12c94f2b0bc5eb005f516707bdd1572a8e73bd6d6c4b5736006d49604fb7e3bb",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-ilya.jpg",
+    "removed": [
+      "JPEG-E1",
+      "JPEG-ED"
+    ],
+    "sha256_before": "eaa0b75d7ddda4e5322a456c072f7a896960f466aea7a91ed9e7d3e6cec560bc",
+    "sha256_after": "f3f2dacd3f40ce86c50f3d554d4d5a0d2aaa67343b93c2a6cf9656eba45b75ba",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-konstantin.png",
+    "removed": [
+      "eXIf"
+    ],
+    "sha256_before": "bb1842c2cd0452120f88529e43af4cec6cf060f7574cf7e9ec425a311b2cc4a5",
+    "sha256_after": "c6fc74b8745f693848552132164d20a89bf539bbb57e074c66e90e92a6c50da1",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-maxim.jpg",
+    "removed": [
+      "JPEG-E1",
+      "JPEG-ED"
+    ],
+    "sha256_before": "88b7e8f1bb7411353df4af00d7bd374e2f9ec7370bb4db2f954ba2dc8c3e3489",
+    "sha256_after": "fd4c027a52eb84fbe4905f53f31eb5293d02b11e8612429ad53c7103a8eda6f4",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-new-1.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "dae8fee791691c16015f5de4c86ab7ee2a8e77689277352e30e8122b9c2c6328",
+    "sha256_after": "b7d9123b620143c2ef661f6a4d717050e7ef1ae60140378e53b7926102977ca0",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-new-2.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "39a87df5394e93437fac5a94b937baa9ab77397ce02af26114377c464df3a9f1",
+    "sha256_after": "c930c86c0b997907a06f7dce35cbab22f2344e807e24fb2196df5d28d4f1d04c",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-new-3.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "b3e66f0efd47aa63ec99cee764506fb2d830bd59381f6d89f0df49ca8f665806",
+    "sha256_after": "fb1303058e356861f360fe4cd62ef89dbd656c82528e493f453517d3984e34bd",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-new-4.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "13ba5bef314030b4c1dbfeadd5ad7190a7244622d54d9aead962d017a3424d71",
+    "sha256_after": "212fa2c6530a99b1fb374fd9ceb2bcb9a51e8eaa224b0b660e8d03af2623af93",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-new-5.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "5137abb1f72d2def76d499f30a6741b7612e1cb98a918d277109786c6940f5d8",
+    "sha256_after": "1701474bb3434bb4f515ac8db71092d883573297a166fe4e61ae99ab6675a6c3",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/person-new-6.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "ea52280f2f4b89f8cc332f73b032752c6b8321724867a5bddd31b289e18de682",
+    "sha256_after": "61565591791c2143bedc0f23ab229f9e93b5e78165b372bbb5015069b7898bd5",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/product/principle-art.png",
+    "removed": [
+      "caBX"
+    ],
+    "sha256_before": "bf938aed09edca12d2747c35bdc6bd72cd622bb2a63c76408086ac27f1ff1ea7",
+    "sha256_after": "597cfaedd2dcf9451743ddcf7404d3523d7ffe49360b2f4bb49d167006c7d905",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/product/style-icons-row-1.png",
+    "removed": [
+      "eXIf",
+      "iTXt"
+    ],
+    "sha256_before": "2a78fef90906b431ca03e817aaee8358111f080d255c38f8f9b02d0b04340a13",
+    "sha256_after": "238f98317b35da35d516c9d648c6fef71fd740255f3204167607e62e17f3684e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/product/style-icons-row-2.png",
+    "removed": [
+      "eXIf",
+      "iTXt"
+    ],
+    "sha256_before": "2a78fef90906b431ca03e817aaee8358111f080d255c38f8f9b02d0b04340a13",
+    "sha256_after": "238f98317b35da35d516c9d648c6fef71fd740255f3204167607e62e17f3684e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/product/style-icons-row-3.png",
+    "removed": [
+      "eXIf",
+      "iTXt"
+    ],
+    "sha256_before": "2a78fef90906b431ca03e817aaee8358111f080d255c38f8f9b02d0b04340a13",
+    "sha256_after": "238f98317b35da35d516c9d648c6fef71fd740255f3204167607e62e17f3684e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/product/style-icons-row-4.png",
+    "removed": [
+      "eXIf",
+      "iTXt"
+    ],
+    "sha256_before": "2a78fef90906b431ca03e817aaee8358111f080d255c38f8f9b02d0b04340a13",
+    "sha256_after": "238f98317b35da35d516c9d648c6fef71fd740255f3204167607e62e17f3684e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/product/style-icons.png",
+    "removed": [
+      "eXIf",
+      "iTXt"
+    ],
+    "sha256_before": "2a78fef90906b431ca03e817aaee8358111f080d255c38f8f9b02d0b04340a13",
+    "sha256_after": "238f98317b35da35d516c9d648c6fef71fd740255f3204167607e62e17f3684e",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/product-card.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "2cb38dc58d035feb34dfc75a8bad030f81f9ee58fc783b21e622efa2d9d5b837",
+    "sha256_after": "fc264d74793c0de3b56ffd30fe4150ee31f0233726489a6f629e6826a2a696d6",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/projects/moex-brandbook-ipad.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "b8b059b1eba5341ecbb885133194dcd2cd4ee0d4f82c79146d7227c333d58c0c",
+    "sha256_after": "3f7fc102798d70bc53386d66473ae5c4b0478833e3ab723e96897c2b7dc7c8ee",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/team-card-afanasiev.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "ee85e3a7c559c04626ccd696059b3dcb70eb55387dcf4f3dd02533d12e68eb1b",
+    "sha256_after": "e9a71869e497c6ad310c524132724cdaed77748cc32746244c160057880d3bc8",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/team-card-anna.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "4e41e83f2378fba8fd755d5bd65c57216a29eac039a3692ca7698c2c2e25b89a",
+    "sha256_after": "bdfcb4380899d629224ac6a495eae7a73516deef1efa255498838e329be89a5c",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/team-card-ervin.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "f1a88c68f2b4f2ba7a95247a15ae63380d96d2f55ec1fdda4f462505d1760450",
+    "sha256_after": "142b0abb918f2e35029593a072b8ebd7b382603d5ce7591600b7f6a88490488b",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/team-card-semenov.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "48b9087cf429abaa95fd6e1675f6e15faabc3ae728f6319df89d47fa05fced98",
+    "sha256_after": "c947a14f48a822e2e23ccb69ae246cf629e7c5d22cd2ecc84f6a955eae6f35ca",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/team-card-vasil.png",
+    "removed": [
+      "tEXt"
+    ],
+    "sha256_before": "784e18cd4865950b60255bf4064a3ca1179a66ad24c6d4ee4256e7a1d5c009c0",
+    "sha256_after": "2efaf9edd057a9a85275140a6f83d526e45f2a84cb61d0c28f440af2f5b155d2",
+    "compressed_visual_data_unchanged": true
+  },
+  {
+    "file": "assets/team-oleg-white.png",
+    "removed": [
+      "caBX"
+    ],
+    "sha256_before": "2a5a09637ea85c4eec768f38d6163294c25bdc3e3eacdd55f7fdea07327478d2",
+    "sha256_after": "d6a9771e6b1ef754a43ab4fc9ae76ec9d8943819b7dbf4228b10c3866c376d55",
+    "compressed_visual_data_unchanged": true
+  }
+]

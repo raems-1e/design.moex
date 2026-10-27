@@ -1,0 +1,5 @@
+/* Self-hosted Inter, including legacy Manrope aliases. No external font requests. */
+@font-face { font-family:'Inter'; src:url('./InterVariable.woff2') format('woff2'); font-style:normal; font-weight:100 900; font-display:swap; }
+@font-face { font-family:'MOEX Inter'; src:url('./InterVariable.woff2') format('woff2'); font-style:normal; font-weight:100 900; font-display:swap; }
+@font-face { font-family:'Manrope'; src:url('./InterVariable.woff2') format('woff2'); font-style:normal; font-weight:100 900; font-display:swap; }
+:where(html, body, body *) { font-variant-numeric:lining-nums proportional-nums; }
